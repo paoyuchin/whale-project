@@ -1,0 +1,28 @@
+@mixin size($w, $h:$w) {
+    width: $w;
+    height: $h;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$colorBlack: #000;
+$colorWhite: #fff;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    @include size(100%, 100vh);
+    @include flexCenter;
+    flex-direction: column;
+    background-color: $colorBlack;
+    .title,
+    .desc {
+        color: $colorWhite;
+    }
+}

@@ -1,0 +1,126 @@
+@import 'base/var';
+.box {
+    @include margin-auto();
+}
+
+.ititle {
+    @include padding();
+}
+
+.box {
+    width: 10px - 1px;
+    height: 50px+5px;
+    padding: (10px/2);
+}
+
+// .item {
+//     @include toleft();
+// }
+$fontbase:15px;
+h1 {
+    font-size: $fontbase*5;
+}
+
+h2 {
+    font-size: $fontbase*4;
+}
+
+h3 {
+    font-size: $fontbase*3;
+}
+
+h4 {
+    font-size: $fontbase*2;
+}
+
+h5 {
+    font-size: $fontbase*1;
+}
+
+h6 {
+    font-size: $fontbase
+}
+
+// $width:7px;
+// .wrapper {
+//     @if $width>=10 {
+//         width: $width*2
+//     }
+//     @else {
+//         width: $width*100
+//     }
+// }
+// // theme
+@mixin theme($name, $bb) {
+    @if #{$bb}==blue {
+        #{$name} {
+            background-color: red;
+            @content;
+        }
+    }
+    @else if #{$bb}==yellow {
+        #{$name} {
+            background-color: pink;
+            @content;
+        }
+    }
+}
+
+@include theme('.item', yellow) {
+    width: 100px;
+}
+
+p {
+    color: red;
+}
+
+p {
+    padding: 10px;
+    font-size: 50px;
+    color: #f00;
+}
+
+@mixin rwd($breakpoint) {
+    @if $breakpoint==small {
+        @media all and (max-width: 720px) {
+            @content;
+        }
+    }
+    @else if $breakpoint==medium {
+        @media all and (min-width: 995px) and (max-width:721px) {
+            @content;
+        }
+    }
+    @else if $breakpoint==large {
+        @media all and (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+@include rwd(small) {
+    .box {
+        width: 500px;
+    }
+    span {
+        font-size: 20px;
+    }
+}
+
+@include rwd(medium) {
+    .box {
+        width: 500px;
+    }
+    span {
+        font-size: 20px;
+    }
+}
+
+@include rwd(large) {
+    .box {
+        width: 500px;
+    }
+    span {
+        font-size: 20px;
+    }
+}
