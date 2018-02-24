@@ -1,0 +1,208 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體, arial;
+  padding: 0;
+  margin: 0;
+  h1: 60px;
+  h2: 45px;
+  h3: 30px;
+  h4: 22px;
+  p: 18px;
+  list-style: none;
+  text-decoration: none;
+  outline: 1px solid red; }
+
+body {
+  background-image: url("../image/background.png");
+  background-size: 100%, 100vh;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.aboutus-container {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.aboutus-opening {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.aboutus-opening img {
+  width: 100%; }
+
+.aboutus-video {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  .aboutus-video .aboutus-opening-diverimg-1 {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    left: 20%;
+    top: 50%; }
+  .aboutus-video .aboutus-opening-diverimg-2 {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    left: 60%;
+    top: 0; }
+  .aboutus-video img {
+    width: 100%; }
+
+.aboutus-slogen,
+.aboutus-name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+
+.aboutus-slogen {
+  top: 45%; }
+
+.aboutus-name {
+  font-size: 60px; }
+
+.aboutus-title {
+  font-size: 60px;
+  font-family: serif;
+  padding: 20px;
+  font-weight: bold; }
+  .aboutus-title:before {
+    display: block;
+    content: '';
+    width: 75px;
+    height: 2px;
+    content: 'Our Team';
+    letter-spacing: 3px;
+    color: white;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 10px; }
+
+.aboutus-content-1 {
+  padding: 20px; }
+
+.aboutus-content-2 {
+  padding: 20px; }
+
+.aboutus-text-father {
+  float: left;
+  width: 40%;
+  color: white;
+  margin-top: 20px;
+  position: relative; }
+
+.aboutus .aboutus-left-pic {
+  float: right;
+  width: 55%; }
+
+.aboutus .aboutus-left-pic img {
+  width: 100%; }
+
+.aboutus-method {
+  width: 100%;
+  height: 100%;
+  background-size: 100vw;
+  height: 100vh;
+  position: relative; }
+
+.aboutus-method-backimage {
+  background-image: url("../image/gola.jpg");
+  background-size: 95%;
+  background-repeat: no-repeat;
+  height: 95%;
+  background-position: center center;
+  text-align: center; }
+
+.aboutus-method-logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: -20px; }
+  .aboutus-method-logo img {
+    width: 100%;
+    height: 100%; }
+
+.aboutus-method-title {
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 10%; }
+
+.aboutus-method-content {
+  text-align: center;
+  width: 60%;
+  height: auto;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  top: 20%;
+  left: 20%; }
+
+.aboutus-goal-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-sizing: border-box; }
+
+.aboutus-goal-circle-outside {
+  width: 30%;
+  float: left; }
+  .aboutus-goal-circle-outside .aboutus-goal-circle {
+    width: 400px;
+    height: 400px;
+    border: 5px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-align: center; }
+
+.aboutus-goal-txt {
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 60%;
+  height: auto;
+  position: relative; }
+  .aboutus-goal-txt img {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    left: 40%;
+    top: -26%; }
+
+.aboutus-milestone {
+  width: 100%;
+  height: auto;
+  position: relative; }
+
+.aboutus-milestone-title {
+  width: 40%;
+  height: auto;
+  float: left;
+  text-align: center;
+  color: white; }
+  .aboutus-milestone-title a {
+    color: white; }
+
+.aboutus-milestone-map {
+  width: 60%;
+  float: left; }
+  .aboutus-milestone-map img {
+    width: 100%; }
+
+.aboutus-milestone-open {
+  padding: 20px; }
+  .aboutus-milestone-open .aboutus-milestone-seemorebtn {
+    padding: 15px 0px;
+    border: 1px solid black; }

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體, arial;
+  padding: 0;
+  margin: 0;
+  h1: 60px;
+  h2: 45px;
+  h3: 30px;
+  h4: 22px;
+  p: 18px;
+  list-style: none;
+  text-decoration: none;
+  outline: 1px solid red; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.achievment-inside-container {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto; }
+  .achievment-inside-container .inside-test {
+    width: 50%; }
+  .achievment-inside-container .inside-img {
+    width: 50%;
+    height: 250px;
+    overflow: hidden; }
+  .achievment-inside-container div {
+    float: left; }
+
+.inside-img {
+  position: relative; }
+  .inside-img img {
+    position: absolute; }
+
+.long {
+  height: 500vh; }

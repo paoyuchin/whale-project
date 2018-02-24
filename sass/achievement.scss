@@ -1,0 +1,341 @@
+* {
+    // common area
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: 1px solid red;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(205, 221, 247)
+}
+
+.clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin btn($w, $h, $bgcolor, $color) {
+    width: $w;
+    height: $h;
+    background-color: $bgcolor;
+    color: $color;
+    border-radius: 50%;
+}
+
+@mixin positionAbcenter() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+@mixin size($w, $h:null) {
+    width: $w;
+    height: $h;
+}
+
+@mixin marginauto() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    @include marginauto();
+    width: 1140px;
+    .achievement-btn-fahter {
+        width: 100%; // background-color: red;
+        a {
+            @include size(50%, null);
+        }
+        .achievement-btn {
+            display: inline-block;
+            color: black;
+            float: left;
+            width: 50%;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid black;
+            padding: 150px 0px;
+            box-sizing: border-box;
+            font-size: 50px;
+        }
+        .achievement-btn-1 {
+            position: relative;
+            &::before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                opacity: 0.6;
+                background-image: url('../image/achievement-img/whale111.jpg');
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                -ms-background-size: cover;
+                -o-background-size: cover;
+                -moz-background-size: cover;
+                -webkit-background-size: cover;
+                background-size: cover;
+            }
+        } //end achievement-btn-1
+        .achievement-btn-2 {
+            position: relative;
+            &:before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                opacity: 0.6;
+                background-image: url('../image/achievement-img/whalecourse.jpeg');
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                -ms-background-size: cover;
+                -o-background-size: cover;
+                -moz-background-size: cover;
+                -webkit-background-size: cover;
+                background-size: cover;
+            }
+        }
+    }
+} //end achievement-btn-father
+.achievement-slogen {
+    @include size(100%,
+    auto);
+    @include marginauto();
+    color: black;
+    margin-bottom: 30px;
+    .achieve-fishimg-1 {
+        display: block;
+        @include size(10%,
+        null);
+        float: left;
+    }
+    .achieve-fishimg-2 {
+        display: block;
+        @include size(10%,
+        null);
+        float: left;
+    }
+    p {
+        @include size(80%,
+        null);
+        float: left;
+        text-align: center;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+} //end grid
+.achievement-content a {
+    float: left;
+    width: 25%;
+    color: #333;
+    box-sizing: border-box;
+    &:nth-child(odd) {
+        margin: 30px 0 -30px 0;
+    }
+}
+
+// .grid .achievement-btn-fahter a {
+//     margin: 0;
+// }
+.grid figure {
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    background: #333;
+    box-sizing: border-box;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    min-height: 400px;
+}
+
+.grid figcaption {
+    position: absolute;
+    top: 0;
+    z-index: 11;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.grid figcaption h2 {
+    margin: 0 0 20px 0;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300; // font-size: 130%;
+    transition: transform 0.3s;
+}
+
+.grid figcaption p {
+    padding: 0 20px;
+    color: #aaa;
+    font-weight: 300;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.grid figcaption h2,
+.grid figcaption p {
+    transform: translateY(50px);
+}
+
+.grid figure button {
+    position: absolute;
+    padding: 4px 20px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.grid figcaption h2 {
+    color: #e74c3c;
+}
+
+.grid figcaption p {
+    transition-delay: 0.05s;
+}
+
+.grid figure button {
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    font-weight: 300;
+    transform: translateY(100%);
+    font-size: 100%;
+    margin: 0px;
+}
+
+.grid a:hover figure button {
+    transition-timing-function: ease-out;
+    transform: translateY(0);
+}
+
+.grid figcaption h2,
+.grid figcaption p {
+    timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
+}
+
+.grid a:hover figcaption p {
+    transition-delay: 0s;
+    transition-duration: 0.1s;
+}
+
+
+/* ///////////////////////  */
+
+.grid figcaption,
+.grid figcaption h2,
+.grid figcaption p,
+.grid figure button {
+    backface-visibility: hidden;
+}
+
+.grid svg {
+    position: absolute;
+    top: -1px;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+}
+
+.grid a:hover figure img {
+    opacity: 1;
+}
+
+.grid a:hover figcaption h2,
+.grid a:hover figcaption p {
+    transform: translateY(0);
+}
+
+.grid a:hover figcaption p {
+    opacity: 0;
+}
+
+.grid figcaption h2 {
+    color: #e74c3c;
+}
+
+.grid figcaption p {
+    transition-delay: 0.05s;
+}
+
+.grid figure button {
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+
+
+/* @media screen and (max-width: 58em) {
+    .grid a {
+        width: 33.333%;
+    }
+    .grid a:nth-child(odd) {
+        margin: 0;
+    }
+    .grid a:nth-child(3n-1) {
+        margin: 30px 0 -30px 0;
+    }
+}
+
+@media screen and (max-width: 45em) {
+    .grid {
+        max-width: 500px;
+    }
+    .grid a {
+        width: 50%;
+    }
+    .grid a:nth-child(3n-1) {
+        margin: 0;
+    }
+    .grid a:nth-child(even) {
+        margin: 30px 0 -30px 0;
+    }
+    .grid figcaption h2 {
+        margin-bottom: 0px;
+        transform: translateY(30px);
+    }
+    .grid figcaption p {
+        margin: 0;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 27em) {
+    .grid {
+        max-width: 250px;
+    }
+    .grid a {
+        width: 100%;
+    }
+    .grid a:nth-child(even) {
+        margin: 0;
+    }
+} */

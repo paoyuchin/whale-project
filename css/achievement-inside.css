@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: 1px solid red; }
+
+body {
+  background-color: #cdddf7; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.achievement-container {
+  overflow: hidden;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto; }
+  .achievement-container .achieve-inside-title {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px; }
+    .achievement-container .achieve-inside-title h2 {
+      text-align: center; }
+    .achievement-container .achieve-inside-title p {
+      font-weight: bold; }
+    .achievement-container .achieve-inside-title .title-content {
+      color: black;
+      margin: 15px 0px; }
+  .achievement-container .achieve-inside-progrebar {
+    width: 100%; }
+    .achievement-container .achieve-inside-progrebar .bar-1,
+    .achievement-container .achieve-inside-progrebar .bar-2,
+    .achievement-container .achieve-inside-progrebar .bar-3 {
+      overflow: hidden;
+      width: 33.33333%;
+      height: auto;
+      float: left; }
+  .achievement-container .achieve-inside-bloack {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden; }
+    .achievement-container .achieve-inside-bloack .achieve-inside-left {
+      width: 50%;
+      height: auto;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow: hidden; }
+    .achievement-container .achieve-inside-bloack .achieve-inside-right {
+      width: 50%;
+      height: auto;
+      float: left;
+      overflow: hidden; }
+      .achievement-container .achieve-inside-bloack .achieve-inside-right .achieve-inside-txt {
+        padding: 20px; }
+      .achievement-container .achieve-inside-bloack .achieve-inside-right img {
+        position: relative;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px; }

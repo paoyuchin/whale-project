@@ -12,18 +12,16 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('css/'));
 });
 
-
 gulp.task('default', ['sass'], function () {
 
     browserSync.init({
         server: {
             //根目錄
             baseDir: "./",
-            index: "tween.html"
+            index: "milestone.html"
             // index: "id.html"
         }
     });
-
     gulp.watch(["sass/*.scss", "sass/**/*.scss"], ['sass']).on('change', reload);
     gulp.watch("*.html").on('change', reload);
     gulp.watch("js/*.js").on('change', reload);
