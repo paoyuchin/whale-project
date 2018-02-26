@@ -1,0 +1,418 @@
+// common area
+* {
+    padding: 0;
+    margin: 0;
+    outline: 1px solid red;
+    position: relative;
+    box-sizing: border-box;
+}
+
+body {
+    // background-image: url('../image/aboutus-img/background.png');
+    // background-size: 100%, 100vh;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-color: rgb(205, 221, 247)
+}
+
+.clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin padding() {
+    padding: 20px;
+}
+
+@mixin margin() {
+    margin-top: 15px;
+}
+
+@mixin btn($w, $h, $bgcolor, $color) {
+    width: $w;
+    height: $h;
+    background-color: $bgcolor;
+    color: $color;
+    border-radius: 50%;
+}
+
+@mixin flexcenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin positionAbcenter() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+@mixin Pseudo() {
+    display: block;
+    content: '';
+}
+
+@mixin about-us-backgroundimage($url) {
+    clear: both;
+    color: black;
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 50vw;
+}
+
+@mixin size($w, $h:null) {
+    width: $w;
+    height: $h;
+}
+// bg_img
+.bg-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%, 100%);
+    z-index: -100;
+    background-image: url("../images/aboutus-img/bg.png");
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// css of aboutus-opening
+.aboutus-container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.aboutus-opening {
+    @include size(100%, 100%);
+    position: relative;
+}
+
+.aboutus-opening img {
+    @include size(100%);
+}
+
+.aboutus-video {
+    @include size(100%, 100vh);
+    position: relative;
+    .aboutus-opening-diverimg-1 {
+        @include size(20%, 20%);
+        position: absolute;
+        left: 20%;
+        top: 50%;
+    }
+    .aboutus-opening-diverimg-2 {
+        @include size(20%, 20%);
+        position: absolute;
+        left: 60%;
+        top: 0;
+    }
+    img {
+        @include size(100%);
+    }
+} //end aboutus-video
+.aboutus-slogen,
+.aboutus-name {
+    @include positionAbcenter
+}
+
+.aboutus-slogen {
+    top: 45%;
+}
+
+.aboutus-name {
+    font-size: 60px;
+} //note:.aboutus-name FZ 60px;
+// css for aboutus
+// .aboutus-sliderbtn {
+//     float: left;
+//     @include size(5%,
+//     auto);
+//     padding-top: 60px;
+//     text-align: center;
+//     display: inline-block;
+// }
+.aboutus {
+    // @include about-us-backgroundimage(url('../image/FIRST.png'));
+}
+
+.aboutus-title {
+    font-size: 60px;
+    font-family: serif;
+    @include padding();
+    font-weight: bold;
+    &:before {
+        @include Pseudo();
+        @include size(75px, 2px);
+        content: 'Our Team';
+        letter-spacing: 3px;
+        color: white;
+        background-color: white;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        font-size: 10px;
+    }
+} //end of aboutus-title
+.aboutus-content-1 {
+    @include padding();
+}
+
+.aboutus-content-2 {
+    @include padding();
+}
+
+// .aboutus-btn-1,
+// .aboutus-btn-2 {
+//     @include margin();
+//     display: block;
+//     @include btn(30px,
+//     30px,
+//     blue,
+//     gray); // text-align: center;
+// }
+.aboutus-text-father {
+    float: left;
+    width: 40%;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+}
+
+.aboutus .aboutus-left-pic {
+    float: right;
+    width: 55%;
+}
+
+.aboutus .aboutus-left-pic img {
+    @include size(100%) // width: 100vw;
+}
+
+//end of about us
+//start our-method
+.aboutus-method {
+    @include size(100%, 100%);
+    background-size: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.aboutus-method-backimage {
+    background-image: url('../image/aboutus-img/gola.jpg');
+    background-size: 95%;
+    background-repeat: no-repeat;
+    height: 95%;
+    background-position: center center;
+    text-align: center;
+}
+
+.aboutus-method-logo {
+    @include size(100px,
+    100px);
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    img {
+        @include size(100%,
+        100%);
+    }
+} //end 
+.aboutus-method-title {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    @include size(100%,
+    auto);
+    position: absolute;
+    top: 10%;
+}
+
+.aboutus-method-content {
+    text-align: center;
+    @include size(60%,
+    auto);
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+//end method
+//start goal
+.aboutus-goal-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.aboutus-goal-circle-outside {
+    @include size(30%,
+    null) float: left;
+    .aboutus-goal-circle {
+        @include size(400px,
+        400px); // float: left;
+        border: 5px solid black;
+        border-radius: 50%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+} //end of aboutus-goal-circle-outside
+.aboutus-goal-txt {
+    float: left;
+    @include padding();
+    box-sizing: border-box;
+    @include size(60%,
+    auto);
+    position: relative;
+    img {
+        @include size(40%,
+        40%);
+        position: absolute;
+        left: 40%;
+        top: -26%;
+    }
+} //end goal
+//start milestone
+.aboutus-milestone {
+    @include size(100%,
+    auto);
+    position: relative;
+}
+
+.aboutus-milestone-title {
+    @include size(40%,
+    auto);
+    float: left;
+    text-align: center;
+    color: white;
+    a {
+        color: white;
+    }
+} //end aboutus-milestone-title
+.aboutus-milestone-map {
+    background-image: url('../image/aboutus-img/enernoc_map.png');
+    background-position: center center;
+    @include size(60%);
+    float: left;
+    overflow: hidden;
+    height: 70vh;
+}
+
+.svg-rout-class {
+    max-width: 450px;
+    position: relative;
+    left: 300px;
+}
+
+.aboutus-milestone-open {
+    // display: none;
+    @include padding();
+    .aboutus-milestone-seemorebtn {
+        padding: 15px 0px;
+        border: 1px solid black;
+    }
+}
+
+//end css for milestone
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (max-width:767px) {
+    .aboutus-opening {
+        .aboutus-slogen {
+            top: 29%;
+            font-size: 30px;
+        }
+        .aboutus-name {
+            width: 100%;
+            text-align: center;
+        }
+        .aboutus-opening-diverimg-1 {
+            left: 7%;
+            width: 40%;
+            height: 40%;
+        }
+        .aboutus-opening-diverimg-2 {
+            width: 40%;
+            height: 40%;
+        }
+    }
+    .aboutus {
+        .aboutus-container {
+            .aboutus-text-father {
+                width: 100%;
+            }
+            .aboutus-title {
+                width: 100%;
+                text-align: center;
+                font-size: 80px;
+                box-sizing: border-box;
+            }
+            .aboutus-content-1 {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .aboutus-content-2 {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .aboutus-left-pic {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    }
+    .aboutus-method {
+        .aboutus-method-logo {
+            top: 0;
+            left: 40%;
+        }
+        .aboutus-method-backimage {
+            background-size: cover;
+            margin-top: 15px;
+            box-sizing: border-box;
+            .aboutus-method-title {
+                top: 16%;
+            }
+            .aboutus-method-content {
+                width: 90%;
+                left: 5%;
+                top: 32%;
+                font-size: 20px;
+            }
+        }
+    }
+    .aboutus-goal-container {
+        .goal-whale {
+            display: none;
+        }
+        .aboutus-goal-txt {
+            width: 100%;
+            .aboutus-goal-title {
+                text-align: center;
+            }
+        }
+        .aboutus-goal-circle-outside {
+            width: 100%;
+        }
+    }
+    .aboutus-milestone {
+        .aboutus-milestone-title {
+            width: 100%;
+        }
+        .aboutus-milestone-map {
+            width: 100%;
+            .svg-rout-class {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+} //end media 767

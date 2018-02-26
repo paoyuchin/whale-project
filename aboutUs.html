@@ -5,85 +5,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/aboutUs.css">
+    <!-- reset -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- plugins -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="plugin/fontawesome-free-5.0.6/web-fonts-with-css/css/fontawesome-all.min.css">
+    <!-- custom -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/project-min.css">
-    <script type='text/javascript' src="plugin/jquery-3.3.1.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="plugin/jquery.lazylinepainter-1.7.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
-    <script type='text/javascript' src="plugin/Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
-    <link rel="stylesheet" href="plugin/fontawesome-free-5.0.6/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
     <title>AboutUs</title>
 </head>
 
 <body>
-    <!-- Start header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="row u-cf">
-                    <figure class="navbar-logo">
-                        <a hre＄f="#">
-                            <img src="images/logo/logo.png" alt="logo">
-                        </a>
-                    </figure>
-                    <a href="#overlay" class="menu-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                    <div id="overlay" class="navbar-menu popup-nav">
-                        <ul class="u-cf">
-                            <li>
-                                <a href="#" class="menu-item" id="about">關於我們</a>
-                                <ul class="dropdown">
-                                    <li>
-                                        <a href="#" id="aboutUs">緣起</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" id="milstone">里程碑</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="activity.html" class="menu-item" id="event">活動招募</a>
-                                <ul class="dropdown">
-                                    <li>
-                                        <a href="#" id="activity">護鯨活動</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" id="boardcast">宣傳講座</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-item" id="fundRaising">募資捐款</a>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-item" id="petition">連署活動</a>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-item" id="interactive">鯨典百科</a>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-item" id="member">會員</a>
-                            </li>
-                        </ul>
-                        <a href="#!" class="popup-close">
+    <div class="wrapper">
+        <div class="bg-img"></div>
+        <!-- Start header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="row u-cf">
+                        <figure class="navbar-logo">
+                            <a href="#">
+                                <img src="images/logo/logo.png" alt="logo">
+                            </a>
+                        </figure>
+                        <a href="#overlay" class="menu-toggle">
+                            <span></span>
                             <span></span>
                             <span></span>
                         </a>
+                        <div id="overlay" class="navbar-menu popup-nav">
+                            <ul class="u-cf">
+                                <li>
+                                    <a href="#" class="menu-item" id="about">關於我們</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#" id="aboutUs">緣起</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" id="milstone">里程碑</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="activity.html" class="menu-item" id="event">活動招募</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#" id="activity">護鯨活動</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" id="boardcast">宣傳講座</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu-item" id="fundRaising">募資捐款</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu-item" id="petition">連署活動</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu-item" id="interactive">鯨典百科</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu-item" id="member">會員</a>
+                                </li>
+                            </ul>
+                            <a href="#!" class="popup-close">
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <!-- End header -->
+            </nav>
+        </header>
+        <!-- End header -->
 
-    <!-- Start main -->
-    <section class="event-main"></section>
-    <!-- End main -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <!-- opening start -->
+        <div class="aboutus-opening">
+            <div class="aboutus-video">
+                <h3 class="aboutus-slogen">if Whale die, We die</h3>
+                <img class="aboutus-opening-diverimg-1" src="images/aboutus-img/diver-shape3.svg" alt="diver">
+                <img class="aboutus-opening-diverimg-2" src="images/aboutus-img/diver-shape4.svg" alt="diver-1">
+                <h2 class="aboutus-name">關於鯨生鯨世</h2>
+            </div>
+        </div>
+        <!-- about us -->
+        <div class="aboutus-bg"></div>
+        <div class="aboutus clearfix">
+            <div class="aboutus-container">
+                <div class="aboutus-text-father">
+                    <h2 class="aboutus-title">About Us</h2>
+                    <p class="aboutus-content-1">Sea Shepherd)周二(29日)表示，今年不會再派船隻出海阻止日本捕鯨行動，因為日本政府出動軍事裝備與武器保護捕鯨船，自知絕無可能對抗政府的軍力及財力，將尋求其他策略。</p>
+                    <div class="aboutus-content-2">打不過日本的軍隊，護鯨組織「海洋守護協會」（Sea Shepherd）創辦人華森（Paul Watson）宣布，今年取消在南極干擾日本捕鯨船的年度行動，不過華森強調，只是不派船隻去南極，並不是放棄這項行動，他們絕對不會退出打擊非法捕鯨行動。華森在官網宣布，由於日本已經動用軍事力量，包括監控系統，他們</div>
+                </div>
+                <div class="aboutus-left-pic owl-carousel">
+                    <img src="images/aboutus-img/whale01.jpg" alt="whale">
+                    <img src="images/aboutus-img/whale01.jpg" alt="whale">
+                    <img src="images/aboutus-img/whale01.jpg" alt="whale">
+                    <img src="images/aboutus-img/whale01.jpg" alt="whale">
+                </div>
+            </div>
+        </div>
+        <!-- our-method -->
+        <div class="aboutus-method">
+            <div class="aboutus-method-backimages">
+                <div class="aboutus-method-logo">
+                    <img src="images/aboutus-img/facklogo.png" alt="fack's logo">
+                </div>
+                <h2 class="aboutus-method-title">我們的方法</h2>
+                <p class="aboutus-method-content">國際護鯨組織「海洋守護者」 放棄狙擊日本捕鯨船. 3121. 出版時間：2017/08/29 23:14. 法新社資料照片. 國際反捕鯨組織「海洋守護者」協會(Sea Shepherd)周二(29日)表示，今年不會再派船隻出海阻止日本捕鯨行動，因為日本政府出動軍事裝備與武器保護捕鯨船，自知絕無可能對抗政府的軍力及財力，將尋求其他策略。
+                    協會創辦人華國際護鯨組織「海洋守護者」 放棄國際護鯨組織「海洋守護者」 放棄狙擊日本捕鯨船. 3121. 出版時間：2017/08/29 23:14. 法新社資料照片. 國際反捕鯨組織「海洋守護者」協會(Sea
+                    Shepherd)周二(29日)表示，今年不會再派船隻出海阻止日本捕鯨行動，因為日本政府出動軍事裝備與武器保護捕鯨船，自知絕無可能對抗政府的軍力及財力，將尋求其他策略。 協會創辦人華國際護鯨組織「海洋守護者」
+                    放棄國際護鯨組織「海洋守護者」 放棄狙擊日本捕鯨船. 3121. 出版時間：2017/08/29 23:14. 法新社資料照片. 國際反捕鯨組織「海洋守護者」協會(Sea Shepherd)周二(29日)表示，今年不會再派船隻出海阻止日本捕鯨行動，因為日本政府出動軍事裝備與武器保護捕鯨船，自知絕無可能對抗政府的軍力及財力，將尋求其他策略。
+                    協會創辦人華國際護鯨組織「海洋守護者」 放棄</p>
+            </div>
+        </div>
+        <!-- goal -->
+        <div class="aboutus-container clearfix aboutus-goal-container">
+            <div class="aboutus-goal-midlesection clearfix">
+                <div class="aboutus-goal-circle-outside">
+                    <svg id="animated" viewbox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="#91a5c4" />
+                        <path id="progress" stroke-linecap="round" stroke-width="2" stroke="darkblue" fill="none" d="M50 10
+                               a 40 40 0 0 1 0 80
+                               a 40 40 0 0 1 0 -80">
+                        </path>
+                        <text id="count" x="50" y="50" text-anchor="middle" dy="7" font-size="20">87%</text>
+                    </svg>
+                </div>
+                <div class="aboutus-goal-txt clearfix">
+                    <h2 class="aboutus-goal-title">我們的目標</h2>
+                    <img class="goal-whale" src="images/aboutus-img/orca-23182_960_720.png" alt="whale">
+                    <p>全球海洋守護協會（Sea Shepherd Global）獲得荷蘭、英國及瑞典彩券機構贊助，斥資830萬歐元（合台幣約2億8610萬）打造高速船「海洋勇士號」（Ocean warrior），將在12月投入南極海域保護鯨魚的行動。法新社報導，全球海洋守護協會執行長康奈里森（Alex
+                        Cornelissen）表示全球海洋守護協會（Sea Shepherd Global）獲得荷蘭、英國及瑞典彩券機構贊助，斥資830萬歐元（合台幣約2億8610萬）打造高速船「海洋勇士號」（Ocean
+                        warrior），將在12月投入南極海域保護鯨魚的行動。法新社報導，全球海洋守護協會執行長康奈里森（Alex Cornelissen）表示，「有了這艘海洋勇士號，我們首度能夠破壞性捕撈、海洋酸化與氣候變遷，都嚴重威脅海洋健康生態。每年，至少有30萬條鯨魚遭誤捕而死。近40年來，綠色和平和全球許多保護海洋的組織並肩作戰，最終目標，是推動全球40%海洋劃為海洋保護區！
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- milestone -->
+        <div class="aboutus-milestone clearfix">
+            <div class="aboutus-milestone-title">
+                <a href="">
+                    <h2>里程碑
+                        <i class="fas fa-angle-double-down"></i>
+                    </h2>
+                </a>
+                <div class="aboutus-milestone-open">
+                    <h2>我們的成果</h2>
+                    <p>全球海洋守護協會（Sea Shepherd Global）獲得荷蘭、英國及瑞典彩券機構贊助，斥資830萬歐元（合台幣約2億8610萬）打造高速船「海洋勇士號」（Ocean warrior），將在12月投入南極海域保護鯨魚的行動。法新社報導，全球海洋守護協會執行長康奈里森（Alex
+                        Cornelissen）表示，「有了這艘海洋勇士號，我們首度能夠破壞性捕撈、海洋酸化與氣候變遷，都嚴重威脅海洋健康生態。每年，至少有30萬條鯨魚遭誤捕而死。近40年來，綠色和平和全球許多保護海洋的組織並肩作戰，最終目標，是推動全球40%海洋劃為海洋保護區！
+                    </p>
+                    <a href="">
+                        <div class="aboutus-milestone-seemorebtn">
+                            查看更多成果
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="aboutus-milestone-map">
+                <div id="svg-rout" class="svg-rout-class"></div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Custom navMenu dropdown -->
     <ul class="navMenu_dropdown" id="dropdownAbout">
@@ -103,107 +195,24 @@
             <a href="#" id="navBoardcast">宣傳講座</a>
         </li>
     </ul>
-    <!-- opening start -->
-    <div class="aboutus-opening">
-        <div class="aboutus-video">
-            <h3 class="aboutus-slogen">if Whale die, We die</h3>
-            <img class="aboutus-opening-diverimg-1" src="image/aboutus-img/diver-shape3.svg" alt="diver">
-            <img class="aboutus-opening-diverimg-2" src="image/aboutus-img/diver-shape4.svg" alt="diver-1">
-            <h2 class="aboutus-name">關於鯨生鯨世</h2>
-        </div>
-    </div>
-    <!-- opening end -->
-    <!-- about us start -->
-    <div class="aboutus-bg"></div>
-    <div class="aboutus clearfix">
-        <div class="aboutus-container">
-            <div class="aboutus-text-father">
-                <h2 class="aboutus-title">About Us</h2>
-                <p class="aboutus-content-1">國際護鯨組織「海洋守護者」 放棄狙擊日本捕鯨船. 3121. 出版時間：2017/08/29 23:14. 法新社資料照片. 國際反捕鯨組織「海洋守護者」協會(Sea Shepherd)周二(29日)表示，今年不會再派船隻出海阻止日本捕鯨行動，因為日本政府出動軍事裝備與武器保護捕鯨船，自知絕無可能對抗政府的軍力及財力，將尋求其他策略。</p>
-                <div class="aboutus-content-2">打不過日本的軍隊，護鯨組織「海洋守護協會」（Sea Shepherd）創辦人華森（Paul Watson）宣布，今年取消在南極干擾日本捕鯨船的年度行動，不過華森強調，只是不派船隻去南極，並不是放棄這項行動，他們絕對不會退出打擊非法捕鯨行動。華森在官網宣布，由於日本已經動用軍事力量，包括監控系統，他們</div>
-            </div>
-            <div class="aboutus-left-pic">
-                <img src="image/aboutus-img/whale01.jpg" alt="whale">
-            </div>
-        </div>
-    </div>
-    <!-- aboutus end -->
-    <!-- our-method start -->
-    <div class="aboutus-method">
-        <div class="aboutus-method-backimage">
-            <div class="aboutus-method-logo">
-                <img src="image/aboutus-img/facklogo.png" alt="fack's logo">
-            </div>
-            <!-- <div class="aboutus-method-line"></div> -->
-            <h2 class="aboutus-method-title">我們的方法</h2>
-            <p class="aboutus-method-content">國際護鯨組織「海洋守護者」 放棄狙擊日本捕鯨船. 3121. 出版時間：2017/08/29 23:14. 法新社資料照片. 國際反捕鯨組織「海洋守護者」協會(Sea Shepherd)周二(29日)表示，今年不會再派船隻出海阻止日本捕鯨行動，因為日本政府出動軍事裝備與武器保護捕鯨船，自知絕無可能對抗政府的軍力及財力，將尋求其他策略。
-                協會創辦人華國際護鯨組織「海洋守護者」 放棄狙擊日本捕鯨船. 3121. 出版時間：2017/08/29 23:14. 法新社資料照片. 國際反捕鯨組織「海洋守護者」協會(Sea Shepherd)周二(29日)表示，今年不會再派船隻出海阻止日本捕鯨行動，因為日本政府出動軍事裝備與武器保護捕鯨船，自知絕無可能對抗政府的軍力及財力，將尋求其他策略。
-                協會創辦人華全球海洋守護協會（Sea Shepherd Global）獲得荷蘭、英國及瑞典彩券機構贊助，斥資830萬歐元（合台幣約2億8610萬）打造高速船「海洋勇士號」（Ocean warrior），將在12月投入南極海域保護鯨魚的行動。法新社報導，全球海洋守護協會執行長康奈里森（Alex
-                Cornelissen）表示，「有了這艘海洋勇士號，我們首度能夠
-            </p>
-        </div>
-    </div>
-    <!-- our-method end -->
-    <!-- start goal -->
-    <div class="aboutus-container clearfix aboutus-goal-container">
-        <div class="aboutus-goal-midlesection clearfix">
-            <div class="aboutus-goal-circle-outside">
-                <svg id="animated" viewbox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="#91a5c4" />
-                    <path id="progress" stroke-linecap="round" stroke-width="2" stroke="darkblue" fill="none" d="M50 10
-                           a 40 40 0 0 1 0 80
-                           a 40 40 0 0 1 0 -80">
-                    </path>
-                    <text id="count" x="50" y="50" text-anchor="middle" dy="7" font-size="20">87%</text>
-                </svg>
-            </div>
-            <div class="aboutus-goal-txt clearfix">
-                <h2 class="aboutus-goal-title">我們的目標</h2>
-                <img src="image/aboutus-img/orca-23182_960_720.png" alt="whale">
-                <p>全球海洋守護協會（Sea Shepherd Global）獲得荷蘭、英國及瑞典彩券機構贊助，斥資830萬歐元（合台幣約2億8610萬）打造高速船「海洋勇士號」（Ocean warrior），將在12月投入南極海域保護鯨魚的行動。法新社報導，全球海洋守護協會執行長康奈里森（Alex
-                    Cornelissen）表示全球海洋守護協會（Sea Shepherd Global）獲得荷蘭、英國及瑞典彩券機構贊助，斥資830萬歐元（合台幣約2億8610萬）打造高速船「海洋勇士號」（Ocean warrior），將在12月投入南極海域保護鯨魚的行動。法新社報導，全球海洋守護協會執行長康奈里森（Alex
-                    Cornelissen）表示，「有了這艘海洋勇士號，我們首度能夠破壞性捕撈、海洋酸化與氣候變遷，都嚴重威脅海洋健康生態。每年，至少有30萬條鯨魚遭誤捕而死。近40年來，綠色和平和全球許多保護海洋的組織並肩作戰，最終目標，是推動全球40%海洋劃為海洋保護區！
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- end of aboutus-goal -->
-    <!-- milestone start -->
-    <div class="aboutus-milestone clearfix">
 
-        <div class="aboutus-milestone-title">
-            <a href="">
-                <h2>里程碑
-                    <i class="fas fa-angle-double-down"></i>
-                </h2>
-            </a>
-            <div class="aboutus-milestone-open">
-                <h2>我們的成果</h2>
-                <p>全球海洋守護協會（Sea Shepherd Global）獲得荷蘭、英國及瑞典彩券機構贊助，斥資830萬歐元（合台幣約2億8610萬）打造高速船「海洋勇士號」（Ocean warrior），將在12月投入南極海域保護鯨魚的行動。法新社報導，全球海洋守護協會執行長康奈里森（Alex
-                    Cornelissen）表示，「有了這艘海洋勇士號，我們首度能夠破壞性捕撈、海洋酸化與氣候變遷，都嚴重威脅海洋健康生態。每年，至少有30萬條鯨魚遭誤捕而死。近40年來，綠色和平和全球許多保護海洋的組織並肩作戰，最終目標，是推動全球40%海洋劃為海洋保護區！
-                </p>
-                <a href="">
-                    <div class="aboutus-milestone-seemorebtn">
-                        查看更多成果
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="aboutus-milestone-map">
-            <div id="svg-rout" class="svg-rout-class"></div>
-        </div>
-    </div>
-    <!-- milestone end -->
+
+    <!-- js -->
+    <script src="js/owlcarousel/owl.carousel.min.js"></script>
+    <!-- jquery -->
+    <script type='text/javascript' src="plugin/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+    <!-- plugins -->
+    <script src="plugin/jquery.lazylinepainter-1.7.0.min.js"></script>
+
+    <script type='text/javascript' src="plugin/Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
+    <!-- owl -->
     <script>
-        /* 
-         * Lazy Line Painter - Path Object 
-         * Generated using 'SVG to Lazy Line Converter'
-         * 
-         * http://lazylinepainter.info 
-         * Copyright 2013, Cam O'Connell  
-         *  
-         */
-
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel();
+        });
+    </script>
+    <script>
         var pathObj = {
             "svg-rout": {
                 "strokepath": [{
@@ -280,6 +289,10 @@
             }, 5000);
         });
     </script>
+
+    <!-- custom -->
+    <script src="js/custom.js"></script>
+
 
 
 

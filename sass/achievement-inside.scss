@@ -7,10 +7,9 @@
     outline: 1px solid red;
 }
 
-body {
-    background-color: rgb(205, 221, 247)
-}
-
+// body {
+//     background-color: rgb(205, 221, 247)
+// }
 .clearfix {
     &:after {
         content: "";
@@ -64,7 +63,11 @@ body {
     margin-left: auto;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.long {
+    height: 100vh;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .achievement-container {
     overflow: hidden;
     @include achievement-inside-container();
@@ -89,23 +92,48 @@ body {
         .bar-2,
         .bar-3 {
             overflow: hidden;
-            @include size(33.333333%, auto) float: left; // background-color: red;
+            @include size(20%, auto);
+            float: left; // background-color: red;
+        }
+        .progressbar-text-father {
+            box-sizing: border-box;
+            .progressbar-text1,
+            .progressbar-text2,
+            .progressbar-text3 {
+                @include size(40%, null);
+                float: left;
+                box-sizing: border-box;
+                padding: 20px;
+                font-size: 20px;
+            }
         }
     }
     .achieve-inside-bloack {
-        @include size(100%, 50vh);
-        overflow: hidden;
+        @include size(100%, null);
+        max-height: 450px;
+        margin: 10px 0;
         .achieve-inside-left {
+            overflow: hidden;
             @include size(50%, auto);
             float: left;
             @include padding();
             box-sizing: border-box;
             overflow: hidden;
+            p {
+                margin: 15px 0;
+                font-size: 20px;
+            }
+            span {
+                display: inline-block;
+                width: 100%;
+                border: 1px solid black;
+                text-align: center;
+                cursor: pointer;
+            }
         }
         .achieve-inside-right {
-            .achieve-inside-txt {
-                @include padding();
-            }
+            max-height: 300px;
+            overflow: hidden;
             @include size(50%, auto);
             float: left;
             overflow: hidden;
@@ -117,35 +145,50 @@ body {
                 bottom: 0px;
             }
         }
-    } // end .achieve-inside-bloack
-} //end container
+    }
+} //end 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// .achievment-inside-container {
-//     max-width: 1140px;
-//     margin-right: auto;
-//     margin-left: auto;
-//     .inside-test {
-//         width: 50%;
-//     }
-//     .inside-img {
-//         width: 50%;
-//         height: 250px;
-//         overflow: hidden;
-//         img {
-//             // @include size(100%, auto);
-//         }
-//     }
-//     div {
-//         float: left;
-//     }
-// }
-// .inside-img {
-//     position: relative;
-//     img {
-//         position: absolute;
-//     }
-// }
-// .long {
-//     height: 500vh;
-// }
+@media screen and (max-width:767px) {
+    .achievement-container {
+        .achieve-inside-progrebar {
+            .bar-1,
+            .bar-2,
+            .bar-3 {
+                font-size: 20px;
+                width: 33.33333%;
+                text {
+                    font-size: 15px;
+                    width: 100%;
+                }
+            }
+            .progressbar-text-father {
+                .progressbar-text1,
+                .progressbar-text2,
+                .progressbar-text3 {
+                    display: none;
+                }
+            }
+        }
+        .achieve-inside-title {
+            width: 100%;
+            font-size: 15px;
+        }
+        .achieve-inside-bloack {
+            .achieve-inside-right {
+                width: 100%;
+                margin-top: 15px;
+                @include padding();
+            }
+            .achieve-inside-left {
+                width: 100%;
+                @include padding();
+                margin-top: 15px;
+                p {
+                    font-size: 25px !important;
+                }
+            }
+        }
+    }
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
