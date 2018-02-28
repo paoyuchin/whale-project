@@ -1,324 +1,511 @@
-                * {
-                    // common area
-                    padding: 0;
-                    margin: 0;
-                    list-style: none;
-                    text-decoration: none;
-                    outline: 1px solid red;
+        * {
+            // common area
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none; // outline: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0; // background-color: rgb(205, 221, 247)
+        }
+
+        .clearfix {
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+
+        @mixin btn($w, $h, $bgcolor, $color) {
+            width: $w;
+            height: $h;
+            background-color: $bgcolor;
+            color: $color;
+            border-radius: 50%;
+        }
+
+        @mixin positionAbcenter() {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%)
+        }
+
+        @mixin size($w, $h:null) {
+            width: $w;
+            height: $h;
+        }
+
+        @mixin marginauto() {
+            margin-left: auto;
+            margin-right: auto;
+        } // .achieve-bg {
+        //     background-repeat: no-repeat; // background-size: cover;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 1500px;
+        //     height: 10000px; // @include size(100%, 100%);
+        //     z-index: -100;
+        //     background-image: url("../image/achievement-img/counter.png");
+        // } /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        .header {
+            position: fixed;
+        }
+
+        .achievement-bg {
+            background-image: url('../image/achievement-img/WhaleOffKaikouraWatermarked.jpg');
+            @include size(100%,
+            100%);
+            background-size: cover;
+            background-position: center top; // margin-bottom: 50px;
+            box-sizing: border-box;
+            position: relative;
+            h2 {
+                color: white;
+                font-size: 60px;
+                max-width: 100%;
+                padding: 170px;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            h4 {
+                color: white;
+                padding: 20px 0;
+                box-sizing: border-box;
+                max-width: 100%;
+                text-align: center;
+            }
+            .element1 {
+                background-image: url('../image/achievement-img/big-clouds.png');
+                background-size: cover;
+                width: 500px;
+                height: 300px;
+                position: absolute;
+                left: 40%;
+                top: 46%;
+            }
+            .element2 {
+                background-image: url('../image/achievement-img/clouds-near.png');
+                background-size: cover;
+                width: 500px;
+                height: 300px;
+                position: absolute;
+                left: 58%;
+                top: 53%;
+            }
+            .element3 {
+                background-image: url('../image/achievement-img/clouds-near.png');
+                background-size: cover;
+                width: 500px; // height: 300px;
+                position: absolute;
+                left: 10%;
+                top: 59%;
+            }
+            .element4 {
+                background-image: url('../image/achievement-img/gie5a5AzT.gif');
+                background-size: 100%;
+                width: 300px;
+                height: 300px;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                background-repeat: no-repeat;
+            }
+            .element5 {
+                background-image: url('../image/achievement-img/74525-whale-tail.png');
+                background-size: 100%;
+                width: 200px;
+                height: 300px;
+                position: absolute;
+                left: 50%;
+                background-repeat: no-repeat;
+                top: 77%;
+            }
+            .element6 {
+                background-image: url('../image/achievement-img/clouds-near.png');
+                background-size: 100%;
+                width: 700px;
+                height: 300px;
+                position: absolute;
+                left: 15%;
+                background-repeat: no-repeat;
+                top: 75%;
+            }
+            .element7 {
+                background-image: url('../image/achievement-img/clouds-far.png');
+                background-size: 100%;
+                width: 700px;
+                height: 300px;
+                position: absolute;
+                left: 10%;
+                background-repeat: no-repeat;
+                top: 75%;
+            }
+        }
+
+        .section1 {
+            height: 80vh;
+            width: 100%;
+            background-color: #231F20;
+            p {
+                text-align: center;
+                box-sizing: border-box;
+                width: 100%;
+                font-size: 30px;
+                padding-top: 30px;
+                color: white;
+            }
+            .layer {
+                @include marginauto();
+                max-width: 1140px;
+                .btn1,
+                .btn2,
+                .section1-content {
+                    margin: 45px 0;
                     box-sizing: border-box;
                 }
-
-                body {
+                .btn1,
+                .btn2 {
+                    color: white;
+                    width: 10%;
+                    float: left;
+                    font-size: 50px;
                     box-sizing: border-box;
-                    margin: 0;
-                    padding: 0; // background-color: rgb(205, 221, 247)
                 }
-
-                .clearfix {
-                    &:after {
-                        content: "";
-                        display: block;
-                        clear: both;
+                .btn2,
+                .btn1 {
+                    padding: 110px 40px;
+                }
+                .section1-content {
+                    color: white;
+                    width: 80%;
+                    float: left;
+                    img {
+                        width: 100%;
+                        max-height: 240px;
                     }
-                }
-
-                @mixin btn($w, $h, $bgcolor, $color) {
-                    width: $w;
-                    height: $h;
-                    background-color: $bgcolor;
-                    color: $color;
-                    border-radius: 50%;
-                }
-
-                @mixin positionAbcenter() {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translateX(-50%) translateY(-50%)
-                }
-
-                @mixin size($w, $h:null) {
-                    width: $w;
-                    height: $h;
-                }
-
-                @mixin marginauto() {
-                    margin-left: auto;
-                    margin-right: auto;
-                } /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                .grid {
-                    figure {
-                        position: relative;
-                        overflow: hidden;
-                        margin: 15px;
-                        background: #333;
+                    p {
+                        // padding: 90px 35px;
                         box-sizing: border-box;
-                        img {
-                            position: relative;
-                            display: block;
-                            width: 100%;
-                            opacity: 0.7;
-                            transition: opacity 0.3s;
-                            min-height: 400px;
-                        }
-                    }
-                    figcaption {
-                        position: absolute;
-                        top: 0;
-                        z-index: 11;
-                        padding: 10px;
-                        width: 100%;
-                        height: 100%;
-                        text-align: center;
-                    }
-                    figcaption h2 {
-                        font-size: 28px;
-                        margin: 0 0 20px 0;
-                        color: #3498db;
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                        font-weight: 300; // font-size: 130%;
-                        transition: transform 0.3s;
-                    }
-                    figcaption p {
-                        padding: 0 20px;
-                        color: #aaa;
-                        font-weight: 300;
-                        transition: opacity 0.3s, transform 0.3s;
-                    }
-                    figcaption h2,
-                    figcaption p {
-                        transform: translateY(50px);
-                    }
-                    figure button {
-                        position: absolute;
-                        padding: 4px 20px;
-                        border: none;
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                        font-weight: bold;
-                        transition: opacity 0.3s, transform 0.3s;
-                    }
-                    figcaption h2 {
-                        color: #e74c3c;
-                    }
-                    figcaption p {
-                        transition-delay: 0.05s;
-                    }
-                    figure button {
-                        bottom: 0;
-                        left: 0;
-                        padding: 15px;
-                        width: 100%;
-                        background: #fff;
-                        color: #333;
-                        font-weight: 300;
-                        transform: translateY(100%);
-                        font-size: 100%;
-                        margin: 0px;
-                    }
-                    & a:hover figure button {
-                        transition-timing-function: ease-out;
-                        transform: translateY(0);
-                    }
-                    & figcaption h2,
-                    & figcaption p {
-                        timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
-                    }
-                    & a:hover figcaption p {
-                        transition-delay: 0s;
-                        transition-duration: 0.1s;
-                    }
-                    figcaption,
-                    figcaption h2,
-                    figcaption p,
-                    figure button {
-                        backface-visibility: hidden;
-                    }
-                    svg {
-                        position: absolute;
-                        top: -1px;
-                        z-index: 10;
-                        width: 100%;
-                        height: auto;
-                    }
-                    a:hover figure img {
-                        opacity: 1;
-                    }
-                    a:hover figcaption h2,
-                    a:hover figcaption p {
-                        transform: translateY(0);
-                    }
-                    a:hover figcaption p {
-                        opacity: 0;
-                    }
-                    figcaption h2 {
-                        color: #e74c3c;
-                    }
-                    figcaption p {
-                        transition-delay: 0.05s;
-                    }
-                    figure button {
-                        bottom: 0;
-                        left: 0;
-                        padding: 20px;
-                    }
-                    @include marginauto();
-                    max-width: 1140px;
-                    .achievement-btn-fahter {
-                        width: 100%; // background-color: red;
-                        a {
-                            @include size(50%, null);
-                        }
-                        .achievement-btn {
-                            display: inline-block;
-                            color: black;
-                            float: left;
-                            width: 50%;
-                            text-align: center;
-                            line-height: 50px;
-                            border: 1px solid black;
-                            padding: 150px 0px;
-                            box-sizing: border-box;
-                            font-size: 50px;
-                        }
-                        .achievement-btn-1 {
-                            position: relative;
-                            cursor: pointer;
-                            &::before {
-                                content: ' ';
-                                display: block;
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                width: 100%;
-                                height: 100%;
-                                z-index: 1;
-                                opacity: 0.6;
-                                background-image: url('../image/achievement-img/whale111.jpg');
-                                background-repeat: no-repeat;
-                                background-position: 50% 0;
-                                -ms-background-size: cover;
-                                -o-background-size: cover;
-                                -moz-background-size: cover;
-                                -webkit-background-size: cover;
-                                background-size: cover;
-                            }
-                        } //end achievement-btn-1
-                        .achievement-btn-2 {
-                            position: relative;
-                            cursor: pointer;
-                            &:before {
-                                content: ' ';
-                                display: block;
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                width: 100%;
-                                height: 100%;
-                                z-index: 1;
-                                opacity: 0.6;
-                                background-image: url('../image/achievement-img/whalecourse.jpeg');
-                                background-repeat: no-repeat;
-                                background-position: 50% 0;
-                                -ms-background-size: cover;
-                                -o-background-size: cover;
-                                -moz-background-size: cover;
-                                -webkit-background-size: cover;
-                                background-size: cover;
-                            }
-                        }
-                    }
-                    .achievement-slogen {
-                        box-sizing: border-box;
-                        @include size(100%,
-                        auto);
-                        @include marginauto();
-                        color: black;
-                        margin: 30px 0;
-                        .achieve-fishimg-1 {
-                            display: block;
-                            @include size(10%,
-                            null);
-                            float: left;
-                        }
-                        .achieve-fishimg-2 {
-                            display: block;
-                            @include size(10%,
-                            null);
-                            float: left;
-                        }
-                        p {
-                            @include size(80%,
-                            null);
-                            font-size: 20px;
-                            float: left;
-                            text-align: center;
-                            padding: 30px 0;
-                            box-sizing: border-box;
-                        }
-                    }
-                    .achievement-content a {
                         float: left;
-                        width: 25%;
-                        color: #333;
-                        box-sizing: border-box;
-                        &:nth-child(odd) {
-                            margin: 30px 0 -30px 0;
-                        }
+                        width: 100%;
+                        text-align: center;
+                        color: white;
+                        font-size: 30px;
                     }
-                } ///////////////////////////////////////////////////////////////////////////////////////.active {
-                //     border: 5px solid black;
-                // }
-                @media screen and (max-width:767px) {
-                    .grid {
-                        #A {
-                            .achieve-fishimg-1 {
-                                width: 40%;
-                            }
-                            p {
-                                width: 60%;
-                                padding: 20px 0;
-                                box-sizing: border-box;
-                            }
-                            .achieve-fishimg-2 {
-                                display: none;
-                            }
-                            .achievement-content {
-                                a {
-                                    width: 100%;
-                                    margin-top: 10px;
-                                    margin-bottom: 10px;
-                                    box-sizing: border-box;
-                                    figure {
-                                        svg {
-                                            height: 50%;
-                                        }
-                                        figcaption {
-                                            p {
-                                                display: none;
-                                            }
-                                            h2 {
-                                                font-size: 30px;
-                                                padding-top: 0;
-                                            }
-                                        }
+                }
+            }
+        }
+
+        .grid {
+            margin-top: 20px;
+            box-sizing: border-box;
+            figure {
+                position: relative;
+                overflow: hidden;
+                margin: 15px;
+                background: #333;
+                box-sizing: border-box;
+                img {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    opacity: 0.7;
+                    transition: opacity 0.3s;
+                    min-height: 400px;
+                }
+            }
+            figcaption {
+                position: absolute;
+                top: 0;
+                z-index: 11;
+                padding: 10px;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+            figcaption h2 {
+                font-size: 28px;
+                margin: 0 0 20px 0;
+                color: #3498db;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 300; // font-size: 130%;
+                transition: transform 0.3s;
+            }
+            figcaption p {
+                padding: 0 20px;
+                color: #aaa;
+                font-weight: 300;
+                transition: opacity 0.3s, transform 0.3s;
+            }
+            figcaption h2,
+            figcaption p {
+                transform: translateY(50px);
+            }
+            figure button {
+                position: absolute;
+                padding: 4px 20px;
+                border: none;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: bold;
+                transition: opacity 0.3s, transform 0.3s;
+            }
+            figcaption h2 {
+                color: #e74c3c;
+            }
+            figcaption p {
+                transition-delay: 0.05s;
+            }
+            figure button {
+                bottom: 0;
+                left: 0;
+                padding: 15px;
+                width: 100%;
+                background: #fff;
+                color: #333;
+                font-weight: 300;
+                transform: translateY(100%);
+                font-size: 100%;
+                margin: 0px;
+            }
+            & a:hover figure button {
+                transition-timing-function: ease-out;
+                transform: translateY(0);
+            }
+            & figcaption h2,
+            & figcaption p {
+                timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
+            }
+            & a:hover figcaption p {
+                transition-delay: 0s;
+                transition-duration: 0.1s;
+            }
+            figcaption,
+            figcaption h2,
+            figcaption p,
+            figure button {
+                backface-visibility: hidden;
+            }
+            svg {
+                position: absolute;
+                top: -1px;
+                z-index: 10;
+                width: 100%;
+                height: auto;
+            }
+            a:hover figure img {
+                opacity: 1;
+            }
+            a:hover figcaption h2,
+            a:hover figcaption p {
+                transform: translateY(0);
+            }
+            a:hover figcaption p {
+                opacity: 0;
+            }
+            figcaption h2 {
+                color: #e74c3c;
+            }
+            figcaption p {
+                transition-delay: 0.05s;
+            }
+            figure button {
+                bottom: 0;
+                left: 0;
+                padding: 20px;
+            }
+            @include marginauto();
+            max-width: 1140px;
+            .achievement-btn-fahter {
+                width: 100%; // background-color: red;
+                .achievement-btn {
+                    display: inline-block;
+                    color: black;
+                    float: left;
+                    width: 50%;
+                    text-align: center;
+                    line-height: 50px;
+                    padding: 150px 0px;
+                    box-sizing: border-box;
+                    font-size: 50px;
+                    p {
+                        font-size: 30px;
+                    }
+                }
+                .achievement-btn-1 {
+                    position: relative;
+                    cursor: pointer;
+                    &::before {
+                        content: ' ';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 350px;
+                        height: 350px;
+                        border-radius: 50%;
+                        left: 15%;
+                        z-index: 1;
+                        opacity: 0.6;
+                        background-image: url('../image/achievement-img/whale111.jpg');
+                        background-repeat: no-repeat;
+                        background-position: 50% 0;
+                        -ms-background-size: cover;
+                        -o-background-size: cover;
+                        -moz-background-size: cover;
+                        -webkit-background-size: cover;
+                        background-size: cover;
+                    }
+                } //end achievement-btn-1
+                .achievement-btn-2 {
+                    position: relative;
+                    cursor: pointer;
+                    &:before {
+                        content: ' ';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 350px;
+                        height: 350px;
+                        border-radius: 50%;
+                        left: 20%;
+                        z-index: 1;
+                        opacity: 0.6;
+                        background-image: url('../image/achievement-img/whalecourse.jpeg');
+                        background-repeat: no-repeat;
+                        background-position: 50% 0;
+                        -ms-background-size: cover;
+                        -o-background-size: cover;
+                        -moz-background-size: cover;
+                        -webkit-background-size: cover;
+                        background-size: cover;
+                    }
+                }
+            }
+            .achieve-act-page {
+                margin-top: 30px;
+                box-sizing: border-box;
+            } // .achievement-slogen {
+            //     box-sizing: border-box;
+            //     @include size(100%,
+            //     auto);
+            //     @include marginauto();
+            //     color: black;
+            //     margin: 30px 0;
+            //     .achieve-fishimg-1 {
+            //         display: block;
+            //         @include size(10%,
+            //         null);
+            //         float: left;
+            //     }
+            //     .achieve-fishimg-2 {
+            //         display: block;
+            //         @include size(10%,
+            //         null);
+            //         float: left;
+            //     }
+            //     p {
+            //         @include size(80%,
+            //         null);
+            //         font-size: 20px;
+            //         float: left;
+            //         text-align: center;
+            //         padding: 30px 0;
+            //         box-sizing: border-box;
+            //     }
+            // }
+            .achievement-content a {
+                float: left;
+                width: 25%;
+                color: #333;
+                box-sizing: border-box;
+                &:nth-child(odd) {
+                    margin: 30px 0 -30px 0;
+                }
+            }
+        } ///////////////////////////////////////////////////////////////////////////////////////.active {
+        //     border: 5px solid black;
+        // }
+        @media screen and (max-width:767px) {
+            .grid {
+                #A {
+                    .achieve-fishimg-1 {
+                        width: 40%;
+                    }
+                    p {
+                        width: 60%;
+                        padding: 20px 0;
+                        box-sizing: border-box;
+                    }
+                    .achieve-fishimg-2 {
+                        display: none;
+                    }
+                    .achievement-content {
+                        a {
+                            width: 100%;
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            box-sizing: border-box;
+                            figure {
+                                svg {
+                                    height: 50%;
+                                }
+                                figcaption {
+                                    p {
+                                        display: none;
+                                    }
+                                    h2 {
+                                        font-size: 30px;
+                                        padding-top: 0;
                                     }
                                 }
                             }
                         }
-                        #B {
-                            .achieve-fishimg-1 {
-                                width: 40%;
-                            }
-                            p {
-                                width: 60%;
-                                padding: 20px 0;
-                                box-sizing: border-box;
-                            }
-                            .achieve-fishimg-2 {
-                                display: none;
+                    }
+                }
+                #B {
+                    .achieve-fishimg-1 {
+                        width: 40%;
+                    }
+                    p {
+                        width: 60%;
+                        padding: 20px 0;
+                        box-sizing: border-box;
+                    }
+                    .achieve-fishimg-2 {
+                        display: none;
+                    }
+                    .achievement-content {
+                        a {
+                            width: 100%;
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            box-sizing: border-box;
+                            figure {
+                                svg {
+                                    height: 50%;
+                                }
+                                figcaption {
+                                    p {
+                                        display: none;
+                                    }
+                                    h2 {
+                                        font-size: 30px;
+                                        padding-top: 0;
+                                    }
+                                }
                             }
                         }
                     }
-                } //end
+                }
+            }
+        } //end

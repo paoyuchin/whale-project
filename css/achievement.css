@@ -3,7 +3,6 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
-  outline: 1px solid red;
   box-sizing: border-box; }
 
 body {
@@ -16,7 +15,138 @@ body {
   display: block;
   clear: both; }
 
+.header {
+  position: fixed; }
+
+.achievement-bg {
+  background-image: url("../image/achievement-img/WhaleOffKaikouraWatermarked.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
+  box-sizing: border-box;
+  position: relative; }
+  .achievement-bg h2 {
+    color: white;
+    font-size: 60px;
+    max-width: 100%;
+    padding: 170px;
+    box-sizing: border-box;
+    text-align: center; }
+  .achievement-bg h4 {
+    color: white;
+    padding: 20px 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: center; }
+  .achievement-bg .element1 {
+    background-image: url("../image/achievement-img/big-clouds.png");
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 40%;
+    top: 46%; }
+  .achievement-bg .element2 {
+    background-image: url("../image/achievement-img/clouds-near.png");
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 58%;
+    top: 53%; }
+  .achievement-bg .element3 {
+    background-image: url("../image/achievement-img/clouds-near.png");
+    background-size: cover;
+    width: 500px;
+    position: absolute;
+    left: 10%;
+    top: 59%; }
+  .achievement-bg .element4 {
+    background-image: url("../image/achievement-img/gie5a5AzT.gif");
+    background-size: 100%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    background-repeat: no-repeat; }
+  .achievement-bg .element5 {
+    background-image: url("../image/achievement-img/74525-whale-tail.png");
+    background-size: 100%;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    background-repeat: no-repeat;
+    top: 77%; }
+  .achievement-bg .element6 {
+    background-image: url("../image/achievement-img/clouds-near.png");
+    background-size: 100%;
+    width: 700px;
+    height: 300px;
+    position: absolute;
+    left: 15%;
+    background-repeat: no-repeat;
+    top: 75%; }
+  .achievement-bg .element7 {
+    background-image: url("../image/achievement-img/clouds-far.png");
+    background-size: 100%;
+    width: 700px;
+    height: 300px;
+    position: absolute;
+    left: 10%;
+    background-repeat: no-repeat;
+    top: 75%; }
+
+.section1 {
+  height: 80vh;
+  width: 100%;
+  background-color: #231F20; }
+  .section1 p {
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 30px;
+    padding-top: 30px;
+    color: white; }
+  .section1 .layer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px; }
+    .section1 .layer .btn1,
+    .section1 .layer .btn2,
+    .section1 .layer .section1-content {
+      margin: 45px 0;
+      box-sizing: border-box; }
+    .section1 .layer .btn1,
+    .section1 .layer .btn2 {
+      color: white;
+      width: 10%;
+      float: left;
+      font-size: 50px;
+      box-sizing: border-box; }
+    .section1 .layer .btn2,
+    .section1 .layer .btn1 {
+      padding: 110px 40px; }
+    .section1 .layer .section1-content {
+      color: white;
+      width: 80%;
+      float: left; }
+      .section1 .layer .section1-content img {
+        width: 100%;
+        max-height: 240px; }
+      .section1 .layer .section1-content p {
+        box-sizing: border-box;
+        float: left;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 30px; }
+
 .grid {
+  margin-top: 20px;
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   max-width: 1140px; }
@@ -117,8 +247,6 @@ body {
     padding: 20px; }
   .grid .achievement-btn-fahter {
     width: 100%; }
-    .grid .achievement-btn-fahter a {
-      width: 50%; }
     .grid .achievement-btn-fahter .achievement-btn {
       display: inline-block;
       color: black;
@@ -126,10 +254,11 @@ body {
       width: 50%;
       text-align: center;
       line-height: 50px;
-      border: 1px solid black;
       padding: 150px 0px;
       box-sizing: border-box;
       font-size: 50px; }
+      .grid .achievement-btn-fahter .achievement-btn p {
+        font-size: 30px; }
     .grid .achievement-btn-fahter .achievement-btn-1 {
       position: relative;
       cursor: pointer; }
@@ -139,8 +268,10 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        left: 15%;
         z-index: 1;
         opacity: 0.6;
         background-image: url("../image/achievement-img/whale111.jpg");
@@ -160,8 +291,10 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        left: 20%;
         z-index: 1;
         opacity: 0.6;
         background-image: url("../image/achievement-img/whalecourse.jpeg");
@@ -172,29 +305,9 @@ body {
         -moz-background-size: cover;
         -webkit-background-size: cover;
         background-size: cover; }
-  .grid .achievement-slogen {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-    margin: 30px 0; }
-    .grid .achievement-slogen .achieve-fishimg-1 {
-      display: block;
-      width: 10%;
-      float: left; }
-    .grid .achievement-slogen .achieve-fishimg-2 {
-      display: block;
-      width: 10%;
-      float: left; }
-    .grid .achievement-slogen p {
-      width: 80%;
-      font-size: 20px;
-      float: left;
-      text-align: center;
-      padding: 30px 0;
-      box-sizing: border-box; }
+  .grid .achieve-act-page {
+    margin-top: 30px;
+    box-sizing: border-box; }
   .grid .achievement-content a {
     float: left;
     width: 25%;
@@ -231,4 +344,16 @@ body {
     padding: 20px 0;
     box-sizing: border-box; }
   .grid #B .achieve-fishimg-2 {
-    display: none; } }
+    display: none; }
+  .grid #B .achievement-content a {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; }
+    .grid #B .achievement-content a figure svg {
+      height: 50%; }
+    .grid #B .achievement-content a figure figcaption p {
+      display: none; }
+    .grid #B .achievement-content a figure figcaption h2 {
+      font-size: 30px;
+      padding-top: 0; } }

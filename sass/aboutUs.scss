@@ -1,8 +1,7 @@
 // common area
 * {
     padding: 0;
-    margin: 0;
-    outline: 1px solid red;
+    margin: 0; // outline: 1px solid red;
     position: relative;
     box-sizing: border-box;
 }
@@ -83,6 +82,18 @@ body {
     background-image: url("../images/aboutus-img/bg.png");
 }
 
+.svg-video-shape {
+    video {
+        clip-path: url(#svgPath);
+        width: 500px;
+        height: auto;
+        position: relative;
+        z-index: 333333;
+        left: 40%;
+        top: 60%;
+    }
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // css of aboutus-opening
 .aboutus-container {
@@ -126,7 +137,7 @@ body {
     }
 } //end aboutus-video
 .aboutus {
-    height: 70vh;
+    // max-height: 70vh;
     .aboutus-text-father {
         float: left;
         width: 40%;
@@ -177,6 +188,8 @@ body {
     background-size: 100vw;
     height: 80vh;
     position: relative;
+    margin-top: 50px;
+    box-sizing: border-box;
     .aboutus-method-backimages {
         background-image: url('../images/aboutus-img/gola.jpg');
         background-size: 95%;
@@ -186,10 +199,10 @@ body {
         text-align: center;
         .aboutus-method-logo {
             @include size(100px,
-            100px);
+            null);
             position: absolute;
-            left: 50%;
-            top: -20px;
+            left: 44%;
+            top: -38px;
             img {
                 @include size(100%,
                 100%);
@@ -199,10 +212,11 @@ body {
             text-align: center;
             color: white;
             font-size: 60px;
-            @include size(100%,
-            auto);
+            @include size(70%,
+            null);
             position: absolute;
-            top: 10%;
+            top: 18%;
+            left: 13%;
         }
         .aboutus-method-content {
             text-align: center;
@@ -329,7 +343,7 @@ body {
             .aboutus-title {
                 width: 100%;
                 text-align: center;
-                font-size: 80px;
+                font-size: 60px;
                 box-sizing: border-box;
             }
             .aboutus-content-1 {
@@ -348,14 +362,16 @@ body {
     }
     .aboutus-method {
         .aboutus-method-logo {
+            width: 10%;
             top: 0;
             left: 40%;
         }
-        .aboutus-method-backimage {
-            background-size: cover; // margin-top: 15px;
+        .aboutus-method-backimages {
+            background-size: cover;
             box-sizing: border-box;
             .aboutus-method-title {
                 top: 16%;
+                font-size: 50px;
             }
             .aboutus-method-content {
                 width: 90%;
@@ -366,17 +382,22 @@ body {
         }
     }
     .aboutus-goal-container {
+        margin-top: 150px;
+        box-sizing: border-box;
         .goal-whale {
             display: none;
         }
         .aboutus-goal-txt {
             width: 100%;
+            position: relative;
             .aboutus-goal-title {
-                text-align: center;
+                text-align: right;
             }
         }
         .aboutus-goal-circle-outside {
-            width: 100%;
+            width: 30%;
+            position: absolute;
+            bottom: 86%;
         }
     }
     .aboutus-milestone {
