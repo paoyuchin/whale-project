@@ -3,7 +3,8 @@
             padding: 0;
             margin: 0;
             list-style: none;
-            text-decoration: none; // outline: 1px solid red;
+            text-decoration: none;
+            outline: 1px solid red;
             box-sizing: border-box;
         }
 
@@ -59,7 +60,7 @@
         }
 
         .achievement-bg {
-            background-image: url('../image/achievement-img/WhaleOffKaikouraWatermarked.jpg');
+            background-image: url('../image/achievement-img/Whales-Kaikoura.jpg');
             @include size(100%,
             100%);
             background-size: cover;
@@ -68,15 +69,15 @@
             position: relative;
             h2 {
                 color: white;
-                font-size: 60px;
+                font-size: 70px;
                 max-width: 100%;
-                padding: 170px;
+                padding-top: 140px;
                 box-sizing: border-box;
                 text-align: center;
             }
             h4 {
                 color: white;
-                padding: 20px 0;
+                padding: 10px 0;
                 box-sizing: border-box;
                 max-width: 100%;
                 text-align: center;
@@ -87,7 +88,7 @@
                 width: 500px;
                 height: 300px;
                 position: absolute;
-                left: 40%;
+                left: 20%;
                 top: 46%;
             }
             .element2 {
@@ -97,7 +98,7 @@
                 height: 300px;
                 position: absolute;
                 left: 58%;
-                top: 53%;
+                top: 60%;
             }
             .element3 {
                 background-image: url('../image/achievement-img/clouds-near.png');
@@ -113,8 +114,8 @@
                 width: 300px;
                 height: 300px;
                 position: absolute;
-                top: 30%;
-                left: 50%;
+                top: 23%;
+                left: 57%;
                 background-repeat: no-repeat;
             }
             .element5 {
@@ -123,7 +124,7 @@
                 width: 400px;
                 height: 250px;
                 position: absolute;
-                left: 30%;
+                left: 14%;
                 background-repeat: no-repeat;
                 top: 84%;
             }
@@ -133,9 +134,9 @@
                 width: 700px;
                 height: 300px;
                 position: absolute;
-                left: 14%;
+                left: 5%;
                 background-repeat: no-repeat;
-                top: 61%;
+                top: 60%;
             }
             .element7 {
                 background-image: url('../image/achievement-img/clouds-far.png');
@@ -150,8 +151,10 @@
         }
 
         .section1 {
-            height: 80vh;
+            // height: 60vh;
             width: 100%; // background-color: #231F20;
+            margin-bottom: 30px;
+            box-sizing: border-box;
             p {
                 text-align: center;
                 box-sizing: border-box;
@@ -207,10 +210,10 @@
                 img {
                     position: relative;
                     display: block;
-                    width: 100%;
+                    max-width: 600px;
                     opacity: 0.7;
                     transition: opacity 0.3s;
-                    min-height: 400px;
+                    min-height: 500px;
                 }
             }
             figcaption {
@@ -317,104 +320,76 @@
             @include marginauto();
             max-width: 1140px;
             .achievement-btn-fahter {
-                width: 100%; // background-color: red;
-                .achievement-btn {
-                    display: inline-block;
-                    color: black;
-                    float: left;
+                width: 100%; // background-color: red;  
+                .btn1 {
+                    cursor: pointer;
                     width: 50%;
+                    float: left;
                     text-align: center;
-                    line-height: 50px;
-                    padding: 150px 0px;
                     box-sizing: border-box;
-                    font-size: 50px;
-                    p {
-                        font-size: 30px;
+                    padding-left: 90px;
+                    .btn1-inside {
+                        position: relative;
+                        width: 400px;
+                        height: 400px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        animation: oval-anime 10s linear 0s infinite, square-anime 15s linear 0s infinite;
+                        vertical-align: bottom;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 27%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: url('../image/achievement-img/event_list_ov.png') top center no-repeat;
+                            background-size: 100% 100%;
+                            transition: 0.3s ease;
+                            background-position: left top;
+                        }
                     }
                 }
-                .achievement-btn-1 {
-                    position: relative;
+                .btn2 {
                     cursor: pointer;
-                    &::before {
-                        content: ' ';
-                        display: block;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 350px;
-                        height: 350px;
+                    text-align: center;
+                    width: 50%;
+                    float: left;
+                    padding-left: 90px;
+                    .btn2-inside {
+                        position: relative;
+                        width: 400px;
+                        height: 400px;
                         border-radius: 50%;
-                        left: 15%;
-                        z-index: 1;
-                        opacity: 0.6;
-                        background-image: url('../image/achievement-img/whale111.jpg');
-                        background-repeat: no-repeat;
-                        background-position: 50% 0;
-                        -ms-background-size: cover;
-                        -o-background-size: cover;
-                        -moz-background-size: cover;
-                        -webkit-background-size: cover;
-                        background-size: cover;
+                        overflow: hidden;
+                        animation: oval-anime 10s linear 0s infinite, square-anime 15s linear 0s infinite;
+                        vertical-align: bottom;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 27%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: url('../image/achievement-img/event_list_ov.png') top center no-repeat;
+                            background-size: 100% 100%;
+                            transition: 0.3s ease;
+                        }
                     }
-                } //end achievement-btn-1
-                .achievement-btn-2 {
-                    position: relative;
-                    cursor: pointer;
-                    &:before {
-                        content: ' ';
-                        display: block;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 350px;
-                        height: 350px;
-                        border-radius: 50%;
-                        left: 20%;
-                        z-index: 1;
-                        opacity: 0.6;
-                        background-image: url('../image/achievement-img/whalecourse.jpeg');
-                        background-repeat: no-repeat;
-                        background-position: 50% 0;
-                        -ms-background-size: cover;
-                        -o-background-size: cover;
-                        -moz-background-size: cover;
-                        -webkit-background-size: cover;
-                        background-size: cover;
-                    }
+                }
+                .btn1:hover .btn1-inside:after,
+                .btn2:hover .btn2-inside:after {
+                    top: 10%;
                 }
             }
             .achieve-act-page {
                 margin-top: 30px;
                 box-sizing: border-box;
-            } // .achievement-slogen {
-            //     box-sizing: border-box;
-            //     @include size(100%,
-            //     auto);
-            //     @include marginauto();
-            //     color: black;
-            //     margin: 30px 0;
-            //     .achieve-fishimg-1 {
-            //         display: block;
-            //         @include size(10%,
-            //         null);
-            //         float: left;
-            //     }
-            //     .achieve-fishimg-2 {
-            //         display: block;
-            //         @include size(10%,
-            //         null);
-            //         float: left;
-            //     }
-            //     p {
-            //         @include size(80%,
-            //         null);
-            //         font-size: 20px;
-            //         float: left;
-            //         text-align: center;
-            //         padding: 30px 0;
-            //         box-sizing: border-box;
-            //     }
-            // }
+            }
             .achievement-content a {
                 float: left;
                 width: 25%;
@@ -423,6 +398,24 @@
                 &:nth-child(odd) {
                     margin: 30px 0 -30px 0;
                 }
+            }
+        }
+
+        @keyframes oval-anime {
+            0% {
+                border-radius: 60% 50% 50% 60%;
+            }
+            25% {
+                border-radius: 60% 60% 50% 50%;
+            }
+            50% {
+                border-radius: 50% 60% 60% 50%;
+            }
+            75% {
+                border-radius: 50% 50% 60% 60%;
+            }
+            100% {
+                border-radius: 60% 50% 50% 60%;
             }
         } ///////////////////////////////////////////////////////////////////////////////////////.active {
         //     border: 5px solid black;
