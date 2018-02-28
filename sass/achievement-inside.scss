@@ -66,15 +66,159 @@
     height: 100vh;
 }
 
+header {
+    position: fixed;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.achieve-inside-bg-section {
+    background-image: url('../image/achievement-inside-img/orche-in-mare.jpg');
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    position: relative;
+    p {
+        position: absolute;
+        left: 48%;
+        top: 48%;
+        font-size: 30px;
+        font-weight: bold;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .spin-animation {
+        position: absolute;
+        left: 35%;
+        top: 25%;
+        transform: translateX(-50%) translateY(-50%);
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 350px;
+            height: 350px;
+            background: url('../image/achievement-inside-img/snav-open.png');
+            background-size: 100% 100%;
+            animation: spin 25s linear infinite;
+            background-repeat: no-repeat;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 350px;
+            height: 350px;
+            background: url('../image/achievement-inside-img/snav-open02.png');
+            background-size: 100% 100%;
+            animation: spin-reverse 25s linear infinite;
+            background-repeat: no-repeat;
+        }
+    }
+    .wave01,
+    .wave02,
+    .wave03 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 104px;
+    }
+    .wave01 {
+        background-image: url('../image/achievement-inside-img/mv_wave.png');
+        background-position: left 0 top;
+        background-repeat: repeat-x;
+        animation: wave-anime01 50s linear infinite;
+        opacity: 0.45;
+    }
+    .wave02 {
+        background-image: url('../image/achievement-inside-img/mv_wave.png');
+        background-position: left 300px top;
+        background-repeat: repeat-x;
+        -webkit-animation: wave-anime02 40s linear infinite;
+        animation: wave-anime02 40s linear infinite;
+        opacity: 0.7;
+    }
+    .wave03 {
+        background-image: url('../image/achievement-inside-img/mv_wave.png');
+        background-position: left 600px top;
+        background-repeat: repeat-x;
+        -webkit-animation: wave-anime03 30s linear infinite;
+        animation: wave-anime03 30s linear infinite;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@keyframes wave-anime01 {
+    0% {
+        background-position: left 0 top;
+    }
+    100% {
+        background-position: left 2000px top;
+    }
+}
+
+@keyframes wave-anime02 {
+    0% {
+        background-position: left 300px top;
+    }
+    100% {
+        background-position: left 2300px top;
+    }
+}
+
+@keyframes wave-anime03 {
+    0% {
+        background-position: left 600px top;
+    }
+    100% {
+        background-position: left 2600px top;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
 .achievement-container {
     overflow: hidden;
     @include achievement-inside-container();
     .achieve-inside-title {
-        @include size(100%, null);
+        @include size(100%,
+        null);
         box-sizing: border-box;
         h2 {
             text-align: center;
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                background: url('../image/achievement-inside-img/wave.png');
+                bottom: 0;
+                left: 28%;
+                width: 40%;
+                height: 25%;
+                background-size: 100% 100%;
+            }
         }
         @include padding();
         p {
@@ -86,12 +230,14 @@
         }
     }
     .achieve-inside-progrebar {
-        @include size(100%, null);
+        @include size(100%,
+        null);
         .bar-1,
         .bar-2,
         .bar-3 {
             overflow: hidden;
-            @include size(20%, auto);
+            @include size(20%,
+            auto);
             float: left; // background-color: red;
         }
         .progressbar-text-father {
@@ -99,7 +245,8 @@
             .progressbar-text1,
             .progressbar-text2,
             .progressbar-text3 {
-                @include size(40%, null);
+                @include size(40%,
+                null);
                 float: left;
                 box-sizing: border-box;
                 padding: 20px; // padding: 10px 20px;
@@ -107,13 +254,15 @@
             }
         }
     }
-    .achieve-inside-bloack {
-        @include size(100%, null);
+    .block1 {
+        @include size(100%,
+        null);
         max-height: 450px;
         margin: 10px 0;
         .achieve-inside-left {
             overflow: hidden;
-            @include size(50%, auto);
+            @include size(70%,
+            auto);
             float: left;
             @include padding();
             box-sizing: border-box;
@@ -133,7 +282,8 @@
         .achieve-inside-right {
             max-height: 300px;
             overflow: hidden;
-            @include size(50%, auto);
+            @include size(30%,
+            auto);
             float: left;
             overflow: hidden;
             img {
@@ -145,7 +295,39 @@
             }
         }
     }
+    .block2 {
+        width: 100%;
+        .block2-1 {
+            width: 55%;
+            float: left;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding: 50px 0px;
+        }
+        .block2-2 {
+            width: 45%;
+            float: left;
+            padding: 50px 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
 } //end 
+// a {
+//     &:after {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         background: url('../image/achievement-inside-img/clowd.png');
+//         bottom: 50%;
+//         left: 50%;
+//         width: 100px;
+//         height: 100px;
+//         background-size: 100% 100%;
+//     }
+// }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @media screen and (max-width:767px) {
     .achievement-container {
