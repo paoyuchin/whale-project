@@ -170,9 +170,12 @@
                     width: 100%;
                     .displayContainer {
                         overflow: hidden;
-                        width: 100%;
-                        max-height: 400px;
+                        width: 100%; // max-height: 400px;
                         position: relative;
+                        .content-001 {
+                            box-sizing: border-box;
+                            padding: 20px;
+                        }
                         p {
                             font-size: 30px;
                             position: absolute;
@@ -321,6 +324,18 @@
             max-width: 1140px;
             .achievement-btn-fahter {
                 width: 100%; // background-color: red;  
+                .btn1,
+                .btn2 {
+                    p {
+                        font-size: 43px;
+                        color: white;
+                        font-weight: bold;
+                        width: 50%;
+                        position: absolute;
+                        left: 25%;
+                        top: 27%;
+                    }
+                }
                 .btn1 {
                     cursor: pointer;
                     width: 50%;
@@ -328,6 +343,7 @@
                     text-align: center;
                     box-sizing: border-box;
                     padding-left: 90px;
+                    position: relative;
                     .btn1-inside {
                         position: relative;
                         width: 400px;
@@ -360,6 +376,7 @@
                     width: 50%;
                     float: left;
                     padding-left: 90px;
+                    position: relative;
                     .btn2-inside {
                         position: relative;
                         width: 400px;
@@ -421,72 +438,123 @@
         //     border: 5px solid black;
         // }
         @media screen and (max-width:767px) {
+            .achievement-bg h2 {
+                padding-top: 100px;
+            }
+            .achievement-bg {
+                .element1 {
+                    display: none;
+                }
+                .element4 {
+                    display: none;
+                }
+                .element3 {
+                    display: none;
+                }
+                .element2 {
+                    display: none;
+                }
+                .element7 {
+                    display: none;
+                }
+                .element6 {
+                    display: none;
+                }
+                .element5 {
+                    width: 200px;
+                    height: 300px;
+                    left: -2%;
+                    top: 87%;
+                }
+            }
             .grid {
-                #A {
-                    .achieve-fishimg-1 {
-                        width: 40%;
-                    }
-                    p {
-                        width: 60%;
-                        padding: 20px 0;
+                .achieve-fishimg-1 {
+                    width: 40%;
+                }
+                .achieve-fishimg-2 {
+                    display: none;
+                }
+                .achievement-btn-fahter {
+                    .btn1 {
+                        width: 100%;
+                        margin-bottom: 10px;
                         box-sizing: border-box;
+                        padding-left: 0;
+                        p {
+                            left: 30%;
+                        }
+                        .btn1-inside {
+                            width: 300px;
+                            height: 300px;
+                            margin: auto;
+                        }
                     }
-                    .achieve-fishimg-2 {
-                        display: none;
+                    .btn2 {
+                        padding-left: 0;
+                        width: 100%;
+                        p {
+                            left: 30%;
+                        }
+                        .btn2-inside {
+                            width: 300px;
+                            height: 300px;
+                            margin: auto;
+                        }
                     }
-                    .achievement-content {
-                        a {
-                            width: 100%;
-                            margin-top: 10px;
-                            margin-bottom: 10px;
-                            box-sizing: border-box;
-                            figure {
-                                svg {
-                                    height: 50%;
+                }
+                .achievement-content {
+                    a {
+                        width: 100%;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        box-sizing: border-box;
+                        figure {
+                            svg {
+                                height: 50%;
+                            }
+                            img {
+                                max-width: 1000px;
+                            }
+                            figcaption {
+                                p {
+                                    display: none;
                                 }
-                                figcaption {
-                                    p {
-                                        display: none;
-                                    }
-                                    h2 {
-                                        font-size: 30px;
-                                        padding-top: 0;
-                                    }
+                                h2 {
+                                    font-size: 30px;
+                                    padding-top: 0;
                                 }
                             }
                         }
                     }
                 }
-                #B {
-                    .achieve-fishimg-1 {
-                        width: 40%;
-                    }
-                    p {
-                        width: 60%;
-                        padding: 20px 0;
+                .achieve-fishimg-1 {
+                    width: 40%;
+                }
+                p {
+                    width: 60%;
+                    padding: 20px 0;
+                    box-sizing: border-box;
+                }
+                .achieve-fishimg-2 {
+                    display: none;
+                }
+                .achievement-content {
+                    a {
+                        width: 100%;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
                         box-sizing: border-box;
-                    }
-                    .achieve-fishimg-2 {
-                        display: none;
-                    }
-                    .achievement-content {
-                        a {
-                            width: 100%;
-                            margin-top: 10px;
-                            margin-bottom: 10px;
-                            box-sizing: border-box;
-                            figure {
-                                svg {
-                                    height: 50%;
+                        figure {
+                            svg {
+                                height: 50%;
+                            }
+                            figcaption {
+                                p {
+                                    display: none;
                                 }
-                                figcaption {
-                                    p {
-                                        display: none;
-                                    }
-                                    h2 {
-                                        font-size: 30px;
-                                        padding-top: 0;
-                                    }
+                                h2 {
+                                    font-size: 30px;
+                                    padding-top: 0;
                                 }
                             }
                         }

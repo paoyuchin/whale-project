@@ -120,8 +120,10 @@ body {
       .section1 .layer .Slidrrr .displayContainer {
         overflow: hidden;
         width: 100%;
-        max-height: 400px;
         position: relative; }
+        .section1 .layer .Slidrrr .displayContainer .content-001 {
+          box-sizing: border-box;
+          padding: 20px; }
         .section1 .layer .Slidrrr .displayContainer p {
           font-size: 30px;
           position: absolute;
@@ -243,13 +245,23 @@ body {
     padding: 20px; }
   .grid .achievement-btn-fahter {
     width: 100%; }
+    .grid .achievement-btn-fahter .btn1 p,
+    .grid .achievement-btn-fahter .btn2 p {
+      font-size: 43px;
+      color: white;
+      font-weight: bold;
+      width: 50%;
+      position: absolute;
+      left: 25%;
+      top: 27%; }
     .grid .achievement-btn-fahter .btn1 {
       cursor: pointer;
       width: 50%;
       float: left;
       text-align: center;
       box-sizing: border-box;
-      padding-left: 90px; }
+      padding-left: 90px;
+      position: relative; }
       .grid .achievement-btn-fahter .btn1 .btn1-inside {
         position: relative;
         width: 400px;
@@ -277,7 +289,8 @@ body {
       text-align: center;
       width: 50%;
       float: left;
-      padding-left: 90px; }
+      padding-left: 90px;
+      position: relative; }
       .grid .achievement-btn-fahter .btn2 .btn2-inside {
         position: relative;
         width: 400px;
@@ -323,43 +336,80 @@ body {
     border-radius: 60% 50% 50% 60%; } }
 
 @media screen and (max-width: 767px) {
-  .grid #A .achieve-fishimg-1 {
-    width: 40%; }
-  .grid #A p {
-    width: 60%;
-    padding: 20px 0;
-    box-sizing: border-box; }
-  .grid #A .achieve-fishimg-2 {
+  .achievement-bg h2 {
+    padding-top: 100px; }
+  .achievement-bg .element1 {
     display: none; }
-  .grid #A .achievement-content a {
+  .achievement-bg .element4 {
+    display: none; }
+  .achievement-bg .element3 {
+    display: none; }
+  .achievement-bg .element2 {
+    display: none; }
+  .achievement-bg .element7 {
+    display: none; }
+  .achievement-bg .element6 {
+    display: none; }
+  .achievement-bg .element5 {
+    width: 200px;
+    height: 300px;
+    left: -2%;
+    top: 87%; }
+  .grid .achieve-fishimg-1 {
+    width: 40%; }
+  .grid .achieve-fishimg-2 {
+    display: none; }
+  .grid .achievement-btn-fahter .btn1 {
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding-left: 0; }
+    .grid .achievement-btn-fahter .btn1 p {
+      left: 30%; }
+    .grid .achievement-btn-fahter .btn1 .btn1-inside {
+      width: 300px;
+      height: 300px;
+      margin: auto; }
+  .grid .achievement-btn-fahter .btn2 {
+    padding-left: 0;
+    width: 100%; }
+    .grid .achievement-btn-fahter .btn2 p {
+      left: 30%; }
+    .grid .achievement-btn-fahter .btn2 .btn2-inside {
+      width: 300px;
+      height: 300px;
+      margin: auto; }
+  .grid .achievement-content a {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     box-sizing: border-box; }
-    .grid #A .achievement-content a figure svg {
+    .grid .achievement-content a figure svg {
       height: 50%; }
-    .grid #A .achievement-content a figure figcaption p {
+    .grid .achievement-content a figure img {
+      max-width: 1000px; }
+    .grid .achievement-content a figure figcaption p {
       display: none; }
-    .grid #A .achievement-content a figure figcaption h2 {
+    .grid .achievement-content a figure figcaption h2 {
       font-size: 30px;
       padding-top: 0; }
-  .grid #B .achieve-fishimg-1 {
+  .grid .achieve-fishimg-1 {
     width: 40%; }
-  .grid #B p {
+  .grid p {
     width: 60%;
     padding: 20px 0;
     box-sizing: border-box; }
-  .grid #B .achieve-fishimg-2 {
+  .grid .achieve-fishimg-2 {
     display: none; }
-  .grid #B .achievement-content a {
+  .grid .achievement-content a {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     box-sizing: border-box; }
-    .grid #B .achievement-content a figure svg {
+    .grid .achievement-content a figure svg {
       height: 50%; }
-    .grid #B .achievement-content a figure figcaption p {
+    .grid .achievement-content a figure figcaption p {
       display: none; }
-    .grid #B .achievement-content a figure figcaption h2 {
+    .grid .achievement-content a figure figcaption h2 {
       font-size: 30px;
       padding-top: 0; } }
