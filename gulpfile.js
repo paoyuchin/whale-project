@@ -9,7 +9,7 @@ gulp.task('sass', function () {
     return gulp.src('sass/*.scss')
         .pipe(sass().on('error', sass.logError))
         //目的地
-        .pipe(gulp.dest('css/'));
+        .pipe(gulp.dest('front/css/'));
 });
 
 gulp.task('default', ['sass'], function () {
@@ -23,7 +23,9 @@ gulp.task('default', ['sass'], function () {
         }
     });
     gulp.watch(["sass/*.scss", "sass/**/*.scss"], ['sass']).on('change', reload);
-    gulp.watch("*.html").on('change', reload);
-    gulp.watch("js/*.js").on('change', reload);
+    gulp.watch(["*.html", "**/*.html"]).on('change', reload);
+    gulp.watch(["js/*.js", "js/**/*.js"]).on('change', reload);
+    // gulp.watch("*.html").on('change', reload);
+    // gulp.watch("js/*.js").on('change', reload);
     // gulp.watch("images/*").on('change', reload);
 });

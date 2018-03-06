@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- reset -->
+    <!-- plugins -->
+    <link rel="stylesheet" href="css/plugin/fontawesome.min.css">
+    <!-- custom -->
+    <link rel="stylesheet" href="css/achievement.css">
+    <script type='text/javascript' src="js/plugin/jquery-3.3.1.min.js"></script>
+    <script src="js/plugin/snap.svg-min.js"></script>
+    <title>achievement</title>
+</head>
+
+<body>
+    <div class="achievement-bg">
+        <h2>我是里程碑</h2>
+        <h4>里程碑的小標題</h4>
+        <div class="element1"></div>
+        <!-- 1 雲 -->
+        <div class="element4"></div>
+        <!-- 4 鳥 -->
+        <div class="element3"></div>
+        <div class="element2"></div>
+        <div class="element5"></div>
+        <!-- 5是尾巴 -->
+        <div class="element6"></div>
+    </div>
+    <div class="section1 clearfix">
+        <p>關於我們的團隊</p>
+        <div class="layer clearfix">
+            <div class="Slidrrr">
+                <div class="displayContainer mySlides">
+                    <div class="content-001">
+                        第一張你有按了的鯨肉與鯨脂，麥殖民地法羅群島每年都會舉行的集體捕鯨活動，與日本的捕鯨及加拿大的捕獵海豹活動齊名。打從諾曼人首次在法羅群島殖民就存在。據統計，法羅群島每年集體宰殺的長肢領航鯨（又名巨頭鯨，Globicephala melaena）達950頭，可產生約500噸的鯨肉與鯨
+                    </div>
+                </div>
+                <div class="displayContainer mySlides">
+                    <div class="content-001">
+                        第二張你有按了的鯨肉與鯨脂，麥殖民地法羅群島每年都會舉行的集體捕鯨活動，與日本的捕鯨及加拿大的捕獵海豹活動齊名。打從諾曼人首次在法羅群島殖民就存在。據統計，法羅群島每年集體宰殺的長肢領航鯨（又名巨頭鯨，Globicephala melaena）達950頭，可產生約500噸的鯨肉與鯨
+                    </div>
+                    <!-- <img src="images/achievement-img/5914-Orca-Whale-Jumping-picspaper-com-8.jpg">
+                    <p class="slidertxt slidertxt1">2照片補充內容</p> -->
+                </div>
+            </div>
+            <span class="sliderbtn">
+                <div onclick="plusDivs(-1)">
+                    <i class="fa fa-chevron-left" aria-hidden="true">
+                    </i>
+                </div>
+                <div onclick="plusDivs(1)">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+
+    <div id="grid" class="grid clearfix">
+        <div class="achievement-btn-fahter clearfix">
+            <div class="btn1 active clearfix" data-link="A">
+                <div class="btn1-inside">
+                    <img src="images/achievement-img/Super-Whale-Wallpaper.jpg" alt="whale">
+                    <p>護鯨活動</p>
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+            <div class="btn2 clearfix" data-link="B">
+                <div class="btn2-inside">
+                    <img src="images/achievement-img/whalecourse.jpeg" alt="course">
+                    <p>出海宣傳</p>
+                </div>
+            </div>
+        </div>
+        <div class="achieve-act-page page" style="display:block" id="A">
+            <div class="achievement-content">
+                <a href="achievement-inside.html" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0
+                            z" />`
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                            />
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                            />
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+
+                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                            />
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>Soko radicchio bunya nuts gram dulse.</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                            />
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>Soko radicchio bunya nuts gram dulse.</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                            />
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>Soko radicchio bunya nuts gram dulse.</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////// 出海宣傳 -->
+        <div class="achieve-act-page page" style="display:none" id="B">
+            <!-- <div class="achievement-slogen clearfix">
+                <img class="achieve-fishimg-1" src="images/achievement-img/fish-1.png" alt="fish">
+                <p>海洋守護人現在宣布，當然，他沒有透露新戰術的細節。與此同時，沃森堅信，迄今的努力已在日本社會中造成了影響</p>
+                <img class="achieve-fishimg-2" src="images/achievement-img/fish-2.png" alt="fish">
+            </div> -->
+            <div class="achievement-content">
+                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue" fill="pink">
+                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                            />
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue">
+                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                            />
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活護鯨活動內容護鯨活動內容護鯨活動內容護鯨活護鯨活動內容護鯨活動內容護鯨活動內容護鯨活護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <figure>
+                        <img src="images/achievement-img/bga.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue">
+                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                            />
+                        </svg>
+                        <figcaption>
+                            <h2>護鯨活動</h2>
+                            <p>Soko radicchio bunya nuts gram dulse.</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- javescript -->
+    <script>
+        // $('#A').css('backgroundColor', '#81A2E5');
+        $('.activity-btn').click(function () {
+            var name = $(this).data("link");
+            $('.activity-btn').removeClass('active');
+            $(this).addClass('active');
+            $('.achieve-act-page').hide();
+            $('#' + name).show();
+            // $('.tabbtn').css('backgroundColor', '#006386'); 
+            // $(this).css('backgroundColor', '#81A2E5');
+            // $('.tabbtn').removeClass('active01');
+            // $(this).addClass('active01');
+        });
+    </script>
+
+    <script>
+        (function () {
+
+            function init() {
+                var speed = 330,
+                    easing = mina.backout;
+
+                [].slice.call(document.querySelectorAll('#grid > .achieve-act-page >.achievement-content >a')).forEach(
+                    function (el) {
+                        var s = Snap(el.querySelector('svg')),
+                            path = s.select('path'),
+                            pathConfig = {
+                                from: path.attr('d'),
+                                to: el.getAttribute('data-path-hover')
+                            };
+
+                        el.addEventListener('mouseenter', function () {
+                            path.animate({
+                                'path': pathConfig.to
+                            }, speed, easing);
+                        });
+
+                        el.addEventListener('mouseleave', function () {
+                            path.animate({
+                                'path': pathConfig.from
+                            }, speed, easing);
+                        });
+                    });
+            }
+
+            init();
+
+        })();
+    </script>
+
+
+</body>
+
+</html>
+</body>
+
+</html>

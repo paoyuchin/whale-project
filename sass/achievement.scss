@@ -3,7 +3,8 @@
             padding: 0;
             margin: 0;
             list-style: none;
-            text-decoration: none; // outline: 1px solid red;
+            text-decoration: none;
+            outline: 1px solid red;
             box-sizing: border-box;
         }
 
@@ -61,7 +62,7 @@
         .achievement-bg {
             background-image: url('../images/achievement-img/Whales-Kaikoura.jpg');
             @include size(100%,
-            100%);
+            100vh);
             background-size: cover;
             background-position: center top; // margin-bottom: 50px;
             box-sizing: border-box;
@@ -326,36 +327,37 @@
             max-width: 1140px;
             .achievement-btn-fahter {
                 width: 100%; // background-color: red;  
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 .btn1,
                 .btn2 {
+                    display: flex;
+                    justify-content: center;
                     p {
-                        font-size: 43px;
+                        font-size: 42px;
+                        white-space: nowrap;
                         color: white;
                         font-weight: bold;
-                        width: 50%;
                         position: absolute;
-                        left: 25%;
-                        top: 27%;
+                        top: 40%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                     }
                     i {
-                        font-size: 20px;
+                        font-size: 30px;
+                        color: #fff;
+                        z-index: 3;
+                        position: absolute;
+                        top: 70%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                     }
                 }
                 .btn1 {
                     cursor: pointer;
                     width: 50%;
-                    float: left;
-                    text-align: center;
                     box-sizing: border-box;
-                    padding-left: 90px;
-                    position: relative;
-                    i {
-                        font-size: 30px;
-                        position: absolute;
-                        bottom: 15%;
-                        left: 50%;
-                        color: white;
-                    }
                     .btn1-inside {
                         position: relative;
                         width: 400px;
@@ -386,9 +388,6 @@
                     cursor: pointer;
                     text-align: center;
                     width: 50%;
-                    float: left;
-                    padding-left: 90px;
-                    position: relative;
                     .btn2-inside {
                         position: relative;
                         width: 400px;
@@ -494,30 +493,25 @@
                     display: none;
                 }
                 .achievement-btn-fahter {
+                    .btn1,
+                    .btn2 {
+                        p {
+                            font-size: 24px;
+                        }
+                    }
                     .btn1 {
                         width: 100%;
-                        margin-bottom: 10px;
                         box-sizing: border-box;
-                        padding-left: 0;
-                        p {
-                            left: 30%;
-                        }
                         .btn1-inside {
-                            width: 300px;
-                            height: 300px;
-                            margin: auto;
+                            width: 200px;
+                            height: 200px;
                         }
                     }
                     .btn2 {
-                        padding-left: 0;
                         width: 100%;
-                        p {
-                            left: 30%;
-                        }
                         .btn2-inside {
-                            width: 300px;
-                            height: 300px;
-                            margin: auto;
+                            width: 200px;
+                            height: 200px;
                         }
                     }
                 }
@@ -550,7 +544,6 @@
                     width: 40%;
                 }
                 p {
-                    width: 60%;
                     padding: 20px 0;
                     box-sizing: border-box;
                 }

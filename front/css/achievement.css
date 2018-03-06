@@ -1,0 +1,428 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: 1px solid red;
+  box-sizing: border-box; }
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.header {
+  position: fixed; }
+
+.achievement-bg {
+  background-image: url("../images/achievement-img/Whales-Kaikoura.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  box-sizing: border-box;
+  position: relative; }
+  .achievement-bg h2 {
+    color: white;
+    font-size: 70px;
+    max-width: 100%;
+    padding-top: 140px;
+    box-sizing: border-box;
+    text-align: center; }
+  .achievement-bg h4 {
+    color: white;
+    padding: 10px 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: center; }
+  .achievement-bg .element1 {
+    background-image: url("../images/achievement-img/big-clouds.png");
+    background-size: 100%;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 3%;
+    top: 46%;
+    background-repeat: no-repeat; }
+  .achievement-bg .element2 {
+    background-image: url("../images/achievement-img/clouds-near.png");
+    background-size: 100%;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 0%;
+    top: 60%;
+    background-repeat: no-repeat; }
+  .achievement-bg .element3 {
+    background-image: url("../images/achievement-img/clouds-near.png");
+    background-size: cover;
+    width: 500px;
+    position: absolute;
+    left: 10%;
+    top: 59%; }
+  .achievement-bg .element4 {
+    background-image: url("../images/achievement-img/gie5a5AzT.gif");
+    background-size: 100%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 17%;
+    left: 65%;
+    background-repeat: no-repeat; }
+  .achievement-bg .element5 {
+    background-image: url("../images/achievement-img/whaletial.png");
+    background-size: 100%;
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 14%;
+    background-repeat: no-repeat;
+    top: 84%; }
+  .achievement-bg .element6 {
+    background-image: url("../images/achievement-img/clouds-near.png");
+    background-size: 100%;
+    width: 700px;
+    height: 300px;
+    position: absolute;
+    left: 5%;
+    background-repeat: no-repeat;
+    top: 60%; }
+  .achievement-bg .element7 {
+    background-image: url("../images/achievement-img/clouds-far.png");
+    background-size: 100%;
+    width: 700px;
+    height: 300px;
+    position: absolute;
+    left: 10%;
+    background-repeat: no-repeat;
+    top: 75%; }
+
+.section1 {
+  width: 100%;
+  margin-bottom: 30px;
+  box-sizing: border-box; }
+  .section1 p {
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 30px;
+    padding-top: 30px;
+    color: black; }
+  .section1 .layer {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto; }
+    .section1 .layer .Slidrrr {
+      width: 100%; }
+      .section1 .layer .Slidrrr .displayContainer {
+        overflow: hidden;
+        width: 100%;
+        position: relative; }
+        .section1 .layer .Slidrrr .displayContainer .content-001 {
+          box-sizing: border-box;
+          padding: 20px; }
+        .section1 .layer .Slidrrr .displayContainer p {
+          font-size: 30px;
+          position: absolute;
+          top: 50%;
+          left: 0; }
+  .section1 .sliderbtn {
+    width: 100%;
+    display: block;
+    cursor: pointer; }
+    .section1 .sliderbtn div {
+      text-align: center;
+      float: left;
+      box-sizing: border-box;
+      font-size: 50px;
+      width: 50%;
+      color: black;
+      margin-top: 10px; }
+
+.grid {
+  margin-top: 20px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px; }
+  .grid figure {
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    background: #333;
+    box-sizing: border-box;
+    border: 1px solid black; }
+    .grid figure img {
+      position: relative;
+      display: block;
+      max-width: 600px;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      min-height: 500px; }
+  .grid figcaption {
+    position: absolute;
+    top: 0;
+    z-index: 11;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+  .grid figcaption h2 {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: transform 0.3s; }
+  .grid figcaption p {
+    padding: 0 20px;
+    color: #aaa;
+    font-weight: 300;
+    transition: opacity 0.3s, transform 0.3s; }
+  .grid figcaption h2,
+  .grid figcaption p {
+    transform: translateY(50px); }
+  .grid figure button {
+    position: absolute;
+    padding: 4px 20px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: opacity 0.3s, transform 0.3s; }
+  .grid figcaption h2 {
+    color: #e74c3c; }
+  .grid figcaption p {
+    transition-delay: 0.05s; }
+  .grid figure button {
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    font-weight: 300;
+    transform: translateY(100%);
+    font-size: 100%;
+    margin: 0px; }
+  .grid a:hover figure button {
+    transition-timing-function: ease-out;
+    transform: translateY(0); }
+  .grid figcaption h2,
+  .grid figcaption p {
+    timing-function: cubic-bezier(0.25, 0.25, 0.115, 1.445); }
+  .grid a:hover figcaption p {
+    transition-delay: 0s;
+    transition-duration: 0.1s; }
+  .grid figcaption,
+  .grid figcaption h2,
+  .grid figcaption p,
+  .grid figure button {
+    backface-visibility: hidden; }
+  .grid svg {
+    position: absolute;
+    top: -1px;
+    z-index: 10;
+    width: 100%;
+    height: auto; }
+  .grid a:hover figure img {
+    opacity: 1; }
+  .grid a:hover figcaption h2,
+  .grid a:hover figcaption p {
+    transform: translateY(0); }
+  .grid a:hover figcaption p {
+    opacity: 0; }
+  .grid figcaption h2 {
+    color: #e74c3c; }
+  .grid figcaption p {
+    transition-delay: 0.05s; }
+  .grid figure button {
+    bottom: 0;
+    left: 0;
+    padding: 20px; }
+  .grid .achievement-btn-fahter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .grid .achievement-btn-fahter .btn1,
+    .grid .achievement-btn-fahter .btn2 {
+      display: flex;
+      justify-content: center; }
+      .grid .achievement-btn-fahter .btn1 p,
+      .grid .achievement-btn-fahter .btn2 p {
+        font-size: 42px;
+        white-space: nowrap;
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      .grid .achievement-btn-fahter .btn1 i,
+      .grid .achievement-btn-fahter .btn2 i {
+        font-size: 30px;
+        color: #fff;
+        z-index: 3;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .grid .achievement-btn-fahter .btn1 {
+      cursor: pointer;
+      width: 50%;
+      box-sizing: border-box; }
+      .grid .achievement-btn-fahter .btn1 .btn1-inside {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        overflow: hidden;
+        animation: oval-anime 10s linear 0s infinite, square-anime 15s linear 0s infinite;
+        vertical-align: bottom; }
+        .grid .achievement-btn-fahter .btn1 .btn1-inside img {
+          width: 100%;
+          height: 100%; }
+        .grid .achievement-btn-fahter .btn1 .btn1-inside:after {
+          content: '';
+          position: absolute;
+          top: 4%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url("../images/achievement-img/event_list_ov.png") top center no-repeat;
+          background-size: 100% 100%;
+          transition: 0.3s ease;
+          background-position: left top; }
+    .grid .achievement-btn-fahter .btn2 {
+      cursor: pointer;
+      text-align: center;
+      width: 50%; }
+      .grid .achievement-btn-fahter .btn2 .btn2-inside {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        overflow: hidden;
+        animation: oval-anime 10s linear 0s infinite, square-anime 15s linear 0s infinite;
+        vertical-align: bottom; }
+        .grid .achievement-btn-fahter .btn2 .btn2-inside:after {
+          content: '';
+          position: absolute;
+          top: 27%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url("../images/achievement-img/event_list_ov.png") top center no-repeat;
+          background-size: 100% 100%;
+          transition: 0.3s ease; }
+    .grid .achievement-btn-fahter .btn1:hover .btn1-inside:after,
+    .grid .achievement-btn-fahter .btn2:hover .btn2-inside:after {
+      top: 10%; }
+  .grid .achieve-act-page {
+    margin-top: 30px;
+    box-sizing: border-box; }
+  .grid .achievement-content a {
+    float: left;
+    width: 25%;
+    color: #333;
+    box-sizing: border-box; }
+    .grid .achievement-content a:nth-child(odd) {
+      margin: 30px 0 -30px 0; }
+
+@keyframes oval-anime {
+  0% {
+    border-radius: 60% 50% 50% 60%; }
+  25% {
+    border-radius: 60% 60% 50% 50%; }
+  50% {
+    border-radius: 50% 60% 60% 50%; }
+  75% {
+    border-radius: 50% 50% 60% 60%; }
+  100% {
+    border-radius: 60% 50% 50% 60%; } }
+
+@media screen and (max-width: 767px) {
+  .achievement-bg h2 {
+    padding-top: 100px; }
+  .achievement-bg .element1 {
+    background-size: cover;
+    width: 120px;
+    height: 100px;
+    bottom: 90px; }
+  .achievement-bg .element4 {
+    width: 100px;
+    height: 100px;
+    top: 70px; }
+  .achievement-bg .element3 {
+    width: 120px;
+    height: 100px;
+    bottom: 90px; }
+  .achievement-bg .element2 {
+    display: none; }
+  .achievement-bg .element7 {
+    display: none; }
+  .achievement-bg .element6 {
+    display: none; }
+  .achievement-bg .element5 {
+    width: 200px;
+    height: 300px;
+    left: -2%;
+    top: 87%; }
+  .grid .achieve-fishimg-1 {
+    width: 40%; }
+  .grid .achieve-fishimg-2 {
+    display: none; }
+  .grid .achievement-btn-fahter .btn1 p,
+  .grid .achievement-btn-fahter .btn2 p {
+    font-size: 24px; }
+  .grid .achievement-btn-fahter .btn1 {
+    width: 100%;
+    box-sizing: border-box; }
+    .grid .achievement-btn-fahter .btn1 .btn1-inside {
+      width: 200px;
+      height: 200px; }
+  .grid .achievement-btn-fahter .btn2 {
+    width: 100%; }
+    .grid .achievement-btn-fahter .btn2 .btn2-inside {
+      width: 200px;
+      height: 200px; }
+  .grid .achievement-content a {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; }
+    .grid .achievement-content a figure svg {
+      height: 50%; }
+    .grid .achievement-content a figure img {
+      max-width: 1000px; }
+    .grid .achievement-content a figure figcaption p {
+      display: none; }
+    .grid .achievement-content a figure figcaption h2 {
+      font-size: 30px;
+      padding-top: 0; }
+  .grid .achieve-fishimg-1 {
+    width: 40%; }
+  .grid p {
+    padding: 20px 0;
+    box-sizing: border-box; }
+  .grid .achieve-fishimg-2 {
+    display: none; }
+  .grid .achievement-content a {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; }
+    .grid .achievement-content a figure svg {
+      height: 50%; }
+    .grid .achievement-content a figure figcaption p {
+      display: none; }
+    .grid .achievement-content a figure figcaption h2 {
+      font-size: 30px;
+      padding-top: 0; } }
