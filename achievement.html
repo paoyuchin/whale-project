@@ -16,79 +16,19 @@
 </head>
 
 <body>
-    <!-- Start header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="row u-cf">
-                    <figure class="navbar-logo">
-                        <a href="#">
-                            <img src="images/logo/logo.png" alt="logo">
-                        </a>
-                    </figure>
-                    <a href="#overlay" class="menu-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                    <div id="overlay" class="navbar-menu popup-nav">
-                        <ul class="u-cf">
-                            <li>
-                                <a href="#" class="menu-item" id="about">關於我們</a>
-                                <ul class="dropdown">
-                                    <li>
-                                        <a href="#" id="aboutUs">緣起</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" id="milstone">里程碑</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="activity.html" class="menu-item" id="event">活動招募</a>
-                                <ul class="dropdown">
-                                    <li>
-                                        <a href="#" id="activity">護鯨活動</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" id="boardcast">宣傳講座</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-item" id="fundRaising">募資捐款</a>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-item" id="petition">連署活動</a>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-item" id="interactive">鯨典百科</a>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-item" id="member">會員</a>
-                            </li>
-                        </ul>
-                        <a href="#!" class="popup-close">
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- End header -->
-    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <?php require_once "menu.php"; ?>
     <div class="achievement-bg">
         <h2>我是里程碑</h2>
         <h4>里程碑的小標題</h4>
-        <!-- <div class="element1"></div> -->
+        <div class="element1"></div>
+        <!-- 1 雲 -->
         <div class="element4"></div>
-        <!-- <div class="element3"> </div>
+        <!-- 4 鳥 -->
+        <div class="element3"></div>
         <div class="element2"></div>
         <div class="element5"></div>
+        <!-- 5是尾巴 -->
         <div class="element6"></div>
-        <div class="element7"></div> -->
     </div>
     <div class="section1 clearfix">
         <p>關於我們的團隊</p>
@@ -103,7 +43,7 @@
                     <div class="content-001">
                         第二張你有按了的鯨肉與鯨脂，麥殖民地法羅群島每年都會舉行的集體捕鯨活動，與日本的捕鯨及加拿大的捕獵海豹活動齊名。打從諾曼人首次在法羅群島殖民就存在。據統計，法羅群島每年集體宰殺的長肢領航鯨（又名巨頭鯨，Globicephala melaena）達950頭，可產生約500噸的鯨肉與鯨
                     </div>
-                    <!-- <img src="image/achievement-img/5914-Orca-Whale-Jumping-picspaper-com-8.jpg">
+                    <!-- <img src="images/achievement-img/5914-Orca-Whale-Jumping-picspaper-com-8.jpg">
                     <p class="slidertxt slidertxt1">2照片補充內容</p> -->
                 </div>
             </div>
@@ -148,25 +88,26 @@
         <div class="achievement-btn-fahter clearfix">
             <div class="btn1 active clearfix" data-link="A">
                 <div class="btn1-inside">
-                    <img src="image/achievement-img/Super-Whale-Wallpaper.jpg" alt="whale">
+                    <img src="images/achievement-img/Super-Whale-Wallpaper.jpg" alt="whale">
                 </div>
                 <p>護鯨活動</p>
+                <i class="fas fa-arrow-down"></i>
             </div>
             <div class="btn2 clearfix" data-link="B">
                 <div class="btn2-inside">
-                    <img src="image/achievement-img/whalecourse.jpeg" alt="course">
+                    <img src="images/achievement-img/whalecourse.jpeg" alt="course">
                 </div>
                 <p>出海宣傳</p>
             </div>
         </div>
         <div class="achieve-act-page page" style="display:block" id="A">
             <div class="achievement-content">
-                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                <a href="achievement-inside.html" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0
-                            z" />
+                            z" />`
                         </svg>
                         <figcaption>
                             <h2>護鯨活動</h2>
@@ -177,7 +118,7 @@
                 </a>
                 <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                             />
@@ -191,7 +132,7 @@
                 </a>
                 <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                             />
@@ -206,7 +147,7 @@
 
                 <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                             />
@@ -220,7 +161,7 @@
                 </a>
                 <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                             />
@@ -234,7 +175,7 @@
                 </a>
                 <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                             />
@@ -251,14 +192,14 @@
         <!-- ///////////////////////////////////////////////////////////////////////////////////////// 出海宣傳 -->
         <div class="achieve-act-page page" style="display:none" id="B">
             <!-- <div class="achievement-slogen clearfix">
-                <img class="achieve-fishimg-1" src="image/achievement-img/fish-1.png" alt="fish">
+                <img class="achieve-fishimg-1" src="images/achievement-img/fish-1.png" alt="fish">
                 <p>海洋守護人現在宣布，當然，他沒有透露新戰術的細節。與此同時，沃森堅信，迄今的努力已在日本社會中造成了影響</p>
-                <img class="achieve-fishimg-2" src="image/achievement-img/fish-2.png" alt="fish">
+                <img class="achieve-fishimg-2" src="images/achievement-img/fish-2.png" alt="fish">
             </div> -->
             <div class="achievement-content">
                 <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue" fill="pink">
                             <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                             />
@@ -272,7 +213,7 @@
                 </a>
                 <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue">
                             <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                             />
@@ -286,7 +227,7 @@
                 </a>
                 <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                     <figure>
-                        <img src="image/achievement-img/bga.jpg" />
+                        <img src="images/achievement-img/bga.jpg" />
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue">
                             <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                             />

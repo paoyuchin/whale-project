@@ -17,22 +17,24 @@ header {
   position: fixed; }
 
 .achieve-inside-bg-section {
-  background-image: url("../image/achievement-inside-img/orche-in-mare.jpg");
+  background-image: url("../images/achievement-inside-img/orche-in-mare.jpg");
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   background-size: cover;
   position: relative; }
   .achieve-inside-bg-section p {
     position: absolute;
-    left: 48%;
-    top: 48%;
-    font-size: 30px;
+    left: 50%;
+    top: 50%;
+    font-size: 50px;
     font-weight: bold;
     transform: translateX(-50%) translateY(-50%); }
   .achieve-inside-bg-section .spin-animation {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: 35%;
-    top: 25%;
+    left: 50%;
+    top: 50%;
     transform: translateX(-50%) translateY(-50%); }
     .achieve-inside-bg-section .spin-animation:before {
       content: '';
@@ -40,9 +42,12 @@ header {
       position: absolute;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
       width: 350px;
       height: 350px;
-      background: url("../image/achievement-inside-img/snav-open.png");
+      background: url("../images/achievement-inside-img/snav-open.png");
       background-size: 100% 100%;
       animation: spin 25s linear infinite;
       background-repeat: no-repeat; }
@@ -52,9 +57,12 @@ header {
       position: absolute;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
       width: 350px;
       height: 350px;
-      background: url("../image/achievement-inside-img/snav-open02.png");
+      background: url("../images/achievement-inside-img/snav-open02.png");
       background-size: 100% 100%;
       animation: spin-reverse 25s linear infinite;
       background-repeat: no-repeat; }
@@ -67,20 +75,20 @@ header {
     right: 0;
     height: 104px; }
   .achieve-inside-bg-section .wave01 {
-    background-image: url("../image/achievement-inside-img/mv_wave.png");
+    background-image: url("../images/achievement-inside-img/mv_wave.png");
     background-position: left 0 top;
     background-repeat: repeat-x;
     animation: wave-anime01 50s linear infinite;
     opacity: 0.45; }
   .achieve-inside-bg-section .wave02 {
-    background-image: url("../image/achievement-inside-img/mv_wave.png");
+    background-image: url("../images/achievement-inside-img/mv_wave.png");
     background-position: left 300px top;
     background-repeat: repeat-x;
     -webkit-animation: wave-anime02 40s linear infinite;
     animation: wave-anime02 40s linear infinite;
     opacity: 0.7; }
   .achieve-inside-bg-section .wave03 {
-    background-image: url("../image/achievement-inside-img/mv_wave.png");
+    background-image: url("../images/achievement-inside-img/mv_wave.png");
     background-position: left 600px top;
     background-repeat: repeat-x;
     -webkit-animation: wave-anime03 30s linear infinite;
@@ -134,7 +142,7 @@ header {
         content: '';
         display: block;
         position: absolute;
-        background: url("../image/achievement-inside-img/wave.png");
+        background: url("../images/achievement-inside-img/wave.png");
         bottom: 0;
         left: 28%;
         width: 40%;
@@ -216,12 +224,16 @@ header {
       .achievement-container .block2 .block2-2 img {
         width: 100%;
         height: auto; }
+    .achievement-container .block2:nth-of-type(odd) .block2-1 {
+      position: relative;
+      left: 45%; }
+    .achievement-container .block2:nth-of-type(odd) .block2-2 {
+      position: relative;
+      left: -55%; }
 
 @media screen and (max-width: 767px) {
-  .achieve-inside-bg-section p {
-    left: 52%; }
-  .achieve-inside-bg-section .spin-animation {
-    left: 4%; }
+  .achievement-container .spin-animation {
+    overflow: hidden; }
   .achievement-container .achieve-inside-progrebar .bar-1,
   .achievement-container .achieve-inside-progrebar .bar-2,
   .achievement-container .achieve-inside-progrebar .bar-3 {
@@ -248,4 +260,10 @@ header {
   .achievement-container .block2 .block2-2 {
     width: 100%;
     padding: 15px;
-    box-sizing: border-box; } }
+    box-sizing: border-box; }
+  .achievement-container .block2:nth-of-type(odd) .block2-1 {
+    position: relative;
+    left: 0; }
+  .achievement-container .block2:nth-of-type(odd) .block2-2 {
+    position: relative;
+    left: 0; } }

@@ -3,8 +3,7 @@
             padding: 0;
             margin: 0;
             list-style: none;
-            text-decoration: none;
-            outline: 1px solid red;
+            text-decoration: none; // outline: 1px solid red;
             box-sizing: border-box;
         }
 
@@ -60,7 +59,7 @@
         }
 
         .achievement-bg {
-            background-image: url('../image/achievement-img/Whales-Kaikoura.jpg');
+            background-image: url('../images/achievement-img/Whales-Kaikoura.jpg');
             @include size(100%,
             100%);
             background-size: cover;
@@ -83,25 +82,27 @@
                 text-align: center;
             }
             .element1 {
-                background-image: url('../image/achievement-img/big-clouds.png');
-                background-size: cover;
+                background-image: url('../images/achievement-img/big-clouds.png');
+                background-size: 100%;
                 width: 500px;
                 height: 300px;
                 position: absolute;
-                left: 20%;
+                left: 3%;
                 top: 46%;
+                background-repeat: no-repeat;
             }
             .element2 {
-                background-image: url('../image/achievement-img/clouds-near.png');
-                background-size: cover;
+                background-image: url('../images/achievement-img/clouds-near.png');
+                background-size: 100%;
                 width: 500px;
                 height: 300px;
                 position: absolute;
-                left: 58%;
+                left: 0%;
                 top: 60%;
+                background-repeat: no-repeat;
             }
             .element3 {
-                background-image: url('../image/achievement-img/clouds-near.png');
+                background-image: url('../images/achievement-img/clouds-near.png');
                 background-size: cover;
                 width: 500px; // height: 300px;
                 position: absolute;
@@ -109,17 +110,17 @@
                 top: 59%;
             }
             .element4 {
-                background-image: url('../image/achievement-img/gie5a5AzT.gif');
+                background-image: url('../images/achievement-img/gie5a5AzT.gif');
                 background-size: 100%;
                 width: 300px;
                 height: 300px;
                 position: absolute;
-                top: 23%;
-                left: 57%;
+                top: 17%;
+                left: 65%;
                 background-repeat: no-repeat;
             }
             .element5 {
-                background-image: url('../image/achievement-img/whaletial.png');
+                background-image: url('../images/achievement-img/whaletial.png');
                 background-size: 100%;
                 width: 400px;
                 height: 250px;
@@ -129,7 +130,7 @@
                 top: 84%;
             }
             .element6 {
-                background-image: url('../image/achievement-img/clouds-near.png');
+                background-image: url('../images/achievement-img/clouds-near.png');
                 background-size: 100%;
                 width: 700px;
                 height: 300px;
@@ -139,7 +140,7 @@
                 top: 60%;
             }
             .element7 {
-                background-image: url('../image/achievement-img/clouds-far.png');
+                background-image: url('../images/achievement-img/clouds-far.png');
                 background-size: 100%;
                 width: 700px;
                 height: 300px;
@@ -210,6 +211,7 @@
                 margin: 15px;
                 background: #333;
                 box-sizing: border-box;
+                border: 1px solid black;
                 img {
                     position: relative;
                     display: block;
@@ -335,6 +337,9 @@
                         left: 25%;
                         top: 27%;
                     }
+                    i {
+                        font-size: 20px;
+                    }
                 }
                 .btn1 {
                     cursor: pointer;
@@ -344,6 +349,13 @@
                     box-sizing: border-box;
                     padding-left: 90px;
                     position: relative;
+                    i {
+                        font-size: 30px;
+                        position: absolute;
+                        bottom: 15%;
+                        left: 50%;
+                        color: white;
+                    }
                     .btn1-inside {
                         position: relative;
                         width: 400px;
@@ -359,11 +371,11 @@
                         &:after {
                             content: '';
                             position: absolute;
-                            top: 27%;
+                            top: 4%;
                             left: 0;
                             width: 100%;
                             height: 100%;
-                            background: url('../image/achievement-img/event_list_ov.png') top center no-repeat;
+                            background: url('../images/achievement-img/event_list_ov.png') top center no-repeat;
                             background-size: 100% 100%;
                             transition: 0.3s ease;
                             background-position: left top;
@@ -392,7 +404,7 @@
                             left: 0;
                             width: 100%;
                             height: 100%;
-                            background: url('../image/achievement-img/event_list_ov.png') top center no-repeat;
+                            background: url('../images/achievement-img/event_list_ov.png') top center no-repeat;
                             background-size: 100% 100%;
                             transition: 0.3s ease;
                         }
@@ -443,13 +455,20 @@
             }
             .achievement-bg {
                 .element1 {
-                    display: none;
+                    background-size: cover;
+                    width: 120px;
+                    height: 100px;
+                    bottom: 90px;
                 }
                 .element4 {
-                    display: none;
+                    width: 100px;
+                    height: 100px;
+                    top: 70px;
                 }
                 .element3 {
-                    display: none;
+                    width: 120px;
+                    height: 100px;
+                    bottom: 90px;
                 }
                 .element2 {
                     display: none;
