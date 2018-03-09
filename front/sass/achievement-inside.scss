@@ -1,0 +1,446 @@
+                        // common area
+                        * {
+                            padding: 0;
+                            margin: 0;
+                            list-style: none;
+                            text-decoration: none;
+                            outline: 1px solid red; // overflow: hidden;
+                        }
+
+                        h1,
+                        h2,
+                        h3,
+                        h4,
+                        h5,
+                        h6,
+                        p {
+                            margin: 0;
+                        }
+
+                        h1 {
+                            font-size: 56px;
+                            font-weight: 800;
+                            font-family: 'arial', '微軟正黑體', sans-serif;
+                            line-height: 1.5;
+                        }
+
+                        h2 {
+                            font-size: 48px;
+                            font-weight: 600;
+                            font-family: 'arial', '微軟正黑體', sans-serif;
+                        }
+
+                        h3 {
+                            font-size: 40px;
+                            font-weight: 600;
+                            font-family: 'arial', '微軟正黑體', sans-serif;
+                            line-height: 48px;
+                        }
+
+                        h4 {
+                            font-size: 32px;
+                            font-weight: 600;
+                            font-family: 'arial', '微軟正黑體', sans-serif;
+                            line-height: 1.5;
+                        }
+
+                        h5 {
+                            font-size: 24px;
+                            font-weight: 400;
+                            font-family: 'arial', '微軟正黑體', sans-serif;
+                            line-height: 32px;
+                        }
+
+                        h6 {
+                            font-size: 18px;
+                            font-weight: 400;
+                            font-family: 'arial', '微軟正黑體', sans-serif;
+                            line-height: 2;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            font-weight: 400;
+                            font-family: 'arial', '微軟正黑體', sans-serif;
+                            line-height: 1.5;
+                            letter-spacing: 1.5px;
+                        }
+
+                        .clearfix {
+                            &:after {
+                                content: "";
+                                display: block;
+                                clear: both;
+                            }
+                        }
+
+                        @mixin padding() {
+                            padding: 20px;
+                        }
+
+                        @mixin btn($w, $h, $bgcolor, $color) {
+                            width: $w;
+                            height: $h;
+                            background-color: $bgcolor;
+                            color: $color;
+                            border-radius: 50%;
+                        }
+
+                        @mixin flexcenter() {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        @mixin positionAbcenter() {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translateX(-50%) translateY(-50%)
+                        }
+
+                        @mixin about-us-backgroundimage($url) {
+                            clear: both;
+                            color: black;
+                            background-image: $url;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            height: 50vw;
+                        }
+
+                        @mixin size($w, $h:null) {
+                            width: $w;
+                            height: $h;
+                        }
+
+                        @mixin achievement-inside-container() {
+                            max-width: 1140px;
+                            margin-right: auto;
+                            margin-left: auto;
+                        }
+
+                        .long {
+                            height: 100vh;
+                        }
+
+                        header {
+                            position: fixed;
+                        } //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        .achieve-inside-bg-section {
+                            background-image: url('../images/achievement-inside-img/orche-in-mare.jpg');
+                            width: 100%;
+                            height: 100vh;
+                            background-size: cover;
+                            position: relative;
+                            p {
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                font-size: 50px;
+                                font-weight: bold;
+                                transform: translateX(-50%) translateY(-50%);
+                            }
+                            .spin-animation {
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translateX(-50%) translateY(-50%);
+                                &:before {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    width: 350px;
+                                    height: 350px;
+                                    background: url('../images/achievement-inside-img/snav-open.png');
+                                    background-size: 100% 100%;
+                                    animation: spin 25s linear infinite;
+                                    background-repeat: no-repeat;
+                                }
+                                &:after {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    width: 350px;
+                                    height: 350px;
+                                    background: url('../images/achievement-inside-img/snav-open02.png');
+                                    background-size: 100% 100%;
+                                    animation: spin-reverse 25s linear infinite;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                            .wave01,
+                            .wave02,
+                            .wave03 {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                height: 104px;
+                            }
+                            .wave01 {
+                                background-image: url('../images/achievement-inside-img/mv_wave.png');
+                                background-position: left 0 top;
+                                background-repeat: repeat-x;
+                                animation: wave-anime01 50s linear infinite;
+                                opacity: 0.45;
+                            }
+                            .wave02 {
+                                background-image: url('../images/achievement-inside-img/mv_wave.png');
+                                background-position: left 300px top;
+                                background-repeat: repeat-x;
+                                -webkit-animation: wave-anime02 40s linear infinite;
+                                animation: wave-anime02 40s linear infinite;
+                                opacity: 0.7;
+                            }
+                            .wave03 {
+                                background-image: url('../images/achievement-inside-img/mv_wave.png');
+                                background-position: left 600px top;
+                                background-repeat: repeat-x;
+                                -webkit-animation: wave-anime03 30s linear infinite;
+                                animation: wave-anime03 30s linear infinite;
+                            }
+                        } /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        @keyframes wave-anime01 {
+                            0% {
+                                background-position: left 0 top;
+                            }
+                            100% {
+                                background-position: left 2000px top;
+                            }
+                        }
+
+                        @keyframes wave-anime02 {
+                            0% {
+                                background-position: left 300px top;
+                            }
+                            100% {
+                                background-position: left 2300px top;
+                            }
+                        }
+
+                        @keyframes wave-anime03 {
+                            0% {
+                                background-position: left 600px top;
+                            }
+                            100% {
+                                background-position: left 2600px top;
+                            }
+                        }
+
+                        @keyframes spin {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                        @keyframes spin-reverse {
+                            0% {
+                                -webkit-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                -webkit-transform: rotate(-360deg);
+                                transform: rotate(-360deg);
+                            }
+                        }
+
+                        .achievement-container {
+                            overflow: hidden;
+                            @include achievement-inside-container();
+                            .achieve-inside-title {
+                                @include size(100%,
+                                null);
+                                box-sizing: border-box;
+                                h2 {
+                                    text-align: center;
+                                    position: relative;
+                                    &:after {
+                                        content: '';
+                                        display: block;
+                                        position: absolute;
+                                        background: url('../images/achievement-inside-img/wave.png');
+                                        bottom: 0;
+                                        left: 28%;
+                                        width: 40%;
+                                        height: 25%;
+                                        background-size: 100% 100%;
+                                    }
+                                }
+                                @include padding();
+                                p {
+                                    font-weight: bold; // font-size: 20px;
+                                }
+                                .title-content {
+                                    color: black;
+                                    margin: 15px 0px;
+                                }
+                            }
+                            .achieve-inside-progrebar {
+                                @include size(100%,
+                                null);
+                                .bar-1,
+                                .bar-2,
+                                .bar-3 {
+                                    overflow: hidden;
+                                    @include size(20%,
+                                    auto);
+                                    float: left; // background-color: red;
+                                }
+                                .progressbar-text-father {
+                                    box-sizing: border-box;
+                                    .progressbar-text1,
+                                    .progressbar-text2,
+                                    .progressbar-text3 {
+                                        @include size(40%,
+                                        null);
+                                        float: left;
+                                        box-sizing: border-box;
+                                        padding: 20px; // padding: 10px 20px;
+                                        // font-size: 20px;
+                                    }
+                                }
+                            }
+                            .block1 {
+                                @include size(100%,
+                                null);
+                                max-height: 450px;
+                                margin: 10px 0;
+                                .achieve-inside-left {
+                                    overflow: hidden;
+                                    @include size(70%,
+                                    auto);
+                                    float: left;
+                                    @include padding();
+                                    box-sizing: border-box;
+                                    overflow: hidden;
+                                    p {
+                                        margin: 15px 0; // font-size: 25px;
+                                    }
+                                    span {
+                                        display: inline-block;
+                                        width: 100%;
+                                        border: 1px solid black;
+                                        text-align: center;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .achieve-inside-right {
+                                    max-height: 300px;
+                                    overflow: hidden;
+                                    @include size(100%,
+                                    auto);
+                                    float: left;
+                                    overflow: hidden;
+                                    img {
+                                        position: relative;
+                                        left: 0px;
+                                        right: 0px;
+                                        top: 0px;
+                                        bottom: 0px;
+                                    }
+                                }
+                            }
+                            .block2 {
+                                width: 100%;
+                                .block2-1 {
+                                    width: 55%;
+                                    float: left;
+                                    box-sizing: border-box;
+                                    overflow: hidden;
+                                    padding: 55px 10px; // font-size: 20px;
+                                }
+                                .block2-2 {
+                                    width: 45%;
+                                    float: left;
+                                    box-sizing: border-box;
+                                    padding: 55px 10px;
+                                    img {
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                                &:nth-of-type(odd) {
+                                    .block2-1 {
+                                        position: relative;
+                                        left: 45%;
+                                    }
+                                    .block2-2 {
+                                        position: relative;
+                                        left: -55%;
+                                    }
+                                }
+                            }
+                        } //end
+                        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        @media screen and (max-width:767px) {
+                            .achievement-container {
+                                .spin-animation {
+                                    overflow: hidden;
+                                }
+                                .achieve-inside-progrebar {
+                                    .bar-1,
+                                    .bar-2,
+                                    .bar-3 {
+                                        // font-size: 20px;
+                                        width: 33.33333%;
+                                        text {
+                                            // font-size: 15px;
+                                            width: 100%;
+                                        }
+                                    }
+                                    .progressbar-text-father {
+                                        .progressbar-text1,
+                                        .progressbar-text2,
+                                        .progressbar-text3 {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .achieve-inside-title {
+                                    width: 100%; // font-size: 15px;
+                                }
+                                .block1 {
+                                    .achieve-inside-right {
+                                        width: 100%;
+                                    }
+                                    .achieve-inside-left {
+                                        width: 100%;
+                                    }
+                                }
+                                .block2 {
+                                    .block2-1 {
+                                        width: 100%;
+                                    }
+                                    .block2-2 {
+                                        width: 100%;
+                                        padding: 15px;
+                                        box-sizing: border-box;
+                                    }
+                                    &:nth-of-type(odd) {
+                                        .block2-1 {
+                                            position: relative;
+                                            left: 0;
+                                        }
+                                        .block2-2 {
+                                            position: relative;
+                                            left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        } ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

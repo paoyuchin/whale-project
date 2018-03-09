@@ -1,9 +1,61 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
   outline: 1px solid red; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0; }
+
+h1 {
+  font-size: 56px;
+  font-weight: 800;
+  font-family: 'arial', '微軟正黑體', sans-serif;
+  line-height: 1.5; }
+
+h2 {
+  font-size: 48px;
+  font-weight: 600;
+  font-family: 'arial', '微軟正黑體', sans-serif; }
+
+h3 {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'arial', '微軟正黑體', sans-serif;
+  line-height: 48px; }
+
+h4 {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'arial', '微軟正黑體', sans-serif;
+  line-height: 1.5; }
+
+h5 {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'arial', '微軟正黑體', sans-serif;
+  line-height: 32px; }
+
+h6 {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'arial', '微軟正黑體', sans-serif;
+  line-height: 2; }
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'arial', '微軟正黑體', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1.5px; }
 
 .clearfix:after {
   content: "";
@@ -28,6 +80,8 @@ header {
     top: 50%;
     font-size: 50px;
     font-weight: bold;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%); }
   .achieve-inside-bg-section .spin-animation {
     width: 100%;
@@ -35,6 +89,8 @@ header {
     position: absolute;
     left: 50%;
     top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%); }
     .achieve-inside-bg-section .spin-animation:before {
       content: '';
@@ -49,6 +105,7 @@ header {
       height: 350px;
       background: url("../images/achievement-inside-img/snav-open.png");
       background-size: 100% 100%;
+      -webkit-animation: spin 25s linear infinite;
       animation: spin 25s linear infinite;
       background-repeat: no-repeat; }
     .achieve-inside-bg-section .spin-animation:after {
@@ -64,6 +121,7 @@ header {
       height: 350px;
       background: url("../images/achievement-inside-img/snav-open02.png");
       background-size: 100% 100%;
+      -webkit-animation: spin-reverse 25s linear infinite;
       animation: spin-reverse 25s linear infinite;
       background-repeat: no-repeat; }
   .achieve-inside-bg-section .wave01,
@@ -78,6 +136,7 @@ header {
     background-image: url("../images/achievement-inside-img/mv_wave.png");
     background-position: left 0 top;
     background-repeat: repeat-x;
+    -webkit-animation: wave-anime01 50s linear infinite;
     animation: wave-anime01 50s linear infinite;
     opacity: 0.45; }
   .achieve-inside-bg-section .wave02 {
@@ -94,11 +153,23 @@ header {
     -webkit-animation: wave-anime03 30s linear infinite;
     animation: wave-anime03 30s linear infinite; }
 
+@-webkit-keyframes wave-anime01 {
+  0% {
+    background-position: left 0 top; }
+  100% {
+    background-position: left 2000px top; } }
+
 @keyframes wave-anime01 {
   0% {
     background-position: left 0 top; }
   100% {
     background-position: left 2000px top; } }
+
+@-webkit-keyframes wave-anime02 {
+  0% {
+    background-position: left 300px top; }
+  100% {
+    background-position: left 2300px top; } }
 
 @keyframes wave-anime02 {
   0% {
@@ -106,17 +177,41 @@ header {
   100% {
     background-position: left 2300px top; } }
 
+@-webkit-keyframes wave-anime03 {
+  0% {
+    background-position: left 600px top; }
+  100% {
+    background-position: left 2600px top; } }
+
 @keyframes wave-anime03 {
   0% {
     background-position: left 600px top; }
   100% {
     background-position: left 2600px top; } }
 
-@keyframes spin {
+@-webkit-keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
 
 @keyframes spin-reverse {
   0% {
@@ -133,6 +228,7 @@ header {
   margin-left: auto; }
   .achievement-container .achieve-inside-title {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 20px; }
     .achievement-container .achieve-inside-title h2 {
@@ -149,8 +245,7 @@ header {
         height: 25%;
         background-size: 100% 100%; }
     .achievement-container .achieve-inside-title p {
-      font-weight: bold;
-      font-size: 20px; }
+      font-weight: bold; }
     .achievement-container .achieve-inside-title .title-content {
       color: black;
       margin: 15px 0px; }
@@ -164,15 +259,16 @@ header {
       height: auto;
       float: left; }
     .achievement-container .achieve-inside-progrebar .progressbar-text-father {
+      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       .achievement-container .achieve-inside-progrebar .progressbar-text-father .progressbar-text1,
       .achievement-container .achieve-inside-progrebar .progressbar-text-father .progressbar-text2,
       .achievement-container .achieve-inside-progrebar .progressbar-text-father .progressbar-text3 {
         width: 40%;
         float: left;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        padding: 20px;
-        font-size: 20px; }
+        padding: 20px; }
   .achievement-container .block1 {
     width: 100%;
     max-height: 450px;
@@ -183,11 +279,11 @@ header {
       height: auto;
       float: left;
       padding: 20px;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       overflow: hidden; }
       .achievement-container .block1 .achieve-inside-left p {
-        margin: 15px 0;
-        font-size: 25px; }
+        margin: 15px 0; }
       .achievement-container .block1 .achieve-inside-left span {
         display: inline-block;
         width: 100%;
@@ -212,13 +308,14 @@ header {
     .achievement-container .block2 .block2-1 {
       width: 55%;
       float: left;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       overflow: hidden;
-      padding: 55px 10px;
-      font-size: 20px; }
+      padding: 55px 10px; }
     .achievement-container .block2 .block2-2 {
       width: 45%;
       float: left;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding: 55px 10px; }
       .achievement-container .block2 .block2-2 img {
@@ -237,20 +334,17 @@ header {
   .achievement-container .achieve-inside-progrebar .bar-1,
   .achievement-container .achieve-inside-progrebar .bar-2,
   .achievement-container .achieve-inside-progrebar .bar-3 {
-    font-size: 20px;
     width: 33.33333%; }
     .achievement-container .achieve-inside-progrebar .bar-1 text,
     .achievement-container .achieve-inside-progrebar .bar-2 text,
     .achievement-container .achieve-inside-progrebar .bar-3 text {
-      font-size: 15px;
       width: 100%; }
   .achievement-container .achieve-inside-progrebar .progressbar-text-father .progressbar-text1,
   .achievement-container .achieve-inside-progrebar .progressbar-text-father .progressbar-text2,
   .achievement-container .achieve-inside-progrebar .progressbar-text-father .progressbar-text3 {
     display: none; }
   .achievement-container .achieve-inside-title {
-    width: 100%;
-    font-size: 15px; }
+    width: 100%; }
   .achievement-container .block1 .achieve-inside-right {
     width: 100%; }
   .achievement-container .block1 .achieve-inside-left {
@@ -260,6 +354,7 @@ header {
   .achievement-container .block2 .block2-2 {
     width: 100%;
     padding: 15px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
   .achievement-container .block2:nth-of-type(odd) .block2-1 {
     position: relative;
