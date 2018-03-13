@@ -5,7 +5,8 @@
   list-style: none;
   text-decoration: none;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
 
 body {
   -webkit-box-sizing: border-box;
@@ -507,22 +508,32 @@ p {
     height: 300px;
     left: -2%;
     top: 87%; }
+  .achieve-middle-section #svg {
+    width: 60%; }
+  .achieve-middle-section h2 {
+    font-size: 30px; }
+  .achieve-middle-section h5 {
+    padding: 16px 25px; }
   .grid .achieve-fishimg-1 {
     width: 40%; }
   .grid .achieve-fishimg-2 {
     display: none; }
-  .grid .achievement-btn-fahter .btn1 {
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-    .grid .achievement-btn-fahter .btn1 .btn1-inside {
-      width: 200px;
-      height: 200px; }
-  .grid .achievement-btn-fahter .btn2 {
-    width: 100%; }
-    .grid .achievement-btn-fahter .btn2 .btn2-inside {
-      width: 200px;
-      height: 200px; }
+  .grid .achievement-btn-fahter {
+    padding: 0px 15px; }
+    .grid .achievement-btn-fahter h2 {
+      font-size: 40px; }
+    .grid .achievement-btn-fahter .btn1 {
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      .grid .achievement-btn-fahter .btn1 .btn1-inside {
+        width: 185px;
+        height: 185px; }
+    .grid .achievement-btn-fahter .btn2 {
+      width: 100%; }
+      .grid .achievement-btn-fahter .btn2 .btn2-inside {
+        width: 185px;
+        height: 185px; }
   .grid .achievement-content a {
     width: 100%;
     margin-top: 10px;

@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<!-- Reset -->
-	<link rel="stylesheet" href="../common/css/reset.css">
-	<!-- Custom -->
-	<link rel="stylesheet" href="../common/css/menu.css">
-</head>
-<body>
-	<!-- Start header -->
 		<header class="header">
 			<nav class="navbar">
 				<div class="container">
 					<div class="row u-cf">
 						<figure class="navbar-logo">
-							<a href="#">
+							<a href="../front/index.html">
 								<img src="../common/images/logo/logo.png" alt="logo">
 							</a>	
 						</figure>
@@ -28,14 +16,21 @@
 							<ul class="u-cf">
 								<li>
 									<a href="#" class="menu-item" id="about">關於我們</a>
+									<ul class="dropdown">
+										<li><a href="#" id="milstone">里程碑</a></li>
+										<li><a href="../front/fundRaising.php">當期募資活動</a></li>
+										<li><a href="../front/fundRaisingBefore.php">往期募資活動</a></li>
+										<li><a href="#">當期連署</a></li>
+										<li><a href="#">歷年連署</a></li>
+									</ul>
 								</li>
 								<li>
-									<a href="../front/activity.php" class="menu-item" id="event">活動招募</a>
+									<a href="../front/boardcast.php" class="menu-item" id="event">活動招募</a>
 								</li>
 								<li><a href="#" class="menu-item" id="fundRaising">募資捐款</a></li>
 								<li><a href="#" class="menu-item" id="petition">連署活動</a></li>
-								<li><a href="#" class="menu-item" id="interactive">鯨典遊戲</a></li>
-								<li><a href="#" class="menu-item" id="member">會員</a></li>
+								<li><a href="../front/interactive.php" class="menu-item" id="interactive">鯨典遊戲</a></li>
+								<li><a href="../front/member.html" class="menu-item" id="member">會員</a></li>
 							</ul>
 							<a href="#!" class="popup-close">
 								<span></span>
@@ -46,6 +41,12 @@
 				</div>
 			</nav>
 		</header>
-	<!-- End header -->
-</body>
-</html>
+	<!-- Custom navMenu dropdown -->
+		<ul class="navMenu_dropdown" id="dropdownAbout">
+			<li><a href="#">里程碑</a></li>
+			<li><a href="../front/fundRaising.php">當期募資活動</a></li>
+			<li><a href="../front/fundRaisingBefore.php">往期募資活動</a></li>
+			<li><a href="#">當期連署</a></li>
+			<li><a href="#">歷年連署</a></li>
+		</ul>
+

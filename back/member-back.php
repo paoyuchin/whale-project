@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="member-back.php" class="sidebar-item">會員管理</a></li>
 				<li><a href="activity-back.php" class="sidebar-item">活動管理</a></li>
-				<li><a href="milestone-back.php" class="sidebar-item">里程碑管理</a></li>
+				<li><a href="achievement-back.php" class="sidebar-item">里程碑管理</a></li>
 				<li><a href="#" class="sidebar-item">留言管理</a></li>
 				<li><a href="#" class="sidebar-item">募資管理</a></li>
 				<li><a href="#" class="sidebar-item">連署活動管理</a></li>

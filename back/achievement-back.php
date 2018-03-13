@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="member-back.php" class="sidebar-item">會員管理</a></li>
 				<li><a href="activity-back.php" class="sidebar-item">活動管理</a></li>
-				<li><a href="milestone-back.php" class="sidebar-item">里程碑管理</a></li>
+				<li><a href="achievement-back.php" class="sidebar-item">里程碑管理</a></li>
 				<li><a href="#" class="sidebar-item">留言管理</a></li>
 				<li><a href="#" class="sidebar-item">募資管理</a></li>
 				<li><a href="#" class="sidebar-item">連署活動管理</a></li>
@@ -70,17 +70,25 @@
 								$column = "select * from achievementContent limit $start,$num";
 								$contents = $pdo->query($column);
 								while($contentRow = $contents->fetch(PDO::FETCH_ASSOC)){ //array
-						?> 
-								<tr>
-									<td><?php echo $contentRow["achievementContentNo"] ?></td>
-									<td><?php echo $contentRow["title"] ?></td>
-									<td><?php echo $contentRow["content"] ?></td>
-									<td>
-										<a href="achievement-content-editor-back.php?achievementContentNo=<?php echo 
-									$contentRow["achievementContentNo"] ?>">
-									
-									<img src="images/component/pencil.png" alt="edit"></a></td>
-								</tr>
+						?> 		<form action="achievement-content-editor-back.php" method="POST" enctype="multipart/form-data">
+									<tr>
+										<td>	
+											<?php echo $contentRow["achievementContentNo"]?>
+											<input type="hidden" name="achievementContentNo" value="<?php echo $contentRow["achievementContentNo"]?>">
+										</td>
+										<td>
+											<?php echo $contentRow["title"] ?>
+										</td>
+										<td>
+											<?php echo $contentRow["content"] ?>
+										</td>
+										<td>
+											<button class="btn" name="submit" type="submit">
+												<img src="images/component/pencil.png" alt="edit"></a>
+											</button>
+										</td>
+									</tr>
+								</form>
 						<?php	
 								}
 							} catch (PDOExpection $e) {

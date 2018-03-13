@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="member-back.php" class="sidebar-item">會員管理</a></li>
 				<li><a href="activity-back.php" class="sidebar-item">活動管理</a></li>
-				<li><a href="#" class="sidebar-item">里程碑管理</a></li>
+				<li><a href="achievement-back.php" class="sidebar-item">里程碑管理</a></li>
 				<li><a href="#" class="sidebar-item">留言管理</a></li>
 				<li><a href="#" class="sidebar-item">募資管理</a></li>
 				<li><a href="#" class="sidebar-item">連署活動管理</a></li>
@@ -38,21 +38,20 @@
 				<div class="block-table">
                     <?php 
                         try {
-                            // echo $_REQUEST["achievementContentNo"];
                             require_once("connectback.php");
                             $sql = "select * from achievementContent where achievementContentNo = :achievementContentNo";
                             $contents = $pdo -> prepare($sql);
                             $contents -> bindValue(":achievementContentNo", $_REQUEST["achievementContentNo"]);
                             $contents -> execute();
-
                             $content = $contents ->fetchObject();
                             $achieveContent = $content -> content;
                             $title = $content -> title;
                             $filename = $content -> filename;
                             $achievementContentNo = $content -> achievementContentNo;
+                            echo "<script>console.log( 'Debug Objects: " . $filename . "' );</script>";
                             // print_r("$achievementContentNo"); 驗證用
                     ?>
-                        <form action="achieveUpdated.php" enctype="multipart/form-data">  
+                        <form action="achieveUpdated.php" method="post" enctype="multipart/form-data">  
                         <!-- 傳東西可以傳多種typeenctype="multipart/form-data" -->
                             <table>
                                 <tr>
@@ -64,7 +63,7 @@
                                 <tr>
                                     <td>內容</td>
                                     <td>
-                                        <textarea id="" cols="30" rows="10" name="achieveContent">
+                                        <textarea id="" cols="30" rows="10" name="content">
                                             <?php echo $achieveContent; ?>
                                         </textarea>
                                     </td>
@@ -72,10 +71,14 @@
                                 <tr>
                                     <td>新增圖片</td>
                                     <td>
-                                        <input type="file" value="<?php echo $filename ?>">
-                                    </td>
-                                </tr>
+                                        <?php echo $filename ?>
+                                        <input type="file" name="file" id="filename" value="<?php echo $filename ?>">
+                                        <img class='preview' src='uploads/<?php echo $filename?>'> 
+                                    </td>                                 
+                                </tr>   
+        
                             </table>
+                            <input type="hidden" name="file" value="<?php echo $filename ?>">
                             <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">
                             <button class="btn" type="submit" name="submit">確認修改</button>
                         </form>
