@@ -1,61 +1,68 @@
 <?php
     session_start();
     ob_start();
+    $allow_types = array('jpg', 'jpeg', 'png');
+    
     try {
         if(isset($_REQUEST["submit"])) {
-            $achievementContentNo = $_REQUEST["achievementContentNo"];
-            $title = $_REQUEST["title"];
-            $content = $_REQUEST["content"];
-            $file = $_FILES["file"];
-            // print_r($file);
-            //file要驗證的東西
-            $file_name = $file["name"];
-            $file_type = $_FILES["file"]["type"];
-            $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
-            $file_ext = strtolower($file_ext);
-            //. 用.拆開
-            $allow_types = array('jpg','jpeg','png','pdf');
-            $last_uploaded = $_REQUEST['file']; // uuid or ''
-            if(in_array($file_ext , $allow_types )){
-                if($file["error"] === 0 && $file["size"] != 0){
-                    if($file["size"] < 1000000){
-                        $last_uploaded = uniqid() . "." . $file_ext; // should be xxx.jpg
-                        $dest = "uploads/" . $last_uploaded;
-                        move_uploaded_file($file["tmp_name"], $dest);
-                    }
-                    else{
-                        echo 
-                        "<script>
-                            alert('Too big.');
-                            window.loction = 'achievement-content-editor.php?fileSize-fail';
-                        </script>"; 
-                    }
-                }
-                else{
-                    echo 
-                    "<script>
-                        alert('Failed.');
-                        window.loction = 'achievement-content-editor.php?fileError-fail';
-                    </script>";
-                }
-            }
-            else {
-                echo 
-                "<script>
-                    alert('Wrong type.');
-                    window.loction = 'achievement-content-editor.php?fileError-fail';
-                </script>";
-            }
             require_once("connectback.php");
             $sql = "update achievementContent set title = :title,
-                                                  content = :content,
-                                                  filename = :filename
+                                                  content1 = :content1,
+                                                  content2 = :content2,
+                                                  content3 = :content3,
+                                                  img1 = :img1,
+                                                  img2 = :img2,
+                                                  img3 = :img3
                                                   where achievementContentNo = :achievementContentNo";
             $editContent = $pdo -> prepare($sql);
             $editContent -> bindValue(":achievementContentNo", $_REQUEST["achievementContentNo"]);        
+
+            $title = $_REQUEST["title"];
             $editContent -> bindValue(":title", $title);    
-            $editContent -> bindValue(":content", $content);
-            $editContent -> bindValue(":filename", $last_uploaded);
+            $content = array();
+            for($i = 1; $i < 4; $i++){
+                $editContent -> bindValue(":content" . $i, $_REQUEST["content" . $i]);
+                $last_uploaded = $_REQUEST['img' . $i];
+                $img = $_FILES["img" . $i];
+                $file_ext = strtolower(pathinfo($img["name"], PATHINFO_EXTENSION));
+                error_log($file_ext);
+                $msg = $img["name"];
+                if(!in_array($file_ext , $allow_types)){
+                    $msg .= ' Wrong type.';
+                }
+                if($img["error"] !== 0){
+                    $msg .= ' Failed.';
+                }
+                if($img["size"] > 1000000){
+                    $msg .= ' Too big.';
+                }
+                if($msg != $img["name"]) {
+                    echo 
+                    "<script>
+                        alert('" . $msg . "');
+                        window.location = 'achievement-content-editor-back.php?fileSize-fail';
+                    </script>";
+                } else{
+                    if($img["size"] != 0){ // file not empty
+                        error_log($i);
+                        error_log($last_uploaded[0]);
+                        error_log($last_uploaded[1]);
+                        error_log($last_uploaded[2]);
+                        $last_uploaded = $i . "." . $file_ext; // should be xxx.jpg
+                        $path = "uploads/" . $title;
+                        $dest = $path . "/" . $last_uploaded;
+                        error_log($last_uploaded);
+                        error_log($path);
+                        error_log($dest);
+                        if(!is_dir($path)){
+                            mkdir($path);
+                        }
+                        //error_log($dest);
+                        move_uploaded_file($img["tmp_name"], $dest);   
+                    }
+                }    
+                $editContent -> bindValue(":img" . $i, $last_uploaded);     
+            }        
             $editContent -> execute();
             header("location:achievement-back.php");
         }

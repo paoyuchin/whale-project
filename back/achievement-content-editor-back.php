@@ -44,11 +44,18 @@
                             $contents -> bindValue(":achievementContentNo", $_REQUEST["achievementContentNo"]);
                             $contents -> execute();
                             $content = $contents ->fetchObject();
-                            $achieveContent = $content -> content;
+                            $achieveContent1 = $content -> content1;
+                            $achieveContent2 = $content -> content2;
+                            $achieveContent3 = $content -> content3;
                             $title = $content -> title;
-                            $filename = $content -> filename;
+                            $img1 = $content -> img1;
+                            $img2 = $content -> img2;
+                            $img3 = $content -> img3;
                             $achievementContentNo = $content -> achievementContentNo;
-                            echo "<script>console.log( 'Debug Objects: " . $filename . "' );</script>";
+                            echo "<script>console.log( 'Debug Objects: " . $title . "' );</script>";
+                            echo "<script>console.log( 'Debug Objects: " . $img1 . "' );</script>";
+                            echo "<script>console.log( 'Debug Objects: " . $img2 . "' );</script>";
+                            echo "<script>console.log( 'Debug Objects: " . $img3 . "' );</script>";
                             // print_r("$achievementContentNo"); 驗證用
                     ?>
                         <form action="achieveUpdated.php" method="post" enctype="multipart/form-data">  
@@ -63,22 +70,35 @@
                                 <tr>
                                     <td>內容</td>
                                     <td>
-                                        <textarea id="" cols="30" rows="10" name="content">
-                                            <?php echo $achieveContent; ?>
+                                        <textarea id="" cols="30" rows="10" name="content1">
+                                            <?php echo $achieveContent1; ?>
+                                        </textarea>
+                                        <textarea id="" cols="30" rows="10" name="content2">
+                                            <?php echo $achieveContent2; ?>
+                                        </textarea>
+                                        <textarea id="" cols="30" rows="10" name="content3">
+                                            <?php echo $achieveContent3; ?>
                                         </textarea>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>新增圖片</td>
                                     <td>
-                                        <?php echo $filename ?>
-                                        <input type="file" name="file" id="filename" value="<?php echo $filename ?>">
-                                        <img class='preview' src='uploads/<?php echo $filename?>'> 
+                                        <?php echo $img1 ?>
+                                        <?php echo $img2 ?>
+                                        <?php echo $img3 ?>
+                                        <input type="file" name="img1" value="<?php echo $img1 ?>">
+                                        <input type="file" name="img2" value="<?php echo $img2 ?>">
+                                        <input type="file" name="img3" value="<?php echo $img3 ?>">
+                                        <img class='preview' src='uploads/<?php echo $title ?>/<?php echo $img1 ?>'> 
+                                        <img class='preview' src='uploads/<?php echo $title ?>/<?php echo $img2 ?>'> 
+                                        <img class='preview' src='uploads/<?php echo $title ?>/<?php echo $img3 ?>'> 
                                     </td>                                 
                                 </tr>   
-        
                             </table>
-                            <input type="hidden" name="file" value="<?php echo $filename ?>">
+                            <input type="hidden" name="img1" value="<?php echo $img1 ?>">
+                            <input type="hidden" name="img2" value="<?php echo $img2 ?>">
+                            <input type="hidden" name="img3" value="<?php echo $img3 ?>">
                             <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">
                             <button class="btn" type="submit" name="submit">確認修改</button>
                         </form>

@@ -34,7 +34,7 @@
 		</div>
 		<div class="main-section">
 			<div class="block">
-				<div class="title">活動成果</div>
+				<div class="title">里程碑</div>
 				<div class="block-table">
 					<div class="subtitle">
 						活動成果管理
@@ -80,7 +80,9 @@
 											<?php echo $contentRow["title"] ?>
 										</td>
 										<td>
-											<?php echo $contentRow["content"] ?>
+											<?php echo $contentRow["content1"] ?>
+											<?php echo $contentRow["content2"] ?>
+											<?php echo $contentRow["content3"] ?>
 										</td>
 										<td>
 											<button class="btn" name="submit" type="submit">
