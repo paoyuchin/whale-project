@@ -362,3 +362,27 @@ header {
   .achievement-container .block2:nth-of-type(odd) .block2-2 {
     position: relative;
     left: 0; } }
+
+.btnFather {
+  width: 100%; }
+  .btnFather .btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 56px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: #50b78e;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none; }

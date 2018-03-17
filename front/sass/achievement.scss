@@ -273,7 +273,8 @@
                 text-align: center;
             }
             figcaption h2 {
-                margin: 0 0 20px 0;
+                font-size: 25px;
+                margin: 0 0 10px 0;
                 color: #3498db;
                 text-transform: uppercase;
                 letter-spacing: 1px;
@@ -316,11 +317,10 @@
                 transform: translateY(100%);
                 font-size: 100%;
                 margin: 0px;
-            }
-            & a:hover figure button {
-                transition-timing-function: ease-out;
-                transform: translateY(0);
-            }
+            } // & a:hover figure button {
+            //     transition-timing-function: ease-out;
+            //     transform: translateY(0);
+            // }
             & figcaption h2,
             & figcaption p {
                 timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
@@ -344,14 +344,13 @@
             }
             a:hover figure img {
                 opacity: 1;
-            }
-            a:hover figcaption h2,
-            a:hover figcaption p {
-                transform: translateY(0);
-            }
-            a:hover figcaption p {
-                opacity: 0;
-            }
+            } // a:hover figcaption h2,
+            // a:hover figcaption p {
+            //     transform: translateY(0);
+            // }
+            // a:hover figcaption p {
+            //     opacity: 0;
+            // }
             figcaption h2 {
                 color: #e74c3c;
             }
@@ -527,6 +526,7 @@
             }
             .achieve-middle-section {
                 #svg {
+                    height: 50%;
                     width: 60%;
                 }
                 h2 {

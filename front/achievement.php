@@ -122,7 +122,6 @@
                 </div>
             </div>
         </div>
-
         <script>
             // $('#A').css('top', '30');
             $('#b2').click(function () {
@@ -140,115 +139,93 @@
 
             })
         </script>
-
-        <div class="achieve-act-page page" id="A">
-            <div class="achievement-content">
-                <a href="achievement-inside.php" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
-                    <figure>
-                        <img src="images/achievement-img/bga.jpg" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
-                            <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0
-                            z" />`
-                        </svg>
-                        <figcaption>
-                            <h2>A護鯨活動</h2>
-                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
-                    <figure>
-                        <img src="images/achievement-img/bga.jpg" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
-                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
-                            />
-                        </svg>
-                        <figcaption>
-                            <h2>A護鯨活動</h2>
-                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
-                    <figure>
-                        <img src="images/achievement-img/bga.jpg" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
-                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
-                            />
-                        </svg>
-                        <figcaption>
-                            <h2>A護鯨活動</h2>
-                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
-
-                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
-                    <figure>
-                        <img src="images/achievement-img/bga.jpg" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
-                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
-                            />
-                        </svg>
-                        <figcaption>
-                            <h2>A護鯨活動</h2>
-                            <p>Soko radicchio bunya nuts gram dulse.</p>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
+            
+                <div class="achieve-act-page page" id="A">
+                    <div class="achievement-content">
+                            
+                <?php 
+                try{
+                    require_once("connectback.php");
+                    $sql = "SELECT activityName,content,filename,class
+                            FROM achievementcontent aa ,activity
+                            WHERE achievementContentNo=(SELECT MIN(achievementContentNo) 
+                            FROM achievementcontent bb
+                            WHERE aa.activityNo = bb.activityNo) AND
+                            aa.activityNo=activity.activityNo AND class =0";
+                     $editContents = $pdo -> prepare($sql);
+                     $editContents->execute();
+                        while($editContent = $editContents -> fetchObject()){ 
+                        $content = $editContent->content;
+                        $activityName = $editContent->activityName;
+                        $filename = $editContent->filename;?>
+                        <a href="achievement-inside.php" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                            <figure>
+                                <img src="images/achievement-img/bga.jpg" />
+                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                    <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0
+                                    z" />
+                                </svg>
+                                <figcaption>
+                                    <h2> <?php echo $activityName ?></h2>
+                                    <p><?php echo $content ?></p>
+                                    <button>View</button>
+                                </figcaption>
+                            </figure>
+                        </a> 
+                        <?php
+                        }
+                    }catch(PDOExpection $e) {
+								echo "錯誤原因: ", $e->getMessage(), "<br>";
+								echo "錯誤行號: ", $e->getLine(), "<br>";
+							}
+                        ?>	
+                        </div>
+                    </div>  
+                                  
+                   
+                                
 
 
-            </div>
-        </div>
+ 
         <!-- ///////////////////////////////////////////////////////////////////////////////////////// 出海宣傳 -->
         <div class="achieve-act-page page" style="display:none" id="B">
             <div class="achievement-content" id="B-content">
-                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
-                    <figure>
-                        <img src="images/achievement-img/bga.jpg" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue" fill="pink">
-                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
-                            />
-                        </svg>
-                        <figcaption>
-                            <h2>B護鯨活動</h2>
-                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
-                    <figure>
-                        <img src="images/achievement-img/bga.jpg" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue">
-                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
-                            />
-                        </svg>
-                        <figcaption>
-                            <h2>B護鯨活動</h2>
-                            <p>護鯨活動內容護鯨活動內容護鯨活動內容護鯨活護鯨活動內容護鯨活動內容護鯨活動內容護鯨活護鯨活動內容護鯨活動內容護鯨活動內容護鯨活護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容護鯨活動內容</p>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
-                    <figure>
-                        <img src="images/achievement-img/bga.jpg" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue">
-                            <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
-                            />
-                        </svg>
-                        <figcaption>
-                            <h2>B護鯨活動</h2>
-                            <p>Soko radicchio bunya nuts gram dulse.</p>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
+                <?php 
+                try{
+                    require_once("connectback.php");
+                    $sql = "SELECT activityName,content,filename,class
+                            FROM achievementcontent aa ,activity
+                            WHERE achievementContentNo=(SELECT MIN(achievementContentNo) 
+                            FROM achievementcontent bb
+                            WHERE aa.activityNo = bb.activityNo) AND
+                            aa.activityNo=activity.activityNo AND class =1";
+                     $editContents = $pdo -> prepare($sql);
+                     $editContents->execute();
+                        while($editContent = $editContents -> fetchObject()){ 
+                        $content = $editContent->content;
+                        $activityName = $editContent->activityName;
+                        $filename = $editContent->filename;?>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                <figure>
+                    <img src="images/achievement-img/bga.jpg" />
+                    <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue" fill="pink">
+                        <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
+                        />
+                    </svg>
+                    <figcaption>
+                        <h2><?php echo $activityName ?></h2>
+                        <p><?php echo $content ?></p>
+                        <button>View</button>
+                    </figcaption>
+                </figure>
+            </a>
+            <?php
+                        }
+                    }catch(PDOExpection $e) {
+								echo "錯誤原因: ", $e->getMessage(), "<br>";
+								echo "錯誤行號: ", $e->getLine(), "<br>";
+							}
+            ?>	                                        
             </div>
         </div>
     </div>
@@ -259,11 +236,9 @@
 
     <script>
         (function () {
-
             function init() {
                 var speed = 330,
                     easing = mina.backout;
-
                 [].slice.call(document.querySelectorAll('#grid > .achieve-act-page >.achievement-content >a')).forEach(
                     function (el) {
                         var s = Snap(el.querySelector('svg')),

@@ -3,7 +3,8 @@
                             padding: 0;
                             margin: 0;
                             list-style: none;
-                            text-decoration: none; // outline: 1px solid red; // overflow: hidden;
+                            text-decoration: none; // outline: 1px solid red; 
+                            // overflow: hidden;
                         }
 
                         h1,
@@ -442,5 +443,28 @@
                                         }
                                     }
                                 }
+                            }
+                        }
+
+                        .btnFather {
+                            width: 100%;
+                            .btn {
+                                display: inline-block;
+                                vertical-align: middle;
+                                padding: 8px 56px; //大小用padding推
+                                box-sizing: border-box;
+                                font-size: 20px;
+                                line-height: 36px;
+                                text-align: center;
+                                font-weight: 500;
+                                letter-spacing: 0;
+                                text-decoration: none;
+                                color: #fff; //自己改顏色
+                                background-color: rgb(80, 183, 142); //#50b78e
+                                outline: none;
+                                cursor: pointer;
+                                overflow: hidden;
+                                transition: all 0.3s;
+                                border: none;
                             }
                         } ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

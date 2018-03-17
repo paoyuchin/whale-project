@@ -244,7 +244,8 @@ p {
     height: 100%;
     text-align: center; }
   .grid figcaption h2 {
-    margin: 0 0 20px 0;
+    font-size: 25px;
+    margin: 0 0 10px 0;
     color: #3498db;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -299,13 +300,6 @@ p {
     transform: translateY(100%);
     font-size: 100%;
     margin: 0px; }
-  .grid a:hover figure button {
-    -webkit-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0); }
   .grid figcaption h2,
   .grid figcaption p {
     timing-function: cubic-bezier(0.25, 0.25, 0.115, 1.445); }
@@ -330,13 +324,6 @@ p {
     height: auto; }
   .grid a:hover figure img {
     opacity: 1; }
-  .grid a:hover figcaption h2,
-  .grid a:hover figcaption p {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0); }
-  .grid a:hover figcaption p {
-    opacity: 0; }
   .grid figcaption h2 {
     color: #e74c3c; }
   .grid figcaption p {
@@ -509,6 +496,7 @@ p {
     left: -2%;
     top: 87%; }
   .achieve-middle-section #svg {
+    height: 50%;
     width: 60%; }
   .achieve-middle-section h2 {
     font-size: 30px; }

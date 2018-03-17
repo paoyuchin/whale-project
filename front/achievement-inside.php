@@ -29,6 +29,7 @@
     <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <?php  require_once "../common/menu.html" ?>
 
+
     <div class="achieve-inside-bg-section">
         <div class="spin-animation"></div>
         <p>護鯨成果內頁</p>
@@ -38,11 +39,32 @@
     </div>
     <div class="achievement-container clearfix">
         <div class="achieve-inside-title clearfix">
-            <h2>遠洋保護鯨魚</h2>
-            <p class="title-content">近40年來，綠色和平和全球許多保護海洋的組織並肩作戰，最終目標，是推動全球40%海洋劃為海洋保護區！破壞性捕撈、海洋酸化與氣候變遷，都嚴重威脅海洋健康生態。每年，至少有30萬條鯨魚遭誤捕而死。近40年來，綠色和平和全球許多保護海洋的組織並肩作戰，最終目標，是推動全球40%海洋劃為海洋保護區破壞性捕撈、海洋酸化與氣候變遷，都嚴重威脅海洋健康生態。每年，至少有30萬條鯨魚遭誤捕而死。近40年來，綠色和平和全球許多保護海洋的組織並肩作戰，最終目標，是推動全球40%海洋劃為海洋保護區！
-                ！
-            </p>
-            <p class="title-date">2017年8月7號</p>
+            <?php 
+                try{
+                    require_once("connectback.php");
+                    $sql = "SELECT activityName,content,filename,date_add(startDate, interval 1 day) as endDay
+                            FROM achievementcontent aa ,activity
+                            WHERE achievementContentNo=(SELECT MIN(achievementContentNo) 
+                            FROM achievementcontent bb
+                            WHERE aa.activityNo = bb.activityNo) AND
+                            aa.activityNo=activity.activityNo";
+                     $editContents = $pdo -> prepare($sql);
+                     $editContents->execute();
+                        while($editContent = $editContents -> fetchObject()){ 
+                        $content = $editContent->content;
+                        $activityName = $editContent->activityName;
+                        $endDay = $editContent->endDay;
+                        $filename = $editContent->filename;?>
+            <h2><?php echo $activityName ?></h2>
+            <p class="title-content"><?php echo $content ?></p>
+            <p class="title-date"><?php echo $endDay ?></p>
+              <?php
+                        }
+                    }catch(PDOExpection $e) {
+								echo "錯誤原因: ", $e->getMessage(), "<br>";
+								echo "錯誤行號: ", $e->getLine(), "<br>";
+							}
+                        ?>
         </div>
         <div class="achieve-inside-progrebar clearfix">
             <div class="bar-1">
@@ -87,31 +109,31 @@
             </div>
             <div class="achieve-inside-left">
                 <p>
-                    夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。第二年，鯨魚守護者再次出動，傳遞反對捕鯨的信念和行動，直至濫捕危機徹底解決為止。
-                </p>
-                <a href="#" class="youtube-link-dark" youtubeid="-nvUuHKkLgk">點我看影片</a>
+            <?php echo $content?>    
+            </p>
+                <!-- <a href="#" class="youtube-link-dark" youtubeid="-nvUuHKkLgk">點我看影片</a> -->
             </div>
         </div>
         <div class="block2 clearfix">
             <p class="block2-1">
-                動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。第二年，鯨魚守護者再次出動，傳遞反對捕鯨的信念和行動，直至濫捕危機徹底解決為止。夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。第二年，鯨魚守護者再次出動，傳遞反對捕鯨的信念和行動，直至濫捕危機徹底解決為止。
-            </p>
+                <?php echo $content?>  </p>
             <div class="block2-2">
                 <img src="images/achievement-inside-img/33333.jpg" alt="test">
             </div>
         </div>
         <div class="block2 clearfix">
             <p class="block2-1">
-                太平洋，抗議當時蘇聯的捕鯨船。第二年，鯨魚守護者再次出動，傳遞反對捕鯨的信念和行動，直至濫捕危機徹底解決為止。夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。第二年，鯨魚守護者再次出動，傳遞反對捕鯨的信念和行動，直至濫捕危機徹底解決為止。夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。夏天，綠色和平首次出海反捕鯨，守護鯨魚行動揭開序幕。我們揚帆啟航至北太平洋，抗議當時蘇聯的捕鯨船。第二年，鯨魚守護者再次出動，傳遞反對捕鯨的信念和行動，直至濫捕危機徹底解決為止。
-            </p>
+        <?php echo $content?>          
+        </p>
             <div class="block2-2">
                 <img src="images/achievement-inside-img/33333.jpg" alt="test">
             </div>
         </div>
-
-
+        <div class="btnFather">
+        <a class="btn" href="achievement.php">回前一頁</a>
     </div>
-
+    </div>
+    
 
     <script>
         // Demo video 2
