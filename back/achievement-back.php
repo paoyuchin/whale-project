@@ -10,7 +10,8 @@
 	<!-- reset -->
 	<link rel="stylesheet" href="css/reset.css">
 	<!-- custom -->
-	<link rel="stylesheet" href="css/activity-back.css">
+	<link rel="stylesheet" href="css/achievement-back.css">
+	<script src="js/plugin/jquery-3.3.1.min.js"></script>	
 	<script src="achievement-back.js"></script>
 </head>
 <body>
@@ -35,11 +36,8 @@
 		</div>
 		<div class="main-section">
 			<div class="block">
-				<div class="title">活動成果</div>
-				<div class="block-table">
-					<div class="subtitle">
-						活動成果管理
-					</div>	
+				<div class="title">活動成果管理</div>
+				<div class="block-table">	
 					<table align='center' cellspacing='0'>
 						<tr>
                             <th>活動編號</th>
@@ -99,30 +97,30 @@
 											<?php echo $endDay ?>
 											<!-- 結束日期 -->
 										</td>
-										<td>
+										<td class="tdbtn" data-activityNo="<?php echo $activityNo ?>">
 											<?php 
 											if($achievementStatus == 1){
 												echo 
-												'<label>
-													<input type="radio" name="status" value="1" checked>上架
+												"<label>
+													<input type='radio' class='radioBtn' name='status$activityNo' value='1' checked>上架
 												</label>
 												<label>											
-													<input type="radio" name="status" value="0">未上架
-												</label>';
+													<input type='radio' class='radioBtn' name='status$activityNo' value='0'>未上架
+												</label>";
 											}else{
-												echo '
+												echo "
 												<label>
-													<input type="radio" name="status" value="1">上架
+													<input type='radio' class='radioBtn' name='status$activityNo' value='1'>上架
 												</label>
 												<label>											
-													<input type="radio" name="status" value="0" checked>未上架
-												</label>';
+													<input type='radio' class='radioBtn' name='status$activityNo' value='0' checked>未上架
+												</label>";
 											}
 											
 											?>
 										
 											
-												<!-- <?php echo $achievementStatus ?> -->
+												<!-- <?php //echo $achievementStatus ?> -->
 											<!-- 活動狀態 -->
 										</td>
 										<td>

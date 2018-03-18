@@ -146,19 +146,23 @@
                 <?php 
                 try{
                     require_once("connectback.php");
-                    $sql = "SELECT activityName,content,filename,class
+                    $sql = "SELECT activityName,content,filename,class,aa.activityNo AS activityNo
                             FROM achievementcontent aa ,activity
                             WHERE achievementContentNo=(SELECT MIN(achievementContentNo) 
                             FROM achievementcontent bb
-                            WHERE aa.activityNo = bb.activityNo) AND
-                            aa.activityNo=activity.activityNo AND class =0";
+                            WHERE aa.activityNo = bb.activityNo) 
+                            AND
+                            aa.activityNo=activity.activityNo AND class =0 AND achievementStatus = 1";
                      $editContents = $pdo -> prepare($sql);
                      $editContents->execute();
                         while($editContent = $editContents -> fetchObject()){ 
                         $content = $editContent->content;
                         $activityName = $editContent->activityName;
-                        $filename = $editContent->filename;?>
-                        <a href="achievement-inside.php" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                        $filename = $editContent->filename;
+                        $activityNo = $editContent->activityNo;
+                        
+                        ?>
+                        <a href="achievement-inside.php?activityNo=<?php echo $activityNo?>" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                             <figure>
                                 <img src="images/achievement-img/bga.jpg" />
                                 <svg viewBox="0 0 180 320" preserveAspectRatio="none">
@@ -198,7 +202,7 @@
                             WHERE achievementContentNo=(SELECT MIN(achievementContentNo) 
                             FROM achievementcontent bb
                             WHERE aa.activityNo = bb.activityNo) AND
-                            aa.activityNo=activity.activityNo AND class =1";
+                            aa.activityNo=activity.activityNo AND class =1 AND achievementStatus = 1";
                      $editContents = $pdo -> prepare($sql);
                      $editContents->execute();
                         while($editContent = $editContents -> fetchObject()){ 

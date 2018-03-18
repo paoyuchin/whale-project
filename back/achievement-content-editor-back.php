@@ -10,40 +10,13 @@
 	<!-- reset -->
 	<link rel="stylesheet" href="css/reset.css">
 	<!-- custom -->
-    <link rel="stylesheet" href="css/activity-back.css">
+    <link rel="stylesheet" href="css/achievement-back.css">
+    <link rel="stylesheet" href="css/achievement-content-editor-back.css">
+    <script src="achievement-content-edited-back.js"></script>
     
 
 </head>
-<style>
-	* {
-        box-sing:border-box;
-		outline: 1px solid red;
-    }
-    .title{
-        width:100%;
-        text-align:center;
-        font-size:30px;
-    }
-    .addbtn{
-        margin-top:5px;
-        border:1px solid black;
-        display:inline-block;
-        background-color:yellow;
-        cursor:pointer;
-        text-align:center;
-        width:100%;
-    }
-    .tellEmpty{
-        width:100%;
-        text-align:center;
-    }
-    .FinishEditedBtn{
-        display:inline-block;
-        cursor:pointer;        
-        display:inline-block;
-        background-color:blue;
-    }
-</style>
+
 <body>
 	<div class="wrapper">
 		<div class="bg-img"></div>
@@ -68,17 +41,16 @@
 			<div class="block">
 
                 <div class="title"> <?php echo ($_REQUEST['activityName'])?>活動成果管理</div>
-                <div class="tellEmpty" id="tellEmpty">目前尚無資料，請點選新增內容與圖片即可新增啦笨蛋</div>
+                <div class="tellEmpty" id="tellEmpty">目前尚無資料，請點選新增按鈕即可新增</div>
 				<div class="block-table">
                    
                 <!-- =======要複製的東西============================================================== -->
-                <form class="spotDiv" action="achieveUpdated.php" method="post" style="display:none" enctype="multipart/form-data">
+                <form class="spotDiv" method="post" style="display:none" enctype="multipart/form-data">
                     <table>
                         <tr>
                             <td>內容</td>
                             <td>
-                                <textarea id="" cols="30" rows="10" name="content[]">
-                                </textarea>
+                                <textarea id="" cols="30" rows="10" id="contentId" name="content[]"></textarea>
                             </td>                            
                         </tr>                        
                         <tr>
@@ -86,11 +58,14 @@
                             <td>
                                 <input type="file" name="file[]"value="">
                                 <img class='preview' src='uploads/'> 
-                            </td>                                 
-                        </tr>                        
+                            </td>                              
+                        </tr>                       
                     </table>
                     <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">
-                    <button class="FinishEditedBtn" type="submit" name="submit">上面這一筆我已經確認修改完了我要更新</button>                                        
+                    <div class="FinishEditedBtnFather">
+                        <input class="FinishEditedBtn" type="submit" name="submit" value="Submit">                                       
+                    </div>
+                    <div class="line"></div>
                 </form>
                         
 
@@ -120,8 +95,8 @@
                         <tr>
                             <td>內容</td>
                             <td>
-                                <textarea id="" cols="30" rows="10" name="content[]">
-                                    <?php echo $content ; ?>
+                                <textarea id="" cols="30" rows="10" name="content[]" id="textArea">
+                                    <?php echo $content ; ?>dddd
                                 </textarea>
                             </td>
                         </tr>
@@ -142,8 +117,9 @@
                     <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">
                     <!-- <button id="btnSend" class="btn" type="submit" name="submit">確認修改</button> -->
                 </form>
-                <span class="btn addbtn" id="btnSpotAdd">新增內容與圖片</span>
-                        
+                    <div class="btnFather">
+                        <div class="btn" id="btnSpotAdd">新增內容與圖片</div>
+                    </div>          
                     <?
                         } catch (PDOExpection $e){
                             echo "錯誤原因:" , $e->getMessage() , "<br>" ; 
@@ -155,26 +131,5 @@
 			</div>
 		</div>
     </div>
-    
-<script>
-function $id(id) {
-			return document.getElementById(id);
-		}
-        
-function addSpot() {
-			var btnSend = $id("btnSend"); //送出的按鈕
-			var myForm = $id("myForm"); //表單
-			var spotDiv = document.getElementsByClassName("spotDiv")[0];
-			var newSpot = spotDiv.cloneNode(true);
-			newSpot.style.display = "";
-			myForm.insertBefore(newSpot, btnSend);
-			// newSpot.querySelectorAll(".trash")[0].onclick = delSpot;
-		}
-window.addEventListener("load", function () {
-			$id("btnSpotAdd").onclick = addSpot;      
-			// document.querySelectorAll(".trash")[1].onclick = delSpot;
-		}, false);
-
-</script>    
 </body>
 </html>

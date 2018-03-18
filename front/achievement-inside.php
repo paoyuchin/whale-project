@@ -42,18 +42,16 @@
             <?php 
                 try{
                     require_once("connectback.php");
-                    $sql = "SELECT activityName,content,filename,date_add(startDate, interval 1 day) as endDay
-                            FROM achievementcontent aa ,activity
-                            WHERE achievementContentNo=(SELECT MIN(achievementContentNo) 
-                            FROM achievementcontent bb
-                            WHERE aa.activityNo = bb.activityNo) AND
-                            aa.activityNo=activity.activityNo";
+                    $activityNo = $_REQUEST['activityNo'];
+                    $sql = "SELECT content , activityName , `startDate` , filename FROM achievementcontent aa ,activity 
+                            WHERE aa.activityNo = activity.activityNo 
+                            And aa.activityNo = $activityNo";
                      $editContents = $pdo -> prepare($sql);
                      $editContents->execute();
                         while($editContent = $editContents -> fetchObject()){ 
                         $content = $editContent->content;
                         $activityName = $editContent->activityName;
-                        $endDay = $editContent->endDay;
+                        $endDay = $editContent->startDate;
                         $filename = $editContent->filename;?>
             <h2><?php echo $activityName ?></h2>
             <p class="title-content"><?php echo $content ?></p>
