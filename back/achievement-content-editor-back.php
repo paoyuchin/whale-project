@@ -63,7 +63,7 @@
                     </table>
                     <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">
                     <div class="FinishEditedBtnFather">
-                        <input class="FinishEditedBtn" type="submit" name="submit" value="Submit">                                       
+                        <input class="FinishEditedBtn" type="submit" name="submit" value="送出">                                       
                     </div>
                     <div class="line"></div>
                 </form>
@@ -91,7 +91,6 @@
                     $filename = $editContent->filename;
                 ?>
                     <table id="myForm" action="achieveUpdated.php" method="post">
-
                         <tr>
                             <td>內容</td>
                             <td>
@@ -109,13 +108,18 @@
                             </td>                                 
                         </tr>
                     </table>
-
-                <?php
-                    }
-                ?>
+                        <div class="FinishEditedBtnFather">
+                            <input class="FinishEditedBtn" type="submit" name="submit" value="送出">                                       
+                        </div>
                     <input type="hidden" name="file" value="<?php echo $filename ?>">
                     <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">
-                    <!-- <button id="btnSend" class="btn" type="submit" name="submit">確認修改</button> -->
+                    <div class="line"></div>
+                    
+                <?php
+                
+                    }
+                ?>
+                    
                 </form>
                     <div class="btnFather">
                         <div class="btn" id="btnSpotAdd">新增內容與圖片</div>

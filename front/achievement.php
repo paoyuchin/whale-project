@@ -111,14 +111,14 @@
             <div class="btn1 active clearfix" id="b1">
                 <div class="btn btn1-inside">
                     <img src="images/achievement-img/Super-Whale-Wallpaper.jpg" alt="whale">
-                    <h2>護鯨活動</h2>
+                    <h2>0:出海</h2>
                     <!-- <i class="fas fa-arrow-down"></i> -->
                 </div>
             </div>
             <div class="btn2 clearfix" id="b2">
                 <div class="btn btn2-inside">
                     <img src="images/achievement-img/whalecourse.jpeg" alt="course">
-                    <h2>出海宣傳</h2>
+                    <h2>1:宣傳</h2>
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@
                         $content = $editContent->content;
                         $activityName = $editContent->activityName;
                         $filename = $editContent->filename;?>
-            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+            <a href="achievement-inside.php?activityNo= <?php echo $activityNo?>" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                 <figure>
                     <img src="images/achievement-img/bga.jpg" />
                     <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue" fill="pink">

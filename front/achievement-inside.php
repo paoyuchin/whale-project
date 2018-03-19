@@ -48,21 +48,16 @@
                             And aa.activityNo = $activityNo";
                      $editContents = $pdo -> prepare($sql);
                      $editContents->execute();
-                        while($editContent = $editContents -> fetchObject()){ 
+                        $editContent = $editContents -> fetchObject();
                         $content = $editContent->content;
                         $activityName = $editContent->activityName;
                         $endDay = $editContent->startDate;
                         $filename = $editContent->filename;?>
-            <h2><?php echo $activityName ?></h2>
-            <p class="title-content"><?php echo $content ?></p>
-            <p class="title-date"><?php echo $endDay ?></p>
-              <?php
-                        }
-                    }catch(PDOExpection $e) {
-								echo "錯誤原因: ", $e->getMessage(), "<br>";
-								echo "錯誤行號: ", $e->getLine(), "<br>";
-							}
-                        ?>
+                    <h2><?php echo $activityName ?></h2>
+                    <p class="title-content"><?php echo $content ?></p>
+                    <p class="title-date"><?php echo $endDay ?></p>
+                    
+              
         </div>
         <div class="achieve-inside-progrebar clearfix">
             <div class="bar-1">
@@ -101,6 +96,13 @@
                 <div class="progressbar-text3">活動參觀人數活動參觀人數</div>
             </div>
         </div>
+        <?php
+        $editContent = $editContents -> fetchObject();
+                        $content = $editContent->content;
+                        $activityName = $editContent->activityName;
+                        $endDay = $editContent->startDate;
+                        $filename = $editContent->filename;
+        ?>
         <div class="block1 clearfix">
             <div class="achieve-inside-right">
                 <img src="images/achievement-inside-img/33333.jpg" id="imagesscroll" alt="world">
@@ -109,24 +111,37 @@
                 <p>
             <?php echo $content?>    
             </p>
-                <!-- <a href="#" class="youtube-link-dark" youtubeid="-nvUuHKkLgk">點我看影片</a> -->
             </div>
         </div>
+        
+        <?php
+        while ($editContent = $editContents -> fetchObject()) {
+            $content = $editContent->content;
+                        $activityName = $editContent->activityName;
+                        $endDay = $editContent->startDate;
+                        $filename = $editContent->filename;
+        
+        
+                        
+        ?>
         <div class="block2 clearfix">
             <p class="block2-1">
-                <?php echo $content?>  </p>
+                <?php echo $content?></p>
             <div class="block2-2">
                 <img src="images/achievement-inside-img/33333.jpg" alt="test">
             </div>
         </div>
-        <div class="block2 clearfix">
-            <p class="block2-1">
-        <?php echo $content?>          
-        </p>
-            <div class="block2-2">
-                <img src="images/achievement-inside-img/33333.jpg" alt="test">
-            </div>
-        </div>
+        <?php
+        }
+        ?>
+        
+        <?php
+                        
+                    }catch(PDOExpection $e) {
+								echo "錯誤原因: ", $e->getMessage(), "<br>";
+								echo "錯誤行號: ", $e->getLine(), "<br>";
+							}
+                        ?>
         <div class="btnFather">
         <a class="btn" href="achievement.php">回前一頁</a>
     </div>
