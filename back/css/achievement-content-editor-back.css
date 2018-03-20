@@ -25,10 +25,14 @@
     background-color: rgba(5, 4, 8, 0.6);
 }
 
-.title {
+textarea {
+    font-size: 16px;
+}
+
+.scroll-back {
     width: 100%;
-    text-align: center;
-    font-size: 30px;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .addbtn {
@@ -59,13 +63,15 @@ textarea {
 
 .FinishEditedBtnFather {
     width: 100%;
+    font-size: 16px;
     text-align: right;
 }
 
 .FinishEditedBtn {
     background-color: azure;
     border-radius: 5px;
-    padding: 2px 15px;
+    font-size: 16px;
+    padding: 5px 30px;
 }
 
 button {

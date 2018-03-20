@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/plugin/fontawesome-all.min.css">
     <script src="js/plugin/grt-youtube-popup.js"></script>
     <script type='text/javascript' src="js/plugin/snap.svg-min.js"></script>
-        <script src="js/plugin/ScrollMagic.min.js"></script>
+    <script src="js/plugin/ScrollMagic.min.js"></script>
     <script src="js/plugin/debug.addIndicators.min.js"></script>
 
     <script src="../common/js/menu.js"></script>

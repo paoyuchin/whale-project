@@ -6,13 +6,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>會員後端</title>
+	<title>活動列表</title>
 	<!-- reset -->
 	<link rel="stylesheet" href="css/reset.css">
 	<!-- custom -->
 	<link rel="stylesheet" href="css/achievement-back.css">
 	<script src="js/plugin/jquery-3.3.1.min.js"></script>	
-	<script src="achievement-back.js"></script>
+	<script src="js/achievement-back.js"></script>
 </head>
 <body>
 	<div class="wrapper">
