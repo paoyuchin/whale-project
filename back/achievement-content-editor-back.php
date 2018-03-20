@@ -46,7 +46,7 @@
                         $activityNo = $_REQUEST['activityNo'];
 
                         require_once("connectback.php");
-                        $sql = "SELECT content , title , filename
+                        $sql = "SELECT content , title , filename,achievementContentNo
                         FROM achievementcontent
                         WHERE activityNo = :activityNo ";
                         $editContents = $pdo -> prepare($sql);
@@ -64,7 +64,7 @@
                    
                 <!-- =======要複製的東西============================================================== -->
                 <form class="spotDiv" method="post" style="display:none" enctype="multipart/form-data">
-                <input type="hidden" name="activityNo" value="<?php echo $activityNo?>">
+                    <input type="hidden" name="activityNo" value="<?php echo $activityNo?>">
                     <table>
                         <tr>
                             <td>內容</td>
@@ -76,12 +76,13 @@
                             <td>新增圖片</td>
                             <td>
                                 <input name="upFile" type="file">
-                                <img class='preview' src='uploads/'> 
+                                <img class='preview' src='images/'> 
                             </td>                              
                         </tr>                       
                     </table>
                     <div class="FinishEditedBtnFather">
-                        <input class="FinishEditedBtn" type="button" name="submit" value="送出">                                       
+                        <input class="FinishEditedBtn" type="button" name="submit" value="送出">
+                        <input type="hidden" name="FinishEditedBtn2" value="2">                                                                                                      
                     </div>
                     <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">                    
                     <div class="line"></div>
@@ -93,44 +94,43 @@
 <!-- ========================================================================================================================                         -->
 
                         
-
+                <?php    
+                    while($editContent = $editContents -> fetchObject()){ 
+                    $content = $editContent->content;
+                    $filename = $editContent->filename;
+                    $achievementContentNo = $editContent->achievementContentNo;
+                ?>
                 <form id="myForm" method="post" enctype="multipart/form-data">  
-                    <?php    
-                        while($editContent = $editContents -> fetchObject()){ 
-                        $content = $editContent->content;
-                        $filename = $editContent->filename;
-                    ?>
+                    <input type="hidden" name="activityNo" value="<?php echo $activityNo?>">                    
                     <table method="post">
                         <tr>
                             <td>內容</td>
                             <td>
-                                <textarea id="" cols="30" rows="10" name="content[]" id="textArea">
-                                    <?php echo $content ; ?>dddd
-                                </textarea>
+                                <textarea id="textareaContent" cols="30" rows="10" id="contentId" class="textareaClsss" name="content"><?php echo $content;?></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td>新增圖片</td>
                             <td>
                                 <?php echo $filename ?>
-                                <img class='preview' src='images/<?php echo $filename?>'>                                 
-                                <input name="upFile" type="file"value="<?php echo $filename ?>">
+                                <img class='preview' src='images/<?php echo $filename?>'>
+                                <input name="upFile" type="file" value="<?php echo $filename ?>">
                             </td>                                 
                         </tr>
     
                     </table>
                     <div class="FinishEditedBtnFather">
-                        <input class="FinishEditedBtn" type="submit" name="submit" value="送出">                                       
+                        <input class="FinishEditedBtn" type="submit" name="submit" value="送出">
+                        <input type="hidden" name="FinishEditedBtn2" value="1">                                       
                     </div>
                     <input type="hidden" name="file" value="<?php echo $filename ?>">
                     <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">
                     <div class="line"></div>
-
-                    <?php
+                </form>
+                 <?php
                     
                         }
                     ?>
-                </form>
                     <div class="btnFather">
                         <div class="btn" id="btnSpotAdd">新增內容與圖片</div>
                     </div>          

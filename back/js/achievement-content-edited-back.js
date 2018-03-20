@@ -51,6 +51,8 @@ function update(e) {
 
 window.addEventListener("load", function () {
     $id("btnSpotAdd").onclick = addSpot;
-    $id("btnSend").onclick = update;
+    $('.FinishEditedBtn').click(update);
+    // $id("btnSend").onclick = update;
     // document.querySelectorAll(".trash")[1].onclick = delSpot;
+    // $id("aa").onclick = test;
 }, false);

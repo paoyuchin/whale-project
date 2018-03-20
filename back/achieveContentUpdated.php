@@ -1,12 +1,13 @@
 <?php 
     	try {
-    		require_once("connectback.php");
-
+            require_once("connectback.php");
+            
 			$content = $_REQUEST['content'];
-			$upFile = $_REQUEST['upFile'];
+			// $upFile = $_REQUEST['upFile'];
 			$activityNo = $_REQUEST['activityNo'];
-
-			switch($_FILES['upFile']['error']){
+			$FinishEditedBtn2 = $_REQUEST['FinishEditedBtn2'];
+            
+            switch($_FILES['upFile']['error']){
 				case UPLOAD_ERR_OK:
 
 					if( file_exists("images")===false){
@@ -18,15 +19,25 @@
 
 					$to = "images/" . $imageName;
 					if(copy( $from, $to)){
-						//echo "圖片上傳成功！<br>";
-						$sql = "INSERT INTO achievementcontent(activityNo,content,filename) 
-                                VALUES (:activityNo,:content,:upFile)";
-						$insertData = $pdo->prepare($sql);
-						$insertData -> bindValue(":activityNo", $activityNo);
-						$insertData -> bindValue(":content", $content);
-						$insertData -> bindValue(":upFile", $imageName);
-                        $insertData->execute();
-                        
+                        //echo "圖片上傳成功！<br>";
+                        if ($FinishEditedBtn2==2) {
+                            $sql = "INSERT INTO achievementcontent(activityNo,content,filename) 
+                                    VALUES (:activityNo,:content,:upFile)";
+                            $insertData = $pdo->prepare($sql);
+                            $insertData -> bindValue(":activityNo", $activityNo);
+                            $insertData -> bindValue(":content", $content);
+                            $insertData -> bindValue(":upFile", $imageName);
+                            $insertData->execute();
+                        }elseif ($FinishEditedBtn2==1) {
+			                $achievementContentNo = $_REQUEST['achievementContentNo'];
+                            $sql = "UPDATE achievementcontent 
+                                    SET content=:content,filename=:filename WHERE achievementContentNo =:achievementContentNo";
+                            $insertData = $pdo->prepare($sql);
+                            $insertData -> bindValue(":filename", $imageName);
+                            $insertData -> bindValue(":content", $content);
+                            $insertData -> bindValue(":achievementContentNo", $achievementContentNo);
+                            $insertData->execute();
+                        };
                         // $sql="SELECT aa.achievementContentNo 
                         //     FROM achievementcontent as aa 
                         //     WHERE aa.achievementContentNo 
