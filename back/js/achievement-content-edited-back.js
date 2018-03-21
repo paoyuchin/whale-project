@@ -5,13 +5,13 @@ function $id(id) {
 function addSpot() {
     // var textareaClsss = $('.textareaClsss').val();
     var btnSend = $id("btnSend"); //送出的按鈕
-    var myForm = $id("myForm"); //表單
+    var blockTable = $id("block-table"); //表單
     document.getElementById('tellEmpty').style.display = "none"
     var spotDiv = document.getElementsByClassName("spotDiv")[0];
     var newSpot = spotDiv.cloneNode(true);
     newSpot.getElementsByClassName('FinishEditedBtn')[0].onclick = update;
     newSpot.style.display = "";
-    myForm.insertBefore(newSpot, btnSend);
+    blockTable.insertBefore(newSpot, btnSend);
     // console.log(textareaClsss);
     // newSpot.querySelectorAll(".trash")[0].onclick = delSpot;
 }
@@ -37,6 +37,7 @@ function update(e) {
                     // default:
                     //     alert("請通知系統維人員");
             }
+            window.location.reload();
         } else {
             alert(xhr.status);
         }

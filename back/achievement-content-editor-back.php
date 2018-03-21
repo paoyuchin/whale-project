@@ -46,7 +46,7 @@
                         $activityNo = $_REQUEST['activityNo'];
 
                         require_once("connectback.php");
-                        $sql = "SELECT content , title , filename,achievementContentNo
+                        $sql = "SELECT content , filename,achievementContentNo
                         FROM achievementcontent
                         WHERE activityNo = :activityNo ";
                         $editContents = $pdo -> prepare($sql);
@@ -60,7 +60,7 @@
                     }
                     ?>
                 </div>
-				<div class="block-table">
+				<div class="block-table" id="block-table">
                    
                 <!-- =======要複製的東西============================================================== -->
                 <form class="spotDiv" method="post" style="display:none" enctype="multipart/form-data">
@@ -69,7 +69,7 @@
                         <tr>
                             <td>內容</td>
                             <td>
-                                <textarea id="textareaContent" cols="30" rows="10" id="contentId" class="textareaClsss" name="content"></textarea>
+                                <textarea id="textareaContent" cols="30" rows="10" class="textareaClsss" name="content"></textarea>
                             </td>                            
                         </tr>                        
                         <tr>
@@ -106,7 +106,7 @@
                         <tr>
                             <td>內容</td>
                             <td>
-                                <textarea id="textareaContent" cols="30" rows="10" id="contentId" class="textareaClsss" name="content"><?php echo $content;?></textarea>
+                                <textarea id="textareaContent" cols="30" rows="10" class="textareaClsss" name="content"><?php echo $content;?></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -131,7 +131,7 @@
                     
                         }
                     ?>
-                    <div class="btnFather">
+                    <div class="btnFather" id="btnSend">
                         <div class="btn" id="btnSpotAdd">新增內容與圖片</div>
                     </div>          
                     <?

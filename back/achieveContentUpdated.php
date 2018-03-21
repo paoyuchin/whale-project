@@ -9,14 +9,11 @@
             
             switch($_FILES['upFile']['error']){
 				case UPLOAD_ERR_OK:
-
 					if( file_exists("images")===false){
 						mkdir("images"); //make directory
 					}
-
 					$from = $_FILES['upFile']['tmp_name'];
 					$imageName = $_FILES['upFile']['name'];
-
 					$to = "images/" . $imageName;
 					if(copy( $from, $to)){
                         //echo "圖片上傳成功！<br>";
