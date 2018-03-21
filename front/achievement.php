@@ -164,7 +164,7 @@
                         ?>
                         <a href="achievement-inside.php?activityNo=<?php echo $activityNo?>" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                             <figure>
-                                <img src="images/achievement-img/bga.jpg" />
+                                <img src="../back/images/<?php echo $filename ?>" />
                                 <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                     <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0
                                     z" />
@@ -211,7 +211,7 @@
                         $filename = $editContent->filename;?>
             <a href="achievement-inside.php?activityNo= <?php echo $activityNo?>" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                 <figure>
-                    <img src="images/achievement-img/bga.jpg" />
+                    <img src="../back/images/<?php echo $filename ?>" />
                     <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue" fill="pink">
                         <path d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"
                         />

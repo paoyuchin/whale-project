@@ -34,8 +34,8 @@ function update(e) {
                 case "4":
                     alert("檔案未選");
                     break;
-                    // default:
-                    //     alert("請通知系統維人員");
+                default:
+                    alert("新增成功");
             }
             window.location.reload();
         } else {

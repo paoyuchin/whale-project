@@ -75,8 +75,8 @@
                         <tr>
                             <td>新增圖片</td>
                             <td>
+                                <!-- <img class='preview' src='images/'>                                  -->
                                 <input name="upFile" type="file">
-                                <img class='preview' src='images/'> 
                             </td>                              
                         </tr>                       
                     </table>
