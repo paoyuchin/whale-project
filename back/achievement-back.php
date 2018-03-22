@@ -9,6 +9,9 @@
 	<title>活動列表</title>
 	<!-- reset -->
 	<link rel="stylesheet" href="css/reset.css">
+    <!-- common -->
+	<link src="../common/images/background"></link>
+	<link rel="stylesheet" href="../common/css/menu-back.css">    
 	<!-- custom -->
 	<link rel="stylesheet" href="css/achievement-back.css">
 	<script src="js/plugin/jquery-3.3.1.min.js"></script>	
@@ -16,24 +19,9 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="bg-img"></div>
-		<div class="sidebar-section">
-			<figure class="logo">
-				<img src="images/logo/logo.png" alt="logo">
-			</figure>
-			<div class="welcome">
-				歡迎，<span><?php echo $_SESSION["managerName"]; ?></span>管理員
-			</div>
-			<ul>
-				<li><a href="member-back.php" class="sidebar-item">會員管理</a></li>
-				<li><a href="activity-back.php" class="sidebar-item">活動管理</a></li>
-				<li><a href="achievement-back.php" class="sidebar-item">里程碑管理</a></li>
-				<li><a href="#" class="sidebar-item">留言管理</a></li>
-				<li><a href="#" class="sidebar-item">募資管理</a></li>
-				<li><a href="#" class="sidebar-item">連署活動管理</a></li>
-				<li><a href="#" class="sidebar-item">後台管理</a></li>
-			</ul>
-		</div>
+
+		<?php  require_once "../common/menu-back.html" ?>
+		<!-- require_once("../common/connectDB.php");             -->
 		<div class="main-section">
 			<div class="block">
 				<div class="title">活動成果管理</div>

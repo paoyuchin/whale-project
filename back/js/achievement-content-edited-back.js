@@ -20,6 +20,7 @@ function update(e) {
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
         if (xhr.status == 200) {
+            alert(xhr.responseText);
             switch (xhr.responseText) {
                 case "0":
                     alert("商品資料新增成功");
@@ -35,9 +36,9 @@ function update(e) {
                     alert("檔案未選");
                     break;
                 default:
-                    alert("新增成功");
+                    alert("通知系統維護人員");
             }
-            window.location.reload();
+            // window.location.reload();
         } else {
             alert(xhr.status);
         }
@@ -51,9 +52,47 @@ function update(e) {
 
 
 window.addEventListener("load", function () {
+    console.log("aaa");
     $id("btnSpotAdd").onclick = addSpot;
-    $('.FinishEditedBtn').click(update);
-    // $id("btnSend").onclick = update;
+    // $('.FinishEditedBtn').click(update);
+
+    var divs = document.getElementsByClassName('FinishEditedBtn');
+    for (i in divs) {
+        divs[i].onclick = function (e) {
+            // alert(1);
+            var xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    // alert(xhr.responseText);
+                    switch (xhr.responseText) {
+                        case "0":
+                            alert("商品資料新增成功");
+                            break;
+                        case "1":
+                        case "2":
+                            alert("上傳檔案太大");
+                            break;
+                        case "3":
+                            alert("上傳檔案不完整");
+                            break;
+                        case "4":
+                            alert("檔案未選");
+                            break;
+                        default:
+                            alert("通知系統維護人員");
+                    }
+                    // window.location.reload();
+                } else {
+                    alert(xhr.status);
+                }
+            }
+            var formData = new FormData(e.target.form);
+            xhr.open("Post", "achieveContentUpdated.php", true);
+            xhr.send(formData);
+        };
+    }
+
+    // $id("FinishEditedBtn").onclick = update;
     // document.querySelectorAll(".trash")[1].onclick = delSpot;
     // $id("aa").onclick = test;
 }, false);

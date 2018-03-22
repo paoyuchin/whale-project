@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 1.5px;
     /* outline: 1px solid red; */
 }
 
@@ -198,12 +199,18 @@ table {
 
 table td {
     text-align: center;
-    border-bottom: 2px solid gray;
+    /* border-bottom: 2px solid gray; */
     color: white;
+    border-bottom: 1px dotted #fff;
     font-weight: 100;
 }
 
 th {
-    font-weight: 100;
+    font-size: 22px;
+    font-weight: 600;
     color: white;
+}
+
+.title {
+    font-size: 35px;
 }

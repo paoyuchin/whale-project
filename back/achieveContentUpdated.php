@@ -1,7 +1,7 @@
 <?php 
     	try {
             require_once("connectback.php");
-            
+            // require_once("../common/connectDB.php");            
 			$content = $_REQUEST['content'];
 			// $upFile = $_REQUEST['upFile'];
 			$activityNo = $_REQUEST['activityNo'];
@@ -35,32 +35,29 @@
                             $insertData -> bindValue(":achievementContentNo", $achievementContentNo);
                             $insertData->execute();
                         };
-                        // $sql="SELECT aa.achievementContentNo 
-                        //     FROM achievementcontent as aa 
-                        //     WHERE aa.achievementContentNo 
-                        //     = (select max(bb.achievementContentNo) 
-                        //     from achievementcontent as bb where activityNo = $activityNo)";
-                        // $sel = $pdo->query($sql);
-                        // $id = $sel->fetchObject();
-                        // $no = $id->achievementContentNo;
-                        //echo "資料新增成功！";	
-						echo "0";					
+						// echo "0";
+						// echo "$content"."+"."$imageName";				
 					}
 					else{
-						echo "99";//"圖片上傳失敗";
+						echo "99";
+						echo "圖片上傳失敗";
 					}
 					break;
 				case UPLOAD_ERR_INI_SIZE:
-					echo "1";//"上傳檔案太大,不可超過",ini_get("upload_max_filesize") , "<br>";
+					echo "1";
+					echo "上傳檔案太大,不可超過",ini_get("upload_max_filesize") , "<br>";
 					break;
 				case UPLOAD_ERR_FORM_SIZE:
-					echo "2";//"上傳檔案太大,不可超過",$_POST["MAX_FILE_SIZE"] , "Byte(位元組)<br>";
+					echo "2";
+					echo "上傳檔案太大,不可超過",$_POST["MAX_FILE_SIZE"] , "Byte(位元組)<br>";
 					break;
 				case UPLOAD_ERR_PARTIAL:
-					echo "3";//"上傳檔案不完整<br>";
+					echo "3";
+					echo "上傳檔案不完整<br>";
 					break;
 				case UPLOAD_ERR_NO_FILE:
-					echo "4"; //"檔案未選<br>";
+					echo "4"; 
+					echo "檔案未選<br>";
 					break;
 				default:
 				//   echo "請通知系統維人員,錯誤代碼 : " , $_FILES["upFile"]["error"] ,"<br>";

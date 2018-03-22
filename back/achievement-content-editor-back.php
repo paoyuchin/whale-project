@@ -8,7 +8,9 @@
 	<meta charset="UTF-8">
 	<title>編輯活動成果內頁</title>
 	<!-- reset -->
-	<link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- common -->
+    <link rel="stylesheet" href="../common/css/menu-back.css">    
 	<!-- custom -->
     <link rel="stylesheet" href="css/achievement-back.css">
     <link rel="stylesheet" href="css/achievement-content-editor-back.css">
@@ -18,24 +20,9 @@
 
 <body>
 	<div class="wrapper">
-		<div class="bg-img"></div>
-		<div class="sidebar-section">
-			<figure class="logo">
-				<img src="../images/logo/logo.png" alt="logo">
-			</figure>
-			<div class="welcome">
-				歡迎，<span><?php echo $_SESSION["managerName"]; ?></span>管理員
-			</div>
-			<ul>
-				<li><a href="member-back.php" class="sidebar-item">會員管理</a></li>
-				<li><a href="activity-back.php" class="sidebar-item">活動管理</a></li>
-				<li><a href="achievement-back.php" class="sidebar-item">里程碑管理</a></li>
-				<li><a href="#" class="sidebar-item">留言管理</a></li>
-				<li><a href="#" class="sidebar-item">募資管理</a></li>
-				<li><a href="#" class="sidebar-item">連署活動管理</a></li>
-				<li><a href="#" class="sidebar-item">後台管理</a></li>
-			</ul>
-        </div>
+        <?php  require_once "../common/menu-back.html" ?>
+            <!-- require_once("../common/connectDB.php");             -->
+
         <div class="scroll-back">
 		<div class="main-section">
 			<div class="block">
@@ -66,17 +53,17 @@
                 <form class="spotDiv" method="post" style="display:none" enctype="multipart/form-data">
                     <input type="hidden" name="activityNo" value="<?php echo $activityNo?>">
                     <table>
-                        <tr>
+                        <tr class="contentTr">
                             <td>內容</td>
                             <td>
                                 <textarea id="textareaContent" cols="30" rows="10" class="textareaClsss" name="content"></textarea>
                             </td>                            
                         </tr>                        
-                        <tr>
+                        <tr class="imgTr">
                             <td>新增圖片</td>
                             <td>
                                 <!-- <img class='preview' src='images/'>                                  -->
-                                <input name="upFile" type="file">
+                                <input class="fileBtn" name="upFile" type="file">
                             </td>                              
                         </tr>                       
                     </table>
@@ -112,15 +99,16 @@
                         <tr>
                             <td>新增圖片</td>
                             <td>
-                                <?php echo $filename ?>
                                 <img class='preview' src='images/<?php echo $filename?>'>
                                 <input name="upFile" type="file" value="<?php echo $filename ?>">
+                                <?php echo $filename ?>
+                                
                             </td>                                 
                         </tr>
     
                     </table>
                     <div class="FinishEditedBtnFather">
-                        <input class="FinishEditedBtn" type="submit" name="submit" value="送出">
+                        <input class="FinishEditedBtn" type="button" name="submit" value="送出">
                         <input type="hidden" name="FinishEditedBtn2" value="1">                                       
                     </div>
                     <input type="hidden" name="file" value="<?php echo $filename ?>">

@@ -36,6 +36,25 @@ function menuDropDown() {
 
 menuDropDown();
 
+var menuClose = document.querySelector(".menu-close");
+var menuRwd = document.querySelector(".menu-rwd");
+var menuToggle = document.querySelector(".menu-toggle");
+
+menuClose.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	menuRwd.style.visibility = "hidden";
+	menuRwd.style.opacity = 0;
+})
+
+menuToggle.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	menuRwd.style.visibility = "visible";
+	menuRwd.style.opacity = 1;
+})
+
+
+
+
 
 // catch web location to change menu color 
 // function menuColorChange() {
