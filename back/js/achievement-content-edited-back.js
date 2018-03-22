@@ -17,6 +17,7 @@ function addSpot() {
 }
 
 function update(e) {
+    alert(1);
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
         if (xhr.status == 200) {
@@ -36,7 +37,7 @@ function update(e) {
                     alert("檔案未選");
                     break;
                 default:
-                    alert("通知系統維護人員");
+                    alert("新增成功");
             }
             // window.location.reload();
         } else {
@@ -59,14 +60,12 @@ window.addEventListener("load", function () {
     var divs = document.getElementsByClassName('FinishEditedBtn');
     for (i in divs) {
         divs[i].onclick = function (e) {
-            // alert(1);
             var xhr = new XMLHttpRequest();
             xhr.onload = function () {
                 if (xhr.status == 200) {
-                    // alert(xhr.responseText);
                     switch (xhr.responseText) {
                         case "0":
-                            alert("商品資料新增成功");
+                            alert("資料編輯成功");
                             break;
                         case "1":
                         case "2":
@@ -79,7 +78,7 @@ window.addEventListener("load", function () {
                             alert("檔案未選");
                             break;
                         default:
-                            alert("通知系統維護人員");
+                            alert("資料編輯成功");
                     }
                     // window.location.reload();
                 } else {
@@ -92,7 +91,5 @@ window.addEventListener("load", function () {
         };
     }
 
-    // $id("FinishEditedBtn").onclick = update;
-    // document.querySelectorAll(".trash")[1].onclick = delSpot;
-    // $id("aa").onclick = test;
+
 }, false);
