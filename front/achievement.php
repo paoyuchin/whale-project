@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+	ob_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -145,7 +149,7 @@
                             
                 <?php 
                 try{
-                    require_once("connectback.php");
+                    require_once("../common/connectDB.php");             
                     $sql = "SELECT activityName,content,filename,class,aa.activityNo AS activityNo
                             FROM achievementcontent aa ,activity
                             WHERE achievementContentNo=(SELECT MIN(achievementContentNo) 
@@ -196,8 +200,9 @@
             <div class="achievement-content" id="B-content">
                 <?php 
                 try{
-                    require_once("connectback.php");
-                    $sql = "SELECT activityName,content,filename,class
+                    require_once("../common/connectDB.php");             
+
+                    $sql = "SELECT activityName,content,filename,class,aa.activityNo as activityNo
                             FROM achievementcontent aa ,activity
                             WHERE achievementContentNo=(SELECT MIN(achievementContentNo) 
                             FROM achievementcontent bb
@@ -207,9 +212,10 @@
                      $editContents->execute();
                         while($editContent = $editContents -> fetchObject()){ 
                         $content = $editContent->content;
+                        $activityNo = $editContent->activityNo;
                         $activityName = $editContent->activityName;
                         $filename = $editContent->filename;?>
-            <a href="achievement-inside.php?activityNo= <?php echo $activityNo?>" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+            <a href="achievement-inside.php?activityNo=<?php echo $activityNo?>" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                 <figure>
                     <img src="../back/images/<?php echo $filename ?>" />
                     <svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="blue" fill="pink">

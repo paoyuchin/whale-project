@@ -21,7 +21,6 @@
 <body>
 	<div class="wrapper">
         <?php  require_once "../common/menu-back.html" ?>
-            <!-- require_once("../common/connectDB.php");             -->
 
         <div class="scroll-back">
 		<div class="main-section">
@@ -32,7 +31,9 @@
                     try {
                         $activityNo = $_REQUEST['activityNo'];
 
-                        require_once("connectback.php");
+                        // require_once("connectback.php");
+            require_once("../common/connectDB.php");             
+                        
                         $sql = "SELECT content , filename,achievementContentNo
                         FROM achievementcontent
                         WHERE activityNo = :activityNo ";

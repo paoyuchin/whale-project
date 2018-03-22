@@ -2,8 +2,8 @@
 try {
     $activityNo = $_REQUEST['activityNo'];
     $checkVal = $_REQUEST['checkVal'];
+	require_once("../common/connectDB.php"); 
 
-    require_once("connectback.php");
     $sql = 'UPDATE activity SET achievementStatus= :achievementStatus WHERE activityNo = :activityNo';
     $statement = $pdo ->prepare($sql);
     $statement->bindValue(":achievementStatus",$checkVal);

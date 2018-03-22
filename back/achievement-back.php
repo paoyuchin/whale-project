@@ -21,7 +21,6 @@
 	<div class="wrapper">
 
 		<?php  require_once "../common/menu-back.html" ?>
-		<!-- require_once("../common/connectDB.php");             -->
 		<div class="main-section">
 			<div class="block">
 				<div class="title">活動成果管理</div>
@@ -35,33 +34,38 @@
 							<th>編輯</th>
                         </tr>
 						<?php 
-							try {
-								require_once("connectback.php");
-								// // 取得總共有幾筆
-								// $sql = "select * from achievementContent"; //拿全部東西 從 「表格」
-								// $count = $pdo -> query($sql);
-								// $total = $count->rowCount();
-								// //先設定好每頁5筆
-								// $num = 5;
-								// // 抓到總共有幾頁
-								// $pages = ceil($total/$num);
-								// // 預設頁數
-								// $pageNum = 1;
-								// if(!isset($_REQUEST["pageNum"])){
-								// 	$pageNum = 1;
-								// }else{
-								// 	$pageNum = $_REQUEST["pageNum"];
-								// }
-								// // 記錄筆數
-								// $start = ($pageNum - 1)*$num;
-								// // 用limit限制每頁筆數
-								// $column = "select * from achievementContent limit $start,$num";
-								// $contents = $pdo->query($column);
-								$sql = "SELECT activityNo , activityName ,date_add(startDate, interval 1 day) as endDay, achievementStatus
+							try{
+							require_once("../common/connectDB.php"); 
+							$sql = "SELECT activityNo , activityName ,date_add(startDate, interval 1 day) as endDay, achievementStatus
 								FROM activity
 								where startDate < now()
 								ORDER by startDate
 								";
+								$count =$pdo->prepare($sql);
+								$count->execute();
+								$total = $count->rowCount(); //所有的比數
+								$perPage = 5;
+								$pages = ceil($total/$perPage);//算出有幾頁 已無條件進位
+								if(!isset($_GET["page"])){
+									$page = 1;
+								}else{
+									$page = intval($_GET["page"]);
+								};
+								$start = ($page-1)*$perPage;
+
+							}catch (PDOExpection $e) {
+								echo "錯誤原因: ", $e->getMessage(), "<br>";
+								echo "錯誤行號: ", $e->getLine(), "<br>";
+							}
+
+							////////page
+							try {
+								require_once("../common/connectDB.php"); 
+								$sql = "SELECT activityNo , activityName ,date_add(startDate, interval 1 day) as endDay, achievementStatus
+								FROM activity
+								where startDate < now()
+								ORDER by startDate LIMIT $start,$perPage 
+								"; //頁數
 								$activityDatas = $pdo -> query($sql);
 								while($activityData = $activityDatas -> fetchObject()){ //array
 								$activityNo = $activityData -> activityNo;
@@ -125,28 +129,16 @@
 								echo "錯誤行號: ", $e->getLine(), "<br>";
 							}
 						?>
+						<tr>
+							<td colspan="5">
+							<?php 
+							for ($i=1; $i<=$pages; $i++){
+								echo "<a href=?page=".$i.">".$i."</a>";
+							}
+							?>
+							<td>
+						<tr>
 					</table>
-					<div class="page-change">
-					<?php 
-					// 印出頁數和顯示各頁超連結
-					// 藉由點選更換pageNum 達到換頁效果
-					// if( $pageNum > 1) { //目前不是第一頁
-					// 	echo "<a href='?pageNum=",$pageNum-1,"'>往前一頁</a>&nbsp;&nbsp;&nbsp;";
-					// }
-				
-					// for($i=1; $i <= $pages; $i++){
-					// 	if( $i == $pageNum) {
-					// 	echo "<a href='?pageNum=$i' style='color:deeppink'>$i</a>&nbsp;&nbsp;&nbsp;"; 
-					// 	}else {
-					// 	echo "<a href='?pageNum=$i'>$i</a>&nbsp;&nbsp;&nbsp;";
-					// 	}
-						
-					// }
-					// if( $pageNum < $pages) { //目前不是最後一頁
-					// 	echo "<a href='?pageNum=",$pageNum+1,"'>往後一頁</a>&nbsp;&nbsp;&nbsp;";
-					// }
-					?>
-					</div>
 				</div>
 			</div>
 		</div>

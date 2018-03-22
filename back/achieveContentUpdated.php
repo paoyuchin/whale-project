@@ -1,7 +1,6 @@
 <?php 
     	try {
-            require_once("connectback.php");
-            // require_once("../common/connectDB.php");            
+			require_once("../common/connectDB.php");             
 			$content = $_REQUEST['content'];
 			// $upFile = $_REQUEST['upFile'];
 			$activityNo = $_REQUEST['activityNo'];

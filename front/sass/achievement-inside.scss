@@ -3,8 +3,8 @@
                             padding: 0;
                             margin: 0;
                             list-style: none;
-                            text-decoration: none; // outline: 1px solid red; 
-                            // overflow: hidden;
+                            text-decoration: none;
+                            outline: 1px solid red; // overflow: hidden;
                         }
 
                         h1,
@@ -323,7 +323,7 @@
                                 margin: 10px 0;
                                 .achieve-inside-left {
                                     overflow: hidden;
-                                    @include size(70%,
+                                    @include size(50%,
                                     auto);
                                     float: left;
                                     @include padding();
@@ -343,7 +343,7 @@
                                 .achieve-inside-right {
                                     max-height: 300px;
                                     overflow: hidden;
-                                    @include size(100%,
+                                    @include size(50%,
                                     auto);
                                     float: left;
                                     overflow: hidden;
@@ -363,7 +363,7 @@
                                     float: left;
                                     box-sizing: border-box;
                                     overflow: hidden;
-                                    padding: 55px 10px; // font-size: 20px;
+                                    padding: 110px 10px; // font-size: 20px;
                                 }
                                 .block2-2 {
                                     width: 45%;

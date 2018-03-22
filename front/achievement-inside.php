@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+	ob_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +45,8 @@
         <div class="achieve-inside-title clearfix">
             <?php 
                 try{
-                    require_once("connectback.php");
+                    require_once("../common/connectDB.php");             
+
                     $activityNo = $_REQUEST['activityNo'];
                     $sql = "SELECT content , activityName , `startDate` , filename FROM achievementcontent aa ,activity 
                             WHERE aa.activityNo = activity.activityNo 
@@ -105,7 +110,7 @@
         ?>
         <div class="block1 clearfix">
             <div class="achieve-inside-right">
-                <img src="images/achievement-inside-img/33333.jpg" id="imagesscroll" alt="world">
+                <img src="../back/images/<?php echo $filename ?>" id="imagesscroll" alt="world">
             </div>
             <div class="achieve-inside-left">
                 <p>
@@ -128,7 +133,7 @@
             <p class="block2-1">
                 <?php echo $content?></p>
             <div class="block2-2">
-                <img src="images/achievement-inside-img/33333.jpg" alt="test">
+                <img src="../back/images/<?php echo $filename ?>" alt="test">
             </div>
         </div>
         <?php
@@ -148,13 +153,6 @@
     </div>
     
 
-    <script>
-        // Demo video 2
-        $(".youtube-link-dark").grtyoutube({
-            autoPlay: false,
-            theme: "light"
-        });
-    </script>
 
 
     <script>

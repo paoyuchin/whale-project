@@ -4,6 +4,7 @@
     margin: 0; // outline: 1px solid red;
     position: relative;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 h1,
@@ -24,7 +25,7 @@ h1 {
 }
 
 h2 {
-    font-size: 48px;
+    font-size: 41px;
     font-weight: 600;
     font-family: 'arial', '微軟正黑體', sans-serif;
 }
@@ -215,7 +216,8 @@ p {
         margin-top: 20px;
         position: relative;
         .aboutus-title {
-            @include padding();
+            // @include padding();
+            padding: 30px 0;
             font-weight: bold;
             &:before {
                 @include Pseudo();
@@ -374,6 +376,7 @@ p {
         }
         a {
             color: white;
+            text-decoration: none;
         }
         .aboutus-milestone-open {
             @include padding();

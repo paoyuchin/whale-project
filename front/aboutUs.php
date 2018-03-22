@@ -33,6 +33,7 @@
 
 <body>
     <?php  require_once "../common/menu.html" ?>
+
     <div class="wrapper">
         <div class="testvideo">
             <video src="images/aboutus-img/videoplayback.mp4" autoplay muted></video>
@@ -118,10 +119,10 @@
                     </h2>
                 </a>
                 <div class="aboutus-milestone-open">
-                    <!-- <h2>我們的成果</h2> -->
                     <p>
-                        
-                    鯨生鯨世邀請大家一同來見證我們的活動成果!
+                    自鯨生鯨世創建以來，這幾年來我們辦過100場以上的活動，總共有3500人以上參與，展現出來的是我們的精神與毅力，
+                    為了追求心目中最純淨與和平的海洋，讓鯨魚以及其他海洋生物有個安全的海洋存活，
+                    我們紀錄了每個活動的成果，鯨生鯨世邀請大家一同來見證我們的活動成果!
                     </p>
                     <a href="achievement.php">
                         <div class="aboutus-milestone-seemorebtn">

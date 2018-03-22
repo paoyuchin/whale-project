@@ -3,7 +3,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: 1px solid red; }
 
 h1,
 h2,
@@ -275,7 +276,7 @@ header {
     margin: 10px 0; }
     .achievement-container .block1 .achieve-inside-left {
       overflow: hidden;
-      width: 70%;
+      width: 50%;
       height: auto;
       float: left;
       padding: 20px;
@@ -293,7 +294,7 @@ header {
     .achievement-container .block1 .achieve-inside-right {
       max-height: 300px;
       overflow: hidden;
-      width: 100%;
+      width: 50%;
       height: auto;
       float: left;
       overflow: hidden; }
@@ -311,7 +312,7 @@ header {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       overflow: hidden;
-      padding: 55px 10px; }
+      padding: 110px 10px; }
     .achievement-container .block2 .block2-2 {
       width: 45%;
       float: left;
