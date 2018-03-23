@@ -21,7 +21,7 @@ function update(e) {
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
         if (xhr.status == 200) {
-            alert(xhr.responseText);
+            // alert(xhr.responseText);
             switch (xhr.responseText) {
                 case "0":
                     alert("商品資料新增成功");

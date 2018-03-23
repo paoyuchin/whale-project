@@ -5,7 +5,6 @@
 			// $upFile = $_REQUEST['upFile'];
 			$activityNo = $_REQUEST['activityNo'];
 			$FinishEditedBtn2 = $_REQUEST['FinishEditedBtn2'];
-            
             switch($_FILES['upFile']['error']){
 				case UPLOAD_ERR_OK:
 					if( file_exists("images")===false){

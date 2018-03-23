@@ -20,21 +20,17 @@
 
 <body>
 	<div class="wrapper">
-        <?php  require_once "../common/menu-back.html" ?>
-
+        <?php  require_once("../common/menu-back.php")?>
         <div class="scroll-back">
 		<div class="main-section">
 			<div class="block">
-
-                <div class="title"> <?php echo ($_REQUEST['activityName'])?>活動成果管理</div>
+                <div class="title"> 
+                    <?php echo ($_REQUEST['activityName'])?>活動成果管理</div>
                 <?php 
                     try {
                         $activityNo = $_REQUEST['activityNo'];
-
-                        // require_once("connectback.php");
-            require_once("../common/connectDB.php");             
-                        
-                        $sql = "SELECT content , filename,achievementContentNo
+                        require_once("../common/connectDB.php");             
+                        $sql = "SELECT content , filename, achievementContentNo
                         FROM achievementcontent
                         WHERE activityNo = :activityNo ";
                         $editContents = $pdo -> prepare($sql);
@@ -49,7 +45,6 @@
                     ?>
                 </div>
 				<div class="block-table" id="block-table">
-                   
                 <!-- =======要複製的東西============================================================== -->
                 <form class="spotDiv" method="post" style="display:none" enctype="multipart/form-data">
                     <input type="hidden" name="activityNo" value="<?php echo $activityNo?>">
@@ -63,7 +58,6 @@
                         <tr class="imgTr">
                             <td>新增圖片</td>
                             <td>
-                                <!-- <img class='preview' src='images/'>                                  -->
                                 <input class="fileBtn" name="upFile" type="file">
                             </td>                              
                         </tr>                       
@@ -72,16 +66,10 @@
                         <input class="FinishEditedBtn" type="button" name="submit" value="送出">
                         <input type="hidden" name="FinishEditedBtn2" value="2">                                                                                                      
                     </div>
-                    <input type="hidden" name="achievementContentNo" value="<?php echo $achievementContentNo ?>">                    
+                    <!-- <input type="hidden" name="achievementContentNo" value="<?php //echo $achievementContentNo?>">                     -->
                     <div class="line"></div>
                 </form>
-
-
-                        
-
 <!-- ========================================================================================================================                         -->
-
-                        
                 <?php    
                     while($editContent = $editContents -> fetchObject()){ 
                     $content = $editContent->content;
@@ -103,10 +91,8 @@
                                 <img class='preview' src='images/<?php echo $filename?>'>
                                 <input name="upFile" type="file" value="<?php echo $filename ?>">
                                 <?php echo $filename ?>
-                                
                             </td>                                 
                         </tr>
-    
                     </table>
                     <div class="FinishEditedBtnFather">
                         <input class="FinishEditedBtn" type="button" name="submit" value="送出">
@@ -117,18 +103,16 @@
                     <div class="line"></div>
                 </form>
                  <?php
-                    
                         }
                     ?>
                     <div class="btnFather" id="btnSend">
                         <div class="btn" id="btnSpotAdd">新增內容與圖片</div>
                     </div>          
-                    <?
+                    <?php
                         } catch (PDOExpection $e){
                             echo "錯誤原因:" , $e->getMessage() , "<br>" ; 
                             echo "錯誤訊息:" , $e->getLine() , "<br>" ;
                         }
-                
                     ?>
 				</div>
 			</div>

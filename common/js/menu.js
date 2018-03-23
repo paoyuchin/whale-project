@@ -53,9 +53,6 @@ menuToggle.addEventListener("click", function(evt) {
 })
 
 
-
-
-
 // catch web location to change menu color 
 // function menuColorChange() {
 //     let web = window.location.pathname;

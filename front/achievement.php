@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <?php  require_once "../common/menu.html" ?>
+    <?php  require_once "../common/menu.php" ?>
 
     <div class="achievement-bg">
         <h2>我是歷年成果</h2>

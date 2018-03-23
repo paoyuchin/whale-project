@@ -20,7 +20,7 @@
 <body>
 	<div class="wrapper">
 
-		<?php  require_once "../common/menu-back.html" ?>
+		<?php  require_once "../common/menu-back.php" ?>
 		<div class="main-section">
 			<div class="block">
 				<div class="title">活動成果管理</div>
