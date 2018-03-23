@@ -97,7 +97,7 @@
 													<input type='radio' class='radioBtn' name='status$activityNo' value='1' checked>上架
 												</label>
 												<label>											
-													<input type='radio' class='radioBtn' name='status$activityNo' value='0'>未上架
+													<input type='radio' class='radioBtn' name='status$activityNo' value='0'>下架
 												</label>";
 											}else{
 												echo "
@@ -105,14 +105,11 @@
 													<input type='radio' class='radioBtn' name='status$activityNo' value='1'>上架
 												</label>
 												<label>											
-													<input type='radio' class='radioBtn' name='status$activityNo' value='0' checked>未上架
+													<input type='radio' class='radioBtn' name='status$activityNo' value='0' checked>下架
 												</label>";
 											}
 											
-											?>
-										
-											
-												<!-- <?php //echo $achievementStatus ?> -->
+											?>											
 											<!-- 活動狀態 -->
 										</td>
 										<td>

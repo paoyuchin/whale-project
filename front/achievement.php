@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- reset -->
+
     <link rel="stylesheet" href="css/reset.css">
     <!-- custom -->
     <link rel="stylesheet" href="css/achievement.css">
@@ -21,9 +21,6 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script src="js/plugin/vivus.js"></script>
     <script src="js/plugin/snap.svg-min.js"></script>
-    <!-- javascript -->
-    <script src="../common/js/menu.js"></script>
-
     <title>活動成果</title>
 </head>
 
@@ -278,6 +275,10 @@
     </script>
 
 
+    <!-- reset -->
+
+    <!-- javascript -->
+    <script src="../common/js/menu.js"></script>
 </body>
 
 </html>

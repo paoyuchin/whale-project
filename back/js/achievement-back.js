@@ -34,8 +34,8 @@ $(document).ready(function () {
         var activityNo = $(this).parents('.tdbtn').attr("data-activityNo");
         var checkVal = $('input[name=status' + activityNo + ']:checked').val();
         // alert(checkVal);
-        if (confirm("確定修改？")) {
-            changeStatus(activityNo, checkVal);
-        }
+        // if (confirm("確定修改？")) {
+        changeStatus(activityNo, checkVal);
+        // }
     }); //end
 });

@@ -66,7 +66,8 @@
                         <input class="FinishEditedBtn" type="button" name="submit" value="送出">
                         <input type="hidden" name="FinishEditedBtn2" value="2">                                                                                                      
                     </div>
-                    <!-- <input type="hidden" name="achievementContentNo" value="<?php //echo $achievementContentNo?>">                     -->
+                    <!-- <input type="hidden" name="achievementContentNo" value="<?php //echo $achievementContentNo?>">   
+                    //上傳ftp後發現有問題刪除的就好了                  -->
                     <div class="line"></div>
                 </form>
 <!-- ========================================================================================================================                         -->

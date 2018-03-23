@@ -17,14 +17,11 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- plugin -->
-    <link rel="stylesheet" href="css/grt-youtube-popup.css">
     <link rel="stylesheet" href="css/plugin/fontawesome-all.min.css">
-    <script src="js/plugin/grt-youtube-popup.js"></script>
     <script type='text/javascript' src="js/plugin/snap.svg-min.js"></script>
     <script src="js/plugin/ScrollMagic.min.js"></script>
     <script src="js/plugin/debug.addIndicators.min.js"></script>
 
-    <script src="../common/js/menu.js"></script>
     <title>成果內頁</title>
 </head>
 
@@ -284,6 +281,8 @@
             .addTo(controller);
         
     </script>
+
+    <script src="../common/js/menu.js"></script>
 
 </body>
 
